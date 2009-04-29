@@ -1,0 +1,185 @@
+\documentstyle{article}
+\oddsidemargin=.15in
+\evensidemargin=.15in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+\begin{document}
+\section*{Chapter 4}
+Representative Consumer with pa... given by Utility Function $U(c, l)$ with properties
+\begin{list}{ }
+ \item 1) $U_c > 0, U_l > 0$ (more preferred to less)
+ \item 2) if $U(c_1, l_1) = U(c_2, l_2)$ then $U(\alpha c_1 + (1-\alpha) c_2, \alpha l_1 + (1-\alpha) l_2) > U(c_1, l_1)$
+ \item 3) $(c, l)$ are ``normal goods'' $\frac{\partial c(I, w)}{\partial I} \vert_w > 0$ \\
+ \end{list} 
+Consider ISO-Utility curve, \\ $U(c(l), l) = const$ 
+\begin{eqnarray}
+ dU &=& 0 \nonumber \\
+ &=& U(c + \Delta c, l + \Delta l) dl\nonumber\\
+ -\frac{\partial c}{\partial l} \vert_u &=& \frac{U_l}{U_c}\\
+ 2^{nd} ...: U(c, l) &=& U(c + \Delta c, l + \Delta l), with \Delta c \equiv c(l+\Delta l) - c(l) \approx \Delta l c_l + \frac{1}{2} \Delta l^2 c_{ll}\nonumber\\
+ 0 &=& \Delta c U_c + \Delta l U_l + \frac{1}{2} \Delta c^2 U_{cc} + \frac{1}{2} \Delta l^2 U_{ll} + \Delta c \Delta l U_{cl}\nonumber\\
+ &=& (\Delta l c_l + \frac{1}{2} \Delta l^2 c_{ll})U_c + \Delta u_l + \frac{1}{2} U_{cc} \left[\Delta l^2 c^2_{ll}\right] + \frac{1}{2} \Delta l^2 U_{ll} + \Delta l^2 c_l U_{ll}\nonumber\\
+ \Delta l^1 : 0 &=& c_l U_c + U_l\nonumber\\
+ -C_l &=& U_l/U_c\\
+ \Delta l^2 : 0 &=& \frac{1}{2}c_{ll} U_c + \frac{1}{2} c^2_l U_{ll} + \frac{1}{2} U_{ll}+ c_l U_{cl}\nonumber\\
+ -\frac{1}{2}U_c C_{ll} &=& \frac{1}{2} U_{cc} [\frac{U_l}{U_c}]^2 + \frac{1}{2} U_{ll} - \frac{U_l U_cl}{U_c}\nonumber\\ 
+ C_{ll} &=& - \left( \frac{U_l^2}{U_c} \right) \left\{\frac{U_{cc}}{U_c^2} + \frac{U_{ll}}{U_c^2} - 2 \frac{U_{cl}}{U_c U_l}\right\} \nonumber
+\end{eqnarray}
+Note that $(2)$ above implies for those cases where 
+\begin{eqnarray*}
+U\left[c + \Delta c, l + \Delta l \right] &=& U \left[ c-\Delta c, l - \Delta l \right]\\
+\Delta C U_c + \Delta l U_l &=& 0\\
+-\frac{\Delta C}{\Delta l} \vert_U &=& \frac{U_l}{U_c}\\
+\end{eqnarray*}
+We have,
+\begin{eqnarray}
+U(c,l) &>& \frac{1}{2} \left\{ U(c+\Delta c, l+\Delta l) + U(c-\Delta c, l- \Delta l) \right\} \nonumber\\
+0 &>& (\Delta c U_c + \Delta l U_l + \frac{1}{2} \Delta c^2 U_{cc} + \frac{1}{2} \Delta l^2 U_{ll} + \Delta c \Delta l U_{ll}) + \nonumber\\
+&& (-\Delta c U_c - \Delta l U_l + \frac{1}{2} (-\Delta c)^2 U_{cc} + \frac{1}{2} (-\Delta l)^2 ...) \nonumber\\
+&>& \Delta c^2 U_{cc} + \Delta l^2 U_{ll} + 2 \Delta c \Delta l U_cl\nonumber\\
+&>& \Delta l^2 \left[ \left( \frac{U_l}{U_c}\right) ^2 U_{cc} + U_{ll} + 2 \left( -\frac{U_l}{U_c}\right) U_{cl}\right]\nonumber\\
+0 &>& \frac{U_{cc}}{U_c^2} + \frac{U_{ll}}{U_l^2} - 2 \frac{U_{cl}}{U_c U_l}\\
+\mbox{ and thus } C_{ll} &\equiv & \frac{\partial^2 C}{\partial l^2} \vert_u > 0
+\end{eqnarray}
+
+Indifference ... have two properties :
+\begin{list}{ }{}
+\item 1) Slopes downward : $ \frac{\partial c}{\partial l} \vert_U < 0 $
+\item 2) Convex : $ \frac{\partial^2 c}{\partial l^2} \vert_U > 0 $
+\end{list}
+Def: $MRS_{L,C}$ of leisure for consumption = - slope of indifference curve = $- \frac{\Delta c}{\Delta l}$ \\
+Convex indifference curves imply diminishing MRS = 0
+\subsection*{Budget Constraint}
+\begin{list}{-}{}
+\item Assume agent is a price taker
+\item Assume no money. i.e., we have a ``barter economy''
+\item Agent endorsed with $h$ units of labor \\ $l + N^s = h = $... plus labor supplied \\
+\end{list}
+Def : $ w \equiv wage = \frac{\# Consumption ...}{... labor}$\\
+\begin{list}{-}{}
+\item Use consumption good as ``...''
+\item Wage income = $ w N^s$
+\item Dividends minus Tax = D - T \\ here T = lumpsum tax = tax independent of actions of agent\\
+\end{list}
+``Taxes that are not mump sum have important effects on prices, which in turn affects the demand of that good'' - ``Distorting Effect'' \\ \\
+Recall Diposable income = $(D-T) + w N^s$ equals consumption C since one period, no savings motive.\\
+$ C = w (h - l) + D - T = $ ``budget constraint'' \\ \\
+In slope intercept form, $C = (w^(h+D-T)) - wl$ since C is num... rates why we put it on y-axis $-\frac{\partial c}{\partial l}$\\ \\
+Optimal consumption bundle = $(C^*, l^*)$ on highest indifference curve consistent with budget constraint.
+\begin{list}{-}{}
+\item Indifference curver tangent to budget is constant
+\item Thus, at optimal $MRS  = -\frac{\partial c}{\partial l} = \frac{U_l}{U_c} = wage$
+\end{list}
+Recall $wage \equiv $``Price of one unit of leisure, measured in consumption units'' \\ \\
+Assumption of constrained optimality provides predictions about one consumer corresponds to changes in 
+\begin{list}{ }{}
+\item (i) Budget Constraint
+\item (ii) Wage Plans
+\item (iii) Performance
+\end{list}
+\textbf{\underline{(i) Pure Income Effect: }} 
+\begin{list}{ }{}
+\item Change $(D-T)$, holding $w = constant $
+\item Budget constraint ... parallel fashion ... slope = wage = constant
+\item Due to assumption that $(c,l)$ are normal ..., both increase with an increase in dividends/... in taxes.
+\end{list}
+\textbf{\underline{(ii) Change in wages holding $D - T$ constant: }} Although typically supply of a good increases in its prices, not obvious for the labor, due to counter-acting income + substitution effects.\\
+
+
+\textbf{\underline{Substitution Effect:}} At new wage (i.e., wage) ... divided to find target or original indifference curver. New optimal point will be lower leisure/high consumption to effect the higher cost of leisure.\\
+
+\textbf{\underline{Income Effect:}} Add ... dividend $ \Longrightarrow $ will incease both (consumption and leisure) ... consumption increases, leisure not sure. Assumes substitution effect dominates income effect.\\
+
+When plotted (wage vs labor), should understand that more fundamental is the constrained utility ... for a given wage and then consider multiple wage possibiliites. Some with changes in $(D-T)$.\\
+
+\subsection*{Representative Firm}
+Assume firm owns its capital (instead of costing it)\\
+
+Production Function: $ Y = Z F(K, N^d)$\\
+$Z = $ Total factor productivity\\
+$Y = $ Output\\
+$K = $ Quantity of Capital\\
+$N^D = $ Quantity of labor\\
+
+Here, we consider only a 1- period modeling with K exogin... and $N^D$ a ``control''\\
+
+Defn: Marginal Product of Labor (MPL) = $ \frac{\partial Y}{\partial N_D} \vert_K$ \\
+Marginal Product Captial (MPK) = $ \frac{\partial Y}{\partial K} \vert_{N_D}$ \\
+
+Five Key Properties of Prodcution Function:\\
+\begin{list}{ }{}
+\item (1) Constant Returns to Scale : $F(\lambda K, \lambda N^d) = \lambda F(K, N^d)$
+\item (2) $ \frac{\partial Y}{\partial K} \vert_{N^d} > 0, \frac{\partial Y}{\partial N^d} \vert_{K} > 0 $
+\item (3) $ \frac{\partial^2 Y}{\partial K^2} < 0 $
+\item (4) $ \frac{\partial^2 Y}{\partial N^2} < 0 $
+\item (5) $ \frac{\partial^2 Y}{\partial N \partial K} > 0 $
+\end{list}
+
+Example Cobb Douglass : $Y = Z K^{\alpha} N^{1-\alpha}$\\
+\begin{eqnarray*}
+Profit : D = Y &=& Z K^{\alpha} N^{1-\alpha} - wN - RK\\
+FOC : \frac{\partial}{\partial N} = 0 &=& (1- \alpha) Z K^\alpha N^{-\alpha} - w\\
+(1-\alpha) \frac{Y}{N} &=& w\\
+FOC : \frac{\partial}{\partial K} = 0 &=& \alpha Z K^{\alpha -1} N^{1-\alpha} - R\\
+\alpha \frac{Y}{K} &=& R
+\end{eqnarray*}
+
+Note that these two FOC's imply that $RK + wN = Y$, which further implies that profit $D = 0$. If this were not the case, then profits could be scaled up arbitarily high due to constant returns to scale.\\
+
+$\left. 
+\begin{array}{ll}
+\mbox{Factor $(1-\alpha) Y \equiv (w, N)$ goes to labor,}\\
+\mbox{Factor $\alpha Y = (R,K)$ goes to capital.}
+\end{array} 
+\right\}\mbox{Emprically $\alpha \approx 0.36$} $ \\
+
+Note, $(Y, K, N)$ can be measure, but not Z.\\
+
+This leads to concept of ``Slow Residual''\\
+$Z_* = \frac{Y_*}{K_*^{0.36} N_*^{0.64}}$\\
+
+\textbf{\underline{Profit Maximization : }} Assume f... is wage taking  and owns capital\\
+\begin{eqnarray*}
+D &=& ZF(K, N) - wN \\
+\mbox{FOC : } 0 &=& Z \frac{\partial F}{\partial N}\vert_K - w\\
+wage &=& \mbox{ Marginal Product of labor}
+\end{eqnarray*}
+
+Thus, the dowmward sloping convex relation before MPL and Labor demanded matches the downward sloping convex relation between wage and labor demanded.
+
+% figure goes here
+
+Same curves, but different interpretations:\\
+In the first curves, we just have an exogenous specification of MPL\\
+
+In the second curve, we have an optimal decision of labor defined as a function of exogenous wage.
+\begin{eqnarray}
+\frac{\partial Y(N)}{\partial N} &=& w\nonumber\\
+\mbox{Define } G(N) &\equiv& \frac{\partial Y(N)}{\partial N}\nonumber\\
+G(N^*(w)) &=& w\nonumber\\
+\frac{\partial G}{\partial N} . \frac{\partial N^*}{\partial w} &=& 1\nonumber\\
+\frac{\partial N^*}{\partial w} &=& \frac{1}{\frac{\partial G}{\partial N}} = \frac{1}{\frac{\partial^2 Y}{\partial N^2}}\nonumber\\
+\mbox{More generally FOC : } Y ^\prime \left[ N^*(w)\right] &=& w\nonumber\\
+\mbox{Define } Y^\prime(.) &\equiv& G(.)\nonumber\\
+G\left[ N^*(w)\right] &=& w\nonumber\\
+G\left[ N^*(w+\Delta w)\right] &=& w+\Delta w\nonumber\\
+w+\Delta w &=& G\left[ N(w) + \Delta w N ^\prime(w) + \frac{\Delta w ^\prime}{2} N^{\prime\prime} (w)\right]\nonumber\\
+&=& G\left[N(w)\right] + \left[ \Delta w N^\prime + \frac{\Delta w ^\prime}{2} N^{\prime \prime} \right] G ^\prime () + \frac{1}{2} \left[ \Delta w N^\prime\right]^2 G ^{\prime \prime}(.)\nonumber\\
+\Delta w &=& \Delta w N^\prime G^\prime + \left( \frac{\Delta w^2}{2}\right) \left\{ N^{\prime \prime} G ^ \prime + (N^\prime)^2 G ^{\prime\prime}\right\}\nonumber\\
+\Delta w^1 : 1 = N^\prime G ^ \prime \Longrightarrow N^\prime &=& \frac{1}{G^\prime} \\
+\Delta w^2 : 0 = N^{\prime \prime} G ^ \prime +(N^\prime)^2 G^{\prime \prime}\Longrightarrow N^{\prime\prime} &=& \frac{-1}{G^\prime} (N^\prime) G^{\prime\prime} \nonumber\\
+N^{\prime\prime} &=& \frac{-G ^{\prime \prime}}{(G^\prime)^3}\\
+\mbox{Example : } Y &=& N^\alpha \nonumber\\
+Y^\prime &=& G = \alpha N^{\alpha -1}\nonumber\\
+G^\prime &=& \alpha (\alpha -1) N^{\alpha -2}\nonumber\\
+G^{\prime\prime} &=& \alpha (\alpha -1)(\alpha -2) N^{\alpha -3}\nonumber\\
+\mbox{Optimization : } \alpha N^{\alpha -1} &=& w\nonumber\\
+N(w) &=& \left( \frac{w}{\alpha}\right) ^{\frac{1}{\alpha -1}}\nonumber\\
+N^\prime(w) &=& \left(\frac{1}{\alpha -1}\right) \left(\frac{w}{\alpha}\right) ^{\frac{2-\alpha}{\alpha -1}} \left(\frac{1}{\alpha} \right)\nonumber\\
+N^{\prime\prime}(w) &=& \left(\frac{1}{\alpha(\alpha -1)}\right)^2 (2-\alpha) \left(\frac{w}{\alpha}\right) ^{\frac{3-2\alpha}{\alpha -1}}\nonumber
+\end{eqnarray}
+\end{document}

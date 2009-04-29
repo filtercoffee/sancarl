@@ -1,0 +1,204 @@
+\documentclass{elsart}
+\usepackage{natbib,amssymb}
+\usepackage[pdftex]{graphicx}
+\journal{ISPRS Journal of P \& RS}
+\begin{document}
+\begin{frontmatter}
+\title{High Resolution Data Integration for Automated Road Extraction}
+\author[IRS1]{S. Harini},
+\ead{harinis1@gmail.com}
+\corauth[cor]{Corresponding Author}
+\author[IRS1]{R. Santhosh kumar\corauthref{cor}},
+\ead{santhosh7386@gmail.com}
+\author[IRS1]{Dr.D. Thirumalaivasan}
+\ead{dtvasan@annauniv.edu}
+\address[IRS1]{Institute of Remote Sensing, Anna University, Chennai, India}
+\begin{abstract}
+Recent advancements in the space and airborne technologies have tremendously increased the potential to generate geo -- spatial data with increased spatial resolution and accuracy. In addition to the ability to generate planimetrically accurate images, the efforts to acquire elevation information of higher accuracy take place at an equal pace. Such achievements in data acquisition technologies demand more sophisticated processing methods, because of higher volume of information content. Automated feature extraction from high resolution data has been a continuing research with attempts to overcome complexities in handling huge volume of data and development of techniques to combine various datasets. In this paper an attempt has been made to combine datasets from different sources for efficient extraction of roads. A method for automating the process by integrating high -- resolution imagery and Airborne LiDAR Topographic Mapping (ALTM) data, in order to eliminate manual digitization of road network involving huge human effort is developed. In addition, a conscious effort is undertaken to eliminate the use of LiDAR intensity information and the reflectance values of high -- resolution images, as they are highly dependent on factors like nature of road materials, viewing geometry etc.  Instead the texture information and the geometric nature of roads like, linearity, continuity, constancy of width and minimum lengths have been used in this study to develop the road extraction model. The proposed road extraction model judiciously combines the elevation information from LiDAR data and low -- level information content from the orthophoto to automatically extract road network. An orthophoto of 30 cm resolution and corresponding LIDAR data of 20 cm vertical resolution for Meridian city, Idaho State was used as a test case. The accuracy has been assessed and presented.
+\end{abstract}
+\begin{keyword}
+Automated Road Extraction, High Resolution Imagery, LiDAR, and Data Integration
+\end{keyword}
+\end{frontmatter}
+
+\section{Introduction}
+Feature extraction from remotely sensed data has been a continuing research for decades. Understanding the real world, modeling it and translating it into computer vision has been a great challenge and has never ceased to draw attention of researchers. The panorama of science and technology reveals high degree of automation in almost every field. Feature extraction, in this regard, is in no way an exception. Many attempts were and are still made for semi and fully automatic road extraction from high resolution airborne as well as satellite imagery and also from LiDAR data. The first and the foremost step in road extraction involve the modeling of the real world complexities into simpler sub -- models \citep{BG99}. Multi scale approaches were used in which the extraction based on contextual information was done at different modules involving varying scales and later integrated to form the complete network (\citet{RP03}, \citet{BG99}, \citet{WG02}).  Specific active contours (snakes) were also combined with the multi scale approach for minimizing the problem of geometric noises \citep{RP03}. Extraction based on topology was also attempted in which object recognition was broken down to three primary steps, viz., low -- level processing for feature extraction, mid -- level processing for formation of the structures of objects and relationships between the objects, and high -- level processing for recognition \citep{WG02}. In high -- level processing, knowledge and models of semantic objects were applied to the structures and relationships of objects produced in mid -- level processing to derive interpretation of the objects. Studies on semi -- automatic extraction based on the existing road data or incomplete outputs of fully automated extractions were also made extensively. Completeness and topology of the automatically extracted road networks were improved by generating link hypotheses between points on the network, which are likely to be connected, based on the global network characteristics of roads \citep{WD99}.  Change detection of road segments in existing datasets for the purpose GIS updation, was identified by extending the model of deformable contours to function in a differential mode \citep{AG01}.  Seed points obtained from user were also used as guides for semi -- automatic extraction by forming a Non -- Uniform B -- spline curve using the given seed points and then exact identification of roads was done using adaptive least square correlation \citep{YN01}. Panoptic studies on the evaluation techniques of the accuracy of the extracted roads are also being conducted. Intuitive measures of evaluation such as completeness, correctness and RMS were introduced for the purpose of assessing the precision of the mining \citep{WD98}. To these parameters, other quantitative measures viz., mean detour factors and connectivity were introduced \citep{WH99}.
+
+Despite such mammoth efforts for automating the road extraction process, understanding computer vision still remains ambitious owing to the tortuousness involved with it. With ever increasing spatial resolution, the process has got even more convoluted. The major lacuna in the road mining operations from aerial or satellite imagery is the strong dependency on the radiometric information. The reflectance or intensity values used for the detection vary with respect to the sensor type, the road material, viewing geometry and atmospheric conditions. The brightness values of concrete roads are different from those of metal -- topped roads. Road extraction using line detectors like Steger Line detectors \citep{BG99} involves detection of roads either as dark line on a light background or a light line on a dark background.  This approach becomes complicated when an imagery containing a combination of both these kinds of roads is employed. Furthermore, the imagery does not contain the third dimension of spatial measurement that can serve as an excellent facilitator in discerning road features. Most of the research assayed involves simple rural scenes with lot of open area and less occlusion like building shadows. These involved curve and line detection thereby scaling down the need for using height information. But urban scene features more complexities of high raised buildings, trees, shadows that pose great hindrance to the road extraction thereby necessitating the use of height data.
+ 
+The advent of Airborne Laser scanning systems has given rise to new possibilities of feature extraction. Classification algorithms and feature detection models have been devised to make the best usage of the measured 3D point clouds.  LiDAR has eased Road detection due to the distinct characteristics of roads to be lying on or near ground \citep{SC04}. The separability of features by employing the intensity values of the return pulses has also been extensively experimented (\citet{AX99}, \citet{SC04}, \citet{CB06}). Surface roughness estimates have also been considered by using an artificial neural network for feature classification of LiDAR data \citep{PG00}.  These methods have strong dependency on the intensity values of laser return pulses, which in turn depends on the nature of the reflecting surfaces and the scanning system. \citet{SC04}, suggested the identification of the road points based on the height range and reflectance values of road materials. But if a given scene contains heterogeneous variety of road materials that are common to roads and other features, extraction accuracy results will dilute.
+
+This paved way for inquiry into integrated approach involving the use of both imagery as well as LiDAR data. \citet{RT07} demonstrated the integrated approach for building extraction and modeling of rooftops.  \citet{HU04}, essayed the integrated approach for road detection by utilizing information from color optical imagery to eliminate open areas from roads that are detected from the intensity and height information of LiDAR data. Iterative Hough transformation was done to identify roads on the assumption that roads occur as a grid like network.  This approach too, strongly depends on intensity values and will fail at curved road segments.
+  
+In this paper an attempt has been made to develop a road extraction model and an integrated process that is independent of the road network structure and the intensity values. The road extraction model takes into account those characteristics of road that are universal and independent of data and location. It assumes roads are features that lie near or on the ground and they have more or less similar texture apart from other geometrical features like linearity, smooth curvature and high aspect ratio. This paper assimilates low -- level processed information from the imagery with the height information from LiDAR and finally takes into account the shape analysis for identifying road pixels in a semi -- urban or dense urban scene. The following section introduces the case study data along with the overall workflow. The third section gives a detailed description of the extraction process. This is followed by the results and concluding remarks.
+
+\section{Overview}
+\subsection{Data Procured}
+Earth Data Aviation conducted an aerial survey with LH System ALS40 LiDAR including an Inertial Measuring Unit (IMU) and a dual frequency airborne GPS receiver as a part of hydraulic analysis and soil classification projects done by USA Bureau of Reclamation, Snake River Area in late 2003.  This data with a vertical RMS error of 3.2 cm was obtained from Idaho Geospatial Data Clearinghouse, University of Idaho Library.  The data points were processed and a sample dataset was clipped for a chosen area and the Digital Surface Model is shown in Figure 1.  The 30 cm orthophoto of the same area was procured through the USGS seamless server.  The original aerial photos were obtained as a part of 'USGS High Resolution Orthoimagery for the Boise, ID Urban Area' project, during late 2003 and were released to public in March, 2005. The 1024x1024 sample subset is shown in Figure2.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig1.jpg}
+\caption{Digital Surface Model}
+\end{center}
+\end{figure}
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig2.png}
+\caption{High Resolution Ortho Imagery}
+\end{center}
+\end{figure}
+
+\subsection{Processing Workflow}
+The road extraction model is devised to eliminate the use of intensity information from both the datasets, as they are highly dependent on the sensing systems employed, type of road material and the viewing geometry. This model takes into account only the low level characteristics of urban roads, the vertical position of road points and the geometry. The plausible road segments are identified from the orthophoto based on the distinguishing texture of roads against the background of buildings and vegetation.  Roads appear as points in the LiDAR dataset near or just above the ground \citep{SC05}.  From the height information it is possible to identify regions near the ground.  The outputs from these two surmises are grouped together and the geometric nature of roads like linearity, continuity, constancy of width and minimum length are assessed for obtaining the final road network.
+
+Figure 3 illustrates the workflow of the integrated processing for road network extraction process.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig3.png}
+\caption{Proposed Road Extraction Model}
+\end{center}
+\end{figure}
+\section{Extraction Process}
+\subsection{Processing of Imagery}
+Roads in urban areas are characterized by noises like pedestrian pathways, markings near the shoulders, zebra crossing, stop lines, speed breakers that can be recorded in high-resolution imagery. These markings present a conspicuous appearance against the road background. Vehicles also provide such a distinguishing appearance. These prominent noises make the road appear in segments with a specific geometry having a definite width and are elongated in the direction of the road. These noises can be used as indicators for extracting roads when appropriately processed. Thus in order to extract roads, regions with uniform texture bounded by stark line features has to be extracted. A SUSAN low-level operator is employed to identify edges with their strength value.  This nucleus ascertains the brightness value around it and fixes a numeric value, which represents the edge strength present in local gray value regions \citep{SM97}.  Segmentation of the results will yield low level grouping of pixels. These values are analyzed to detect regions with smooth planar values to form local regions throughout the image shown by the following equations. 
+\[ c(\vec{r},\vec{r_0}) = \left\{ \begin{array}{ll}
+1 & \mbox{if $\left| I(\vec{r})-I(\vec{r_0})\right| < t$};\\
+0 & \mbox{otherwise}.\end{array} \right. \]
+where $\vec{r_0}$ is the position of the nucleus in the two dimensional image, $r$ is the position of any other point within the mask, $I(\vec{r})$ is the brightness of any pixel, $t$ is the brightness difference threshold and $c$ is the output of the comparison.  This comparison is run for each pixel with in the mask, and a running total, $n$ of the outputs is made;
+\[ n(\vec{r_0}) = \sum_{\vec{r}} c(\vec{r}, \vec{r_0}) \]
+This gives the edge strength map, which is segmented based on geometric threshold, $g$, to get the required regions to facilitate the extraction of road segments that have strong edges and uniform regions in between, given by,  
+\[ R(\vec{r_0}) = \left\{ \begin{array}{ll}
+1 & \mbox{if $n(\vec{r_0}) < g$};\\
+0 & \mbox{otherwise}.\end{array} \right. \]
+where $R$, is the segmented output binary image with regions conforming to the road characteristics representing regions bound by stark lines which also include building tops, parking lots, and open areas.  This is shown in Figure 4.  
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig4.png}
+\caption{Processing of Imagery}
+\end{center}
+\end{figure}
+
+As compared to SUSAN operator, in this study the edge strength map is segmented and has been modified to extract the probable road segments.  SUSAN operator concentrates on locating the peaks in edge strength map for edge detection, whereas it has been used to extract regions conforming to the proposed road extraction model by segmenting the edge strength map at a lower threshold value.
+
+\subsection{Processing of LiDAR}
+As already stated road points occur on or just above the ground. Many open areas will also fit into this criterion.  The obtained raw LiDAR points are first processed for removal of weird points by omitting points with very low frequencies in the height histogram. The DSM is generated using nearest neighborhood interpolation in a grid having a resolution same as that of image. The DTM is then generated using an indigenously developed filtering approach.  Firstly, the maximum building size is obtained by identifying the largest closed contour with minimum value in the first differential of DSM and a maximum value in the second differential of DSM. A square window $(W_s)$ is initialized with a size slightly greater than this value and a morphological opening operation is performed to give an intermediate DTM, which has no buildings and other features, but introduces high sinking over the ground regions.
+\[ iDTM = \lbrack DSM \ominus W_s \rbrack \oplus W_s \]
+where represents $\oplus$  dilation operation and  $\ominus$ represents erosion operation.  In the successive iterations, opening operation is performed on the DSM with gradually reducing windows.  In each of these iterations the sinking effect on the ground will be minimized and few buildings will remain. In order to eliminate the remaining buildings and its portions, they are detected in each of the successive iterations. The height values of the detected buildings and its parts are replaced with the height values from the intermediate DTM of the previous iteration as given by the following equations.  
+
+The buildings are detected by subtracting the intermediate DTM from the DSM and checking against the smallest building height($H_t$). 
+\[ Bldg_i = \left\{ \begin{array}{ll}
+1 & \mbox{if $DSM -– iDTM > H_t$};\\
+0 & \mbox{otherwise}.\end{array} \right. \]
+In the successive iteration, a window of smaller size is used to perform the opening operation over the $DSM$, which will result in lesser sinking effect in the ground points and will leave few building or part of buildings undetected. These undetected buildings are identified by
+\[ UBldg_i{}_+{}_1{} = Bldg_i –- Bldg_i{}_+{}_1 \]
+where $i$ represents the $i^t{}^h$ iteration and $ i+1 $ represents the successive iteration.  The height values of these undetected buildings are retrieved from the $iDTM$ of the previous iteration and are replaced in the $iDTM$ of the successive iteration.
+\[iDTM_i{}_+{}_1 = iDTM_i{}_+{}_1 + \left[iDTM_i * UBldg_i{}_+{}_1 \right]\]
+The entire process is repeated till there is no difference between the $iDTM$ of two consecutive iterations thereby yielding the $DTM$. 
+\[DTM = iDTM_i, \mbox{ if $iDTM_i -– iDTM_i{}_+{}_1 = 0$} \]
+The $DTM$ is subtracted from the $DSM$ to obtain the normalized DSM ($NDSM$) representing the non -- ground features.
+\[NDSM = DSM –- DTM\]
+This $NDSM$ is studied and segmented at a lower height value ($H_a$) for allowance of sinking effect and smaller vehicles on roads to obtain the roads and open areas ($O$), as shown in Figure 5.
+\[ O(\vec{r_0}) = \left\{ \begin{array}{ll}
+1 & \mbox{if $NDSM(\vec{r_0}) > H_a$};\\
+0 & \mbox{otherwise}.\end{array} \right. \]
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig5.png}
+\caption{Near Ground Features}
+\end{center}
+\end{figure}
+\subsection{Road Network Extraction}
+The processed output from imagery and LiDAR are combined thereby preserving the segments from the imagery that lie on or just above the ground. A connected compnent analysis is run in $R(\vec{r_o})$ in order to segregate the components in it and a unique integer value is assigned to each of the component.  
+\[C_i(R(\vec{r_o})) = i, \mbox{ for $i^t{}^h$ component in $R(\vec{r_o})$}\]
+where $i$ can take values from 1 to N, N being the total number of independent components in $R(\vec{r_o})$. These components are tested to lie on the open areas and those lying on the open areas only are preserved(figure 6).
+\[ F'(\vec{r_0}) = \left\{ \begin{array}{ll}
+C_i(R(\vec{r_o})), & \mbox{if $\sum_{}\left[ C_i(R(\vec{r_o})) * O(\vec{r_0})\right]=n_i$;}\\
+0, & \mbox{otherwise}.\end{array} \right. \]
+where, $i$ takes values from 1 to N and $n_i$ represents the number of cells in the $i^t{}^h$ component.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig6.png}
+\caption{Intermediate Step}
+\end{center}
+\end{figure}
+
+A connected component analysis is done on $F'$ in order to eliminate segments having very small areas.  Finding the regions with a high aspect ratio of their bounding rectangles preserves linear features.  Curved road segments can be identified by lower values of density, which can be calculated as a ratio of the number of pixels in a given bounding box to the area of the bounding box itself.  Features with high curvatures are eliminated here.  A shape analysis is done to eliminate the non road features like parking lots, open areas covered with grass, concrete corridors etc.  A morphological closing operation is performed to make the extracted roads segments continuous ($F$) and is shown in figure 7.  
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig7.png}
+\caption{Extracted Binary Road Image}
+\end{center}
+\end{figure}
+
+Vectorization of the road network is done using Phase Coded Disk (PCD) approach \citep{SC05}, which is a complex integration over the obtained binary image $F(vec{r_o})$. 
+\[PCD  =  exp ( 2j tan^-{}^1(b/a))\]
+where, $j$ is the complex variable. $PCD$ represents a circular complex valued disk with $a$ and $b$ being the $x$ and $y$ co-ordinates, respectively of a point inside the disk from its center.  A convolution is performed over the obtained binary image of road pixels and its magnitude is shown in equation,
+\[M = \left|F(\vec{r_0}) \bigotimes PCD \right| \]
+where, $\bigotimes$ represents convolution operation.  The maxima in the magnitude of the $PCD$ will occur in the centerline of the road.  This is traced to form the entire road network and the results are shown in Figure 8  \b Figure 9. 
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig8.png}
+\caption{Planimetric view of Extracted Road Network}
+\end{center}
+\end{figure}
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.25]{fig9.png}
+\caption{Perspective view of Extracted Road Network}
+\end{center}
+\end{figure}
+\section{Results}
+The accuracy of the extraction was assessed based on the parameters namely completeness, correctness and quality. Completeness is the ratio of the correctly extracted roads to the total number of relevant roads within the reference. Correctness is the ratio of the number of relevant road pixels extracted to the total number of relevant, as well as, the irrelevant road pixels extracted. Quality is the ratio of the number of relevant road pixels extracted to the total number of extracted pixels and the undetected road pixels.  \citet{WD99} demonstrated an accuracy of 0.858, 0.905 and 0.772 for completeness, correctness and quality, respectively, while extracting roads from mid resolution digital aerial imagery.  In this paper, an analysis of high spatial resolution (i.e., 30 cm orthophoto) data with dense and accurate elevation data (i.e., 3.2 cm vertical resolution LiDAR) has resulted in higher values of 0.9352, 0.9521 and 0.8832 for completeness, correctness and quality respectively.
+\section{Conclusion}
+The results obtained as part of this research study has demonstrated the efficacy of the proposed road extraction model.  The proposed model makes least use of intensity values of LiDAR and reflectance values from imagery and hence can more easily adapt to different types of roads.  The model proposed in this study uses a hybrid approach combining LiDAR and high-resolution orthophoto images for fully automated road extraction process.  The process has yielded a road network, which is complete (i.e., 93\%), correct (i.e., 95\%) and reliable.  However, it is to be noted that the present methodology does not take it into account flyovers, grade separators and subways.  In this context, the future studies can be aimed at analyzing the slope information at the end points of the extracted roads.
+\begin{thebibliography}{00}
+
+\bibitem[Agouris et al, 2001]{AG01}
+Agouris, P., A. Stefanidis, and S. Gyftakis,(2001). `Differential snakes for change detection in road segments', Photogrammetric Engineering \& Remote Sensing, 67(12):1391 -- 1399.
+
+\bibitem[Axelsson, 1999]{AX99}
+Axelsson,P., (1999) `Processing Of Laser Scanner Data—Algorithms And Applications', ISPRS Journal of Photogrammetry \& Remote Sensing Vol. 54, 1999, p:138 -- 147.
+
+\bibitem[Baumgartner et al, 1999]{BG99}
+Baumgartner. A, W. Eckstein, C. Heipke, S. Hinz, H. Mayer, B. Radig, C. Steger, C. Wiedemann (1999) `T -- Rex: TUM Research On Road Extraction', Technical University of Munchen Research, Festschrift fur Prof. Dr. -- Ing. Heinrich Ebner zum 60. Geburtstag, (43 -- 64)
+
+\bibitem[Brenner, 2006]{CB06}
+Brenner,C., (2006) `Aerial Laser Scanning', International Summer School, Digital Recording and 3D Modeling, Aghios Nikolaos, Crete, Greece, 24 -- 29 April 2006.
+
+\bibitem[Clode et al, 2004]{SC04}
+Simon Clode, Peter J Kootsookos, Franz Rottensteiner (2004), 'The Automatic Extraction of Roads from LIDAR data'. In ISPRS 2004, 12 -- 23 July, 2004, Istanbul, Turkey.
+
+\bibitem[Clode et al, 2005]{SC05}
+Clode,S., F.Rottensteiner, P.Kootsookos, E.Zelniker (2005) 'Detection And Vectorisation Of Roads From LiDAR Data', CMRT05. IAPRS, Vol. XXXVI, Part 3/W24, Vienna, Austria, August 29 -- 30, 2005
+
+\bibitem[Priestnalla et al, 2000]{PG00}
+Priestnalla,G., J. Jaafara, A. Duncanb, (2000), 'Extracting urban features from LiDAR digital surface models', Computers Environment and Urban Systems 24 (2000) 65 -- 78
+
+\bibitem[Renaud P´eteri et al, 2003]{RP03}
+Renaud P´eteri, J.Celle and T.Ranchin (2003) 'Detection and Extraction of Road Networks From High Resolution Satellite Imagery', In Proceedings of the IEEE International Conference on Image Processing (ICIP'03), Barcelona, Spain, 14 -- 17 September 2003, Volume I, pp. 301 -- 304. 
+
+\bibitem[Rottensteiner et al, 2007]{RT07}
+Rottensteiner,F., J. Trinder , S. Clode , K. Kubik, (2007) 'Fusing airborne laser scanner data and aerial imagery for the automatic extraction of buildings in densely built -- up areas', ISPRS Journal of Remote Sensing,Volume 62 issue 2 pp 135 -- 149.
+
+\bibitem[Smith \& Brady, 1998]{SM97}
+S.M.Smith and J.M.Brady, 'SUSAN – A new approach to low level image processing', International Journal of computer Vision, 23(1):45 -- 78, May 1997
+
+\bibitem[Wang \& Trinder, 2002]{WG02}
+Wang Yandong and John C. Trinder, (2002) 'Use of Topology In Automatic Road Extraction', School of Geomatic Engineering The University of New South Wales, IAPRS, Vol. 32/4, ISPRS Commission IV Symposium on GIS, Stuttgart, Germany.
+
+\bibitem[Wiedemann et al, 1998]{WD98}
+Wiedemann, C., Heipke, C., Mayer, H. and Jamet, O., (1998). 'Empirical Evaluation of Automatically Extracted Road Axes', In K. J. Bowyer and P. J. Phillips (eds), Empirical Evaluation Methods in Computer Vision, IEEE Computer Society Press, Los Alamitos, California, pp. 172–187.
+
+\bibitem[Wiedemann \& Ebner, 1999]{WD99}
+Wiedemann, C., Heinrich E (1999), 'Automatic completion of road networks', In Proceedings of the ISPRS Joint Workshop on Sensorsand Mapping from Space, 1999.
+
+\bibitem[Wiedemann \& Hinz, 1999]{WH99}
+Wiedemann, C. and Hinz, S., (1999). 'Automatic extraction and evaluation of road networks from satellite imagery', In International Archives of Photogrammetry and Remote Sensing, Vol. 323 -- 2W5, International Society for Photogrammetry and Remote Sensing, pp. 95–100.
+
+\bibitem[Yong Hu et al, 2004]{HU04}
+Yong Hu, Xiangyun Hu, C. Vincent Tao (2004) 'Automatic road extraction from dense urban area by integrated processing of high resolution imagery and lidar data',  XXth ISPRS Congress, 12 -- 23 July 2004 Istanbul, Turkey Commission 3
+
+\bibitem[Yoon et al, 2001]{YN01}
+T. Yoon., W. Park, and T. Kim, (2001) 'Semiautomatic road extraction from IKONOS satellite image', Proceedings of SPIE: Remote Sensing for Environmental Monitoring, GIS Applications and Geology, Toulouse, France, vol. 4545, pp. 320 -- 328, September 18 --  21, 2001.
+\end{thebibliography}
+\end{document}
