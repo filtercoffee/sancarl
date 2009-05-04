@@ -1,0 +1,204 @@
+\documentstyle{article}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+\begin{document}
+\section*{Chapter 6}
+Malthos ($\sim$ 1800) : Any technological improvement leads to increased population growth, so that in the long run there is no improvement in the standard of living. $\Rightarrow$ Only means for improving standard of living is population control.\\
+
+Sotone (1950) : Only technological improvements can improve GDP per agent in the long run. In the short run, standard of living can improve if agents save more. $\Rightarrow$ Technological growth exogenous, in contrast to ``Endogenous growth model''\\
+
+Emprical Facts:\\
+\begin{list}{ }{}
+\item (1) Before industrial revolution ($\sim$ 1980), standards of living differed little across tome and across countries.
+\item (2) Since Industrial Revolution, per capita income growth has been sustained in the wealthiest countries.
+\item (3) Positive correlation between investment and output.
+\item (4) Negative correlation between population growth and output per capita.
+\item (5) Income growth dispersion widened between 1800-1950.
+\item (6) No correlation between level and growth rate $\Rightarrow$ No convergence.
+\item (7) High level countries have similar growth, low level countries have diffuse growth.
+\end{list}
+
+Malthus : Replace capital K with Land L (which is in fixed supply)\\
+Persihable output follows:
+\begin{eqnarray*}
+Y &=& ZF(L,n)
+\end{eqnarray*}
+
+There is no investment, no storage, no technology to convert food to capital. Each agent has one unit of labor to supply, no utility for leisure. $\Rightarrow$ N is both population and labor input.\\
+
+Assume population growth depends on consumption per worker.\\
+\begin{eqnarray*}
+\frac{N(*+1)}{N(*)} = \frac{N^\prime}{N} &=& g \left[\frac{c}{N}\right] = g\left[\frac{ZF(L,N)}{N}\right]\\
+\mbox{In equilibrium, all goods are consumed : } C = Y &=& Z F(L,N)\\
+\mbox{From constant returns to scale : } \frac{ZF(L,N)}{N} &=& ZF \left(\frac{L}{N}, 1\right)\\
+\Rightarrow N(* + 1 ) &=& g\left[ ZF \left(\frac{L}{N}, 1\right)\right]\cdot N(*)
+\end{eqnarray*}
+Assuming RHS is increasing, concave in N, with initial slope greater than one\\$\Rightarrow$ as such, there exists a steady state $N^*$ where $N(*+1) = N(*)$, or $N^*$ is defined via : 
+\begin{eqnarray*}
+1 &=& g\left[ ZF\left(\frac{L}{N^*}, 1\right)\right]
+\end{eqnarray*}
+
+Analysis of steady state in Malthusian Model :\\
+\begin{eqnarray*}
+\mbox{Constant returns to scale : } \frac{Y}{N} &=& ZF(\frac{L}{N}, 1)\\
+\mbox{Define output per worker : } \frac{Y}{N} \equiv Y &=& \frac{c}{N} = \mbox{consumption per worker}\\
+\mbox{Define Land per worker : } \frac{L}{N} &=& l\\
+\Rightarrow c &=& Y = ZF(l)\\
+\Rightarrow N(*+1) &=& g(c).N(*)
+\end{eqnarray*}
+
+Steady State : $(c^*, l^*)$ and thus $N^* = \frac{L}{l^*}$, determined via\\
+\begin{eqnarray*}
+g(c^*) &=& 1\\
+c^* = g^{-1} [1] &=& ZF(l^*)
+\end{eqnarray*}
+
+Interpret : Long-run standard of living, $c^* = $ consumption per capita, uniquely determined by the function $g(\cdot)$.\\
+
+Note : This is completely independent of the value of Z : if Z were to increase once, this would ultimately lead only to an increase in population.\\
+
+Note : Although Williams does not say so, a consant increase in Z would imply that a steady state would not exist, and might imply that $\frac{Y}{N} = \frac{C}{N} = ZF\left( \frac{L}{N}, 1\right)$ might increase; I guess it depends how fast Z increases versus $\left( \frac{L}{N}, 1\right)$ decreases. Actually, since each steady state ahs $c^* = g^{-1} [1]$, I am guessing a constantly increasing Z does little to $c^*$. Probably it causes it above $c^*$, but does not increase out time. (unless Z accelerates).\\
+
+Malthus model does not alter 1800 due to \\
+\begin{list}{ }{}
+\item (1) Captial, which can increase, replacing fixed land as input to production
+\item (2) Agents choosing to have less children.
+\end{list}
+
+Solow Model:\\
+Exogenous population growth (in contrast to Malthusian Model)
+\begin{center}
+$N(*+1) = (1+n) N(*)$\\
+\end{center}
+
+Consumers do not value leisure, so offer their one unit of labor at market price thus population is also the labor force.\\
+
+No taxes. Income generated from labor and dividends. Agnets choose how much to consume, and how much to save. (In contrast to Malthus.) Assume a fraction ``S'' of output is saved.\\
+\begin{eqnarray*}
+C &=& (1-s)Y\\
+S &=& s Y\\
+\mbox{Output has constant returns to scale:}\\
+\frac{Y}{N} &=& ZF\left( \frac{K}{N}, 1\right)\\
+Y &=& ZF(K), where, Y = \frac{Y}{N}, K = \frac{K}{N}\\
+\end{eqnarray*}
+Marginal product of capital, $MPK = F_k$, is positive, but $F_{kk}<0$ \\
+
+Depreciation : \\
+$K(*+1) = (1-\delta) K(*) + I$, where I = investment\\
+
+Competetive Equlibrium:
+\begin{list}{ }{}
+\item (1) Consumption traded for labor at price/wage = w
+\item (2) Consumption traded for capital at price = 1
+\end{list}
+\begin{eqnarray*}
+\mbox{Labor Market clears with supply :} N &=& Demand(w)\\
+\mbox{Capital Market clears with } S &=& I\\
+K(*+1) = (1-\delta) K(*) + SZNF\left( \frac{K(*)}{N(*)}\right)\\
+\frac{K(*+1)}{N(*+1)} \frac{N(*+1)}{N(*)} &=& (1-\delta) \frac{K(*)}{N(*)} + SZNF\left( \frac{K(*)}{N(*)}\right)\\
+K(*+1) (1+n) &=& SZF(K(*)) + (1-\delta) K(*)\\
+K(*+1) &=& \frac{SZF(K(*))}{1+n} + \frac{(1-\delta) K(*)}{1+n}\\
+\mbox{Note : } \frac{\partial}{\partial K}\left[ \frac{SZF(K(*))}{1+n} + \frac{(1-\delta) K(*)}{1+n}\right] &=& \frac{SZF^\prime(K)}{1+n} + \frac{1-\delta}{1+n} > 0\\
+\frac{\partial}{\partial K}\left[ \frac{SZF(K(*))}{1+n} + \frac{(1-\delta) K(*)}{1+n}\right] &=& \frac{SZF^{\prime\prime}(K)}{1+n} < 0 
+\end{eqnarray*}
+By mapping this function with a $45\deg$ line, can determine evolution. There exists a steady state level of capital per agent, call it $K^*$ \\
+
+It thus follows that output per workder $\equiv Y^* = ZF(K^*)$ and consumption per worker $\equiv C^* = (1-S)ZF(K^*)$\\
+
+Thus, if Z is constant, $C^*$ cannot grow.\\
+
+Competitive Statistics : How is $K^*$ affected by a change in 
+\begin{list}{ }{}
+\item (1) S
+\item (2) n
+\item (3) Z
+\end{list}
+
+Steady state $K^*$ defined implicitly by 
+\begin{eqnarray*}
+K^* &=& \frac{SZF(K^*)}{1+n} + \frac{(1-d)K^*}{1+n}\\
+SZF(K^*) &=& (n+d) K^*
+\end{eqnarray*}
+
+Convenient to graph LHS and RHS as a function of $K^*$\\
+
+Graphically, easy to see that $K^*$ increases with S.\\
+
+Mathematically, we get
+\begin{eqnarray*}
+ZF+SZF^\prime K_S &=& (n+d)K_S\\
+K_S &=& \frac{ZF}{n+d-SZF^\prime}\\
+&=& \frac{ZF}{SZ\left[ \frac{F}{K} F_K\right]}
+\end{eqnarray*}
+
+Due to $F_{KK}<0$, the denominator is positive, and therefore so also is $K_S$\\
+
+Note: This does not affect growth rate, as new equilibrium will still have a constant income per capita, and thus aggregate income grows at the population rate.\\
+
+Golden Rule : While inccreasing savings increases $K^*$ and thus $Y^*$, the more important variable is $C^*$, consumption per wokrer. Clearly, if we set $S=1$, output would be maximized, but consumption wiould be zero. This imples a local optimum $C^*$, and thus an optimal $S^*$.
+\begin{eqnarray*}
+C^* &=& (1-S) ZF(K^*)\\
+&=& ZF(K^*) - (n+d)K^*\\
+Optimum : \frac{\partial C^*}{\partial K^*} &=& 0\\
+&=& ZF^\prime (K) - (n+d)\\
+&\Rightarrow & MPK = n+d
+\end{eqnarray*}
+
+Second Method : Thik of $K^*$ as a function of S\\
+\begin{eqnarray*}
+C(S) &=& (1-S) ZF(K(S))\\
+Optimum : o &=& C_S\\
+&=& (1-S) ZF_K K_S - ZF(K(S))
+\end{eqnarray*}
+where $K(S)$ defined via $SZF(K(S)) = (n+d) K(S) \forall S$\\
+
+Differentiating w.r.t S:
+\begin{eqnarray*}
+ZF + SZF_K K_S &=& (n+d) K_S\\
+K_S\left[ n+d-SZF_K \right] &=& ZF
+\end{eqnarray*}
+Plug back into $0 = C_S$ equation:\\
+\begin{eqnarray*}
+(1-S) ZF_K \left( \frac{ZF}{n+d-SZF_K}\right) &=& ZF\\
+ZF_K(1-S) &=& n+d-SZF_K\\
+MPK &=& ZF_K\\
+&=& n+d
+\end{eqnarray*}
+Increase in Population Growth:\\
+More workers implies more capital has to be saved. In equilibrium, both $K^*$ and $C^*$ will be lower.\\
+
+\begin{eqnarray*}
+SZF(K(n)) &=& (n+d) K(n)\\
+\frac{\partial}{\partial n} : SZF_K K_n &=& K + (n+d) K_n\\
+K_N\left[ SZF_K -n -d\right] &=& K\\
+K_n &=& \frac{K}{SZF_K -n - d}\\
+&=& \frac{K}{SZ\left[F_K - \frac{F}{K}\right]} < 0\\
+C_n &=& (1-S) Z F_K K_n <0
+\end{eqnarray*}
+Increase in productivity : The Solow model predicts that standard of living can only increase in the long run if productivity increases in the long run.
+\begin{eqnarray*}
+SZF(K(Z)) &=& (n+d) K(Z)\\
+\frac{\partial}{\partial Z} : SZF_K K_Z + SF &=& (n+d) K_Z\\
+K_Z &=& \frac{SF}{SZ\left[\frac{F}{K} - F_K\right]} > 0\\
+C_Z &=& \frac{\partial}{\partial Z} \left[ (1-S) ZF(K(Z)) \right]\\
+&=& (1-S) \left\{ F + ZF_K K_Z\right\} > 0
+\end{eqnarray*}
+Growth Accounting : Determine what proportion of output is due to changes in (Z, K, N)\\
+
+Assuming Cobb-Douglass, $Y(*) = Z(*) K(*)^{0.36} N(*)^{0.64}$ \\
+Can measure $(Y, K, N)$ directly; thus, can back out $Z(*)$\\
+
+Find a ``Productivity slow down'' from 1948 $\sim$ 1982; 3 possible reasons -
+\begin{list}{ }{}
+\item (1) Measurement Problem : Shift from manufacturing services.
+\item (2) Increases in energy prices : Capital made obsolete not adequateley accounted for.
+\item (3) Costs of adopting new technology.
+\end{list}
+
+\end{document}
