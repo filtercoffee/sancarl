@@ -1,0 +1,164 @@
+\documentstyle{article}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+\begin{document}
+\section*{Routledge et al}
+Comodities differ from stocks, bonds : $F(0, T) = S(0), e^{\left( r+ storage - convenience \right)T}$
+\begin{list}{ }{}
+\item (1) $F(0,T)$ declines in T if convenience > ``cost of carry'' $= (r+storage)$ backwardation vs contage
+\item (2) Comodity prices often are mean-reverting
+\item (3) Comodity prices are dheteroskedastic and positively correlated with degree of backwardation Duffie and Corray (1999), Ng and Pirrong (1994) Litzerberger and Rabenouete (1995)
+\item (4) Term structure of volatility declines with ... - Samuelson Effect (1945). Violations when inventory is high - Fama and French (1988)
+\end{list}
+Backwardation implies existence of a ``Convenience yield'' = some advantagge to ownership\\
+
+Theory of storage [Kaldor (1939), working (1998,1999), Telser (1978)] explains convenience yields in terms of embedded timing option.\\
+
+If optimal to store commodity, then it is priced like an asset.\\
+
+If optimal to consume immediately, then priced as a consumption good.\\
+
+$\Rightarrow$  Spot price = max(consumption value, storage value)\\
+
+In contrast, Formed contract does not give benefit of current ownership.\\
+
+``By influencing current and future scarcity of good, inventory decisions link currnet values and expected future values. The link is imperfect, however, since inventory constrained to be non-negative''\\
+
+Indeed, in this paper, 
+\[ \left\{ \begin{array}{ll}
+P(*) = \theta E_i (P_{*+1}) \mbox{  if $inventory > 0$} \\
+P(*) \geq \theta E_i (P_{*+1}) \mbox{  if $inventory = 0$} \end{array} \right. \]
+
+Thus, ``stockouts'' break the link between $P(*)$ and $E_i (P_{*+1})$. The result is backwardation and positive convenience yields.\\
+
+Deator and Larogue (1992, 1996)\\
+Williams and Wright (1991)\\
+Chambers and Bailey (1996)\\
+
+This paper exogenously specifies a mean reverting process ``a'' that drives net demand and solves for equilibrium inventory assuming competitive, risk neutral agents.\\
+
+\textbf{\underline{Main Results:}}
+\begin{list}{ }{}
+\item (1) Spot and Forward prices are decreasing functions of inventory. This makes intuitive sense : why hold on to inventory when prices are high?
+\item (2) Violations of ``Samuelson Effect'' in that forward volatilities can increase with horizon when inventory is sufficiently high.
+\item (3) Model predicts correlation between spot prices and convenience yields should not be constant but rather a function of inventory.
+\end{list}
+
+$g(a,P_*) = $ production as a function of state of nature ``a'' and price\\
+
+$C(a,P_*) = $ consumption demand as a function $(a, P_*)$\\
+
+Commodity can be stored by a group of competitive, risk neutral inventory traders.\\
+
+Storage is costly : $Q_* ^- = Q_{*-1} ^ + (1-\delta)$ where constant $\delta = $ depreciation rate\\
+
+Spot price $P(Z_*)$ determined by market clearing.
+
+
+$g(a_*, P(Z_*) + Q_* ^{-} = c(a_*, P(Z_*)) + Q_* ^{+}$\\
+$[c-g] [a, P(Z_*)] = - \Delta Q $ upto here it is just a number, not an equilibrium\\
+
+For each value of a, can introduce ``Inverse net demand function''\\
+$P(Z_*) = F[a_*, \Delta Q]$\\
+
+Here we are assuming [c-g] [a,P] is a monotonic function of P for each a\\
+
+Intuitively, net demand [c-g] should be a decreasing function of P\\
+
+Now as $\Delta Q$ decreases, and the value of [c-g] decreases, implying that $P(Z_*)$ increases. Thus, P and $\Delta Q$ move in same direction. Hence $F[a_*, \Delta Q]$ is increasing in $\Delta Q$.\\
+
+Intuitively, the higher is $\Delta Q$, the lower is the supply, the higher is the price. Note : this says nothing about equilibrium; rather just a note that prices ... if supply is lowered.\\
+
+\textbf{\underline{Equilibrium}}\\
+Given that inventory traders are competitive and risk-neutral, we find for $\theta \equiv \frac{1-\delta}{1+r}$\\
+
+3a) $P(*) = \theta E_*[P_{*+1}] $ if, $Q_* > 0$\\
+3b) $P(*) \geq \theta E_*[P_{*+1}] $ if, $Q_* = 0$\\
+
+Intuitively, if $Q_* > 0$ and $P(*) < \theta E_* [P_{*+1}]$, the risk-neutral traders expected future wealth would be increased by purchasing one extra unit of good todgy at price $P(*)$ and borrow this amount. Next date, pay back loan would cost $-P(*) (1+r)$. But expected value of $(1-\delta)$ of the good $= (1-\delta) E_* (P_{*+1})$. Thus, expected wealth change is $= (1+r) [\theta E_*(P_{*+1}) - P(*)] > 0$ by assumption. Thus $P(*) < \theta E_*(P_{*+1})$ is not an equilibirum.\\
+
+can repeat to show $P(*) > \theta E_*(P_{*+1})$ when $Q_* < 0$ and $P(*) < \theta E_*(P_{*+1})$ when $Q_* = 0$ are not equilibriums\\
+
+Now consider, $P(*) \geq \theta E_*(P_{*+1})$ and $Q_* = 0$\\
+
+Here, risk-neutral inventory trader would like to s... commoditiy, but is unable to. Hence, (3a) and (3b) are equilibrium solutions. Of course, (3b) is not a solution, just a constraint. Note : $P(*) \geq \theta E_*(P_{*+1})$ implies backwardation.\\
+\begin{eqnarray*}
+Def: P_*(a_*, q_{*-1}) &\equiv & \mbox{ equilibirum spot price}\\
+Q_* : J_*(a_*, q_{*-1}) & = & \mbox{equilibrium aggregate inventory functions}\\
+Note : P_*(a_*, q_{*-1}) &=& F[a_*, \Delta Q_* = J_*(a_*, q_{*-1}) - (1-\delta) Q_{*-1}]
+\end{eqnarray*}
+
+Note : Recall $P=F[a, \Delta Q]$ is increasing in $\Delta Q$. Intuitively, the higher is $\Delta Q$, the lower is the supply and thus the higher is price. But this has nothing to do with equilirbium. Instead in equilibrium, $\Delta Q$ will bea function of a. For example, a good economic state will imply low inventory ($(\Delta Q(a))$ will be low) and high prices. Thus we will observe a negative correlation between prices and inventory, even though $P = F(a, \Delta Q)$ is increasing in  $\Delta Q$ for a given ``a''.\\
+
+\begin{eqnarray*}
+dP(a_*, \Delta Q (d_*, Q_{*-1})) &=& \frac{\partial P}{\partial a} da + \frac{\partial P}{\partial \Delta Q} \frac{\partial \Delta Q(.)}{\partial a} da\\
+&=& \left[ \frac{\partial P}{\partial a} + \frac{\partial P}{\partial \Delta Q} \frac{\partial \Delta Q}{\partial a}\right] da\\
+dP . d\Delta Q &=& \left[ \frac{\partial P}{\partial a} + \frac{\partial P}{\partial \Delta Q} \frac{\partial \Delta Q}{\partial a} \right] (da)^2 \left( \frac{\partial \Delta Q}{\partial a} \right)\\
+expect \frac{\partial P}{\partial a} & > & 0, \left( \frac{\partial P}{\partial \Delta Q}\right) > 0, \frac{\partial \Delta Q}{\partial a} < 0\\
+&=& [(+) + (+)(-)] (+) (-) 
+\end{eqnarray*}
+I expect $(dP d\Delta Q) < 0$, hence, $\frac{\partial P}{\partial a} < \frac{\partial P}{\partial \Delta Q} . \vert \frac{\partial \Delta Q}{\partial a} \vert$\\
+
+Proposition 1 : 
+\begin{list}{}{}
+\item (a) $J_q < 1-\delta $
+\item (b) $\exists(Q_{max}, a_{min})$ such that $J[a_min, Q_max] = Q_{max}$. Thus $Q_{max}$ is bounded.
+\item (c) $P(a_*, Q_{*-1})$ is decreasing in $Q_{*-1}$
+\end{list}
+
+Intuitively, (c) says high inventory last period will lead to more supply this period and thus a lower price.\\
+
+(a) says that if you had one more unit last period, you will have less than $(1-\delta)$ more units this period regardless of which state ``a'' occurs. Thus, inventories of different firms will converge over time.\\
+
+Corollary 1.1: There exists ``Sell States'' ``$a_s$'' such that
+\begin{list}{}{}
+\item (a) $J[a_s,q] \leq (1-\delta) q, \forall q$
+\item (b) a critical inventory level $q_s$ exists such that a stockout occurs, $J(a_s,q) = 0$, for all $q<q_s$
+\end{list}
+
+Note : while ``a'' is Markov in itself, Q is not, due to stock outs. Instead, only [a, Q] together are jointly Markov.\\
+
+Note : Inventory cannot always be positive if carrying costs are positive. Intuitively, if inventory holders knew they had so much inventory that, no matter what happened, they would never run out, then it would be optimal for them to hold less.\\
+
+Numerical Example: 
+\begin{eqnarray*}
+P_* &=& F[a_*, \Delta Q] = a+\Delta Q\\
+a &=& {a_H, a_L}\\
+D(q_H \vert q_H) &=& 0.75\\
+D(a_L \vert a_H) &=& 0.25\\
+D(a_H \vert a_L) &=& 0.25\\
+D(q_L \vert q_L) &=& 0.75
+\end{eqnarray*}
+Note that $P(a, \Delta Q)$ is increasing in $\Delta Q$ as is neccessary.\\
+
+Proposed solution : ``Guess'' a solution for 
+\begin{eqnarray*}
+Q_* ^H [Q_{*-1}] &=& J[a_* = H, Q_{*-1}]\\
+Q_* ^L [Q_{*-1}] &=& J[a_* = L, Q_{*-1}]\\
+\mbox{we then have, } P_*[a_* = a_H, Q_{*-1}] &=& a_H + Q_* ^H (Q_{*-1}) - (1-\delta) Q_{*-1}\\
+P_*[a_* = a_L, Q_{*-1}] &=& a_L + Q_* ^L (Q_{*-1}) - (1-\delta) Q_{*-1}\\
+\mbox{similarly, } P_{*+1}[a_{*+1} = a_H, Q_{*}] &=& a_H + Q_{*+1} ^H (Q_*) - (1-\delta) Q_*\\
+P_{*+1}[a_{*+1} = a_L, Q_*] &=& a_L + Q_{*+1} ^L (Q_*) - (1-\delta) Q_*\\
+\mbox{Now, assume that } Q_* &>& 0\\
+\mbox{then, from eq 3a, we have for } a_* &=& a_H\\
+P_*[a_* = H, Q_{*-1}] &=& \theta E_i[P_{*+1}\vert a_* = H, Q_{*-1}]\\
+LHS &=& a_H + Q_* ^H (Q_{*-1}) - (1-\delta) Q_{*-1}\\
+RHS &=& \theta \left\{ \begin{array}{ll}
+D(a_H\vert a_H) [a_H + Q_{*+1}^H [Q_* ^H [Q_{*-1}]]] - (1-\delta ) Q^H [Q_{*-1}]\\
++D(a_L\vert a_H) [a_L + Q_{*+1}^L [Q_* ^H [Q_{*-1}]]] - (1-\delta ) Q^H [Q_{*-1}] \end{array} \right\}
+\end{eqnarray*}
+
+Similarly for $Q_* > 0$ and $a_* = a_L$ 
+\begin{eqnarray*}
+LHS &=& a_L + Q^L [Q_{*-1}] - (1-\delta) Q_{*-1}\\
+RHS &=& \theta \left\{ \begin{array}{ll}
+D(a_H\vert a_L) [a_H + Q^H [Q^L [Q_{*-1}]]] - (1-\delta ) Q^L [Q_{*-1}]\\
++D(a_L\vert a_L) [a_L + Q^L [Q^L [Q_{*-1}]]] - (1-\delta ) Q^L [Q_{*-1}] \end{array} \right\}
+\end{eqnarray*}
+\end{document}
