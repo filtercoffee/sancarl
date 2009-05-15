@@ -1,0 +1,84 @@
+\documentclass[]{article}
+\usepackage{gensymb}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+
+\begin{document}
+\section*{Cox/Huang N assets}
+\begin{eqnarray*}
+\frac{ds_i}{s_i} &=& \mu _i dt + \sum_{j=1}^n \sigma _{ij} dZ_j\\
+\frac{\partial B}{B} &=& \gamma dt\\
+\mbox{All Zero divident scc... satisfy } 0 &=& E \left[ \frac{\partial \wedge}{\wedge} + \frac{\partial X}{X} + \frac{\partial \wedge}{\wedge} \frac{\partial X}{X}  \right]\\
+\mbox{Notationally specify } \frac{\partial \wedge}{\wedge} &=& -\alpha dt - \sum_{j=1}^n p_j dZ_j\\
+\mbox{Bond : } 0 &=& -\alpha + \gamma \Rightarrow \alpha = \gamma \\
+s_i : 0 &=& -\gamma +\mu _i - \left( \sum_{m=1}^n p_m dZ_m\right) \left( \sum_{j} \sigma _j dZ_j\right) \\
+\Rightarrow \mu _i &=& \gamma + \sum_{j} \sigma _{ij} p_j\\
+\Rightarrow \sigma \beta _i &=& \left( \mu - \gamma 1 \right)\\
+\Rightarrow \beta &=& \sigma^{-1} \left[ \mu - \gamma 1 \right]\\
+\Rightarrow \frac{\partial \wedge}{\wedge} &=& -\gamma dt - \left[ \mu ^T - \gamma 1^T\right] \sigma ^{-1} dZ\\
+\mbox{Check : } 0 &=& -\gamma + \mu _{i} + \left( \sum_{jm} \left( u_j - \gamma \right)\sigma _{jm} ^{-1} dZ_m \right) \left( \sum_{k} \sigma _{ik} dZ_k\right)\\
+&=& -\gamma + \mu _{i} + \sum_{jm} \left( \mu _j - \gamma \right) \sigma _{jm} ^{-1} \sigma _{mi}\\
+&=& -\gamma + \mu _{i} + \sum_{j} \left( \mu _j - \gamma \right) 1_{\left( j=i \right)}\\
+\max E\left[ \frac{w^{1-\gamma}}{1-\gamma} \right] \mbox{s.t., } \wedge _* w_* = E_*\left[ \wedge _T w_T \right]\\
+L &=& \int dw_T D(w_T) \frac{W(w_T)^{1-\gamma}}{1-\gamma} + \beta \left[ \wedge _* w_* - \int \partial w_T D(w_*) \wedge (w_T) W(w_T) \right]\\
+\frac{\partial Z}{\partial W(w_T)} : 0 &=& D(w_T^\gamma) W(w^\prime)^{-\gamma} - \beta D(w_T^\prime) \wedge (w_T^\prime)\\
+\Rightarrow W(w_T)^{-\gamma} &=& \beta \wedge(w_T) \forall w_T \epsilon \ohm _T \\
+\Rightarrow W(w_T) &=& \beta ^{-\frac{1}{\gamma}} \wedge ^{-\frac{1}{\gamma}(w)}\\
+\mbox{to solve for $\beta $ plug back into constraint:}\\
+\wedge _* w_* &=& E_* \left[ \wedge _T \beta ^{-\frac{1}{\gamma}} \wedge ^{-\frac{1}{\gamma}}\right]\\
+&=& \beta ^{-\frac{1}{\gamma}} E_*\left[ \wedge _T^{-\frac{\gamma -1}{\gamma}} \right]\\
+Y &=& Z \wedge \\
+dY &=& \frac{\partial \wedge }{\wedge} - \frac{1}{x} \left( \frac{\partial \wedge}{\wedge} \right)^2\\
+&=& \gamma d* - \left( \mu -\gamma 1 \right)^T \sigma ^{-1} dZ - \\
+&& \frac{1}{2} \left( \sum_{ij} \left( \mu _i - \gamma 1_i \right) \sigma _{ij}^{-1} dZ_j \right) \left( \sum_{mn} \left( \mu _n - 1 \right) \sigma _{mn}^{-1} dZ_n \right)\\
+\mbox{last term } &=& \sum_{ijm} \left( \mu _i -\gamma \right) \sigma _{ij}^{-1} \left( \mu _m -\gamma \right) \sigma _{mj} ^{-1}\\
+\mbox{Define : } \sum_{j} \sigma _{ij}^{-1} \sigma _{mi}^{-1} &\equiv & \sum_{ij}^{-1}\\
+\mbox{last term } &=& \left( \mu - \gamma 1 \right)^T \sum^{-1} \left( \mu - \gamma 1 \right)\\
+\wedge (T) &=& \wedge (*) e^{ \left\{ \left( -\gamma -\frac{1}{2}\left( \mu -\gamma 1 \right)^T \sum^{-1} \left( \mu -\gamma 1 \right) \right)\left( T-* \right) - \left( \mu \gamma 1 \right)^T \sigma ^{-1} \left[ Z_T - Z_*\right] \right\} }\\
+\mbox{For convenience, define vector } \sigma ^{-1} (\mu - \gamma 1) &\equiv & \theta \\
+\wedge (w_T) &=& \wedge (w_*) e^{(-\gamma -\frac{1}{2} \theta ^T \theta)(T - *) - \theta ^T(Z(w_T)-Z(w_*))}\\
+\wedge _* w_* &=& \beta ^{-\frac{1}{\gamma}} \left[ \wedge _* e^{-\left(\gamma + \frac{1}{2} \theta ^\gamma \theta \right)\left( \gamma -* \right)} \right] ^{\frac{\gamma -1}{\gamma}} E_*\left[e^{-\frac{1-\gamma}{\gamma}\theta ^T \Delta Z}\right]\\
+w_* &=& \beta^{-\frac{1}{\gamma}} \wedge _*^{-\frac{1}{\gamma}} e^{\left( \frac{1-\gamma}{\gamma}\right) \left(\gamma +\frac{1}{2} \theta ^T \theta \right)\left( T-*\right)} \\
+&&e^{\frac{1}{\gamma} \left(\frac{1-\gamma}{\gamma}\right)^2 \theta ^T \theta \left( T-*\right)}\\
+\beta ^{-\frac{1}{\gamma}} &=& w_* \wedge _*^{\frac{1}{\gamma}} e^{\left( \frac{\gamma -1}{\gamma}\right)\gamma \left(T-*\right)} e^{\frac{1}{2} \theta ^T \theta \left( T-* \right) \left(\frac{\gamma -1}{\gamma}\right)\left(1-\left(\frac{\gamma -1}{\gamma}\right)\right)}\\
+&=& w_* \wedge _*^{\frac{1}{\gamma}} e^{\left( \frac{\gamma -1}{\gamma}\right)\gamma \left(T-*\right)} e^{\frac{1}{2} \theta ^T \theta \left( T-* \right) \left(\frac{\gamma -1}{\gamma ^2}\right)}\\
+\mbox{Plugging back for } \beta ^{-\frac{1}{\gamma}}\\
+W(w_T) &=& \beta ^{-\frac{1}{\gamma}} \wedge ^{-\frac{1}{\gamma}} \left(w_T\right)\\
+&=& w_* \left[ \wedge _*^{\frac{1}{\gamma}} e^{\left( \frac{\gamma -1}{\gamma}\right)\gamma \left(T-*\right)} e^{\frac{1}{2} \theta ^T \theta \left( T-* \right) \left(\frac{\gamma -1}{\gamma ^2}\right)} \right] \\
+&&\left[ \wedge _*^{-\frac{1}{\gamma}} e^{\frac{1}{\gamma} \left(\gamma + \frac{\theta ^T \theta}{2}\right) \left( T-*\right) + \frac{1}{\gamma} \theta ^T \Delta Z}\right]\\
+&=& w_* e^{\gamma \left(T-*\right) \left(1-\frac{1}{\gamma}+\frac{1}{\gamma}\right)} e^{\frac{1}{2} \theta ^T \theta \left(T-*\right) \left( \frac{1}{\gamma ^2}\right) \left(\gamma -1 +\gamma \right)} e^{\frac{1}{\gamma} \theta ^T \Delta Z_{(T-*)}}\\
+&=& w_* e^{\gamma \left(T-*\right)} e^{\frac{1}{2} \theta ^T \theta \left(T-*\right) \left( \frac{2\gamma - 1}{\gamma ^2}\right)} e^{\frac{1}{\gamma} \theta ^T \Delta Z_{(T-*)}}\\
+\mbox{Solve at some intermediate date}\\
+\mbox{ $(s *<s<T)$}\\
+\wedge _s w_s &=& E_s \left[ \wedge _T w_T\right]\\
+&=& \wedge _* e^{-\left(1+ \frac{1}{2} \theta ^T \theta \right) \left( T-* \right)} w_* e^{\gamma (T-*)} e^{\frac{1}{2} \theta ^T \theta \left(T-*\right)\left(\frac{2\gamma -1}{\gamma ^2}\right)}\\
+&& E_s\left[e^{-\theta ^T \left[\left(Z_T-Z_s\right)+\left(Z_s - Z_*\right)\right]\left[1-\frac{1}{\gamma}\right]}\right]\\
+&=& \wedge _* w_* e^{\frac{1}{2\gamma ^2} \theta ^T \theta \left(T-*\right)\left(2\gamma -1-\gamma ^2\right)} e^{-\left(1-\frac{1}{\gamma}\right)\theta ^T \left(Z_s -Z_*\right)} e^{\frac{1}{2\gamma ^2} \theta ^T \theta \left(1-\frac{1}{\gamma}\right) ^2 \left(T-s\right)}\\
+&=& \wedge _* w_* e^{\frac{1}{2\gamma ^2} \theta ^T \theta \left(T-s\right)\left(2\gamma -1-\gamma ^2 + \left( \gamma -1\right)^2 \right)} e^{-\frac{1}{2\gamma ^2} \theta ^T \theta \left(s-*\right)\left(\gamma -1\right)^2}\\ && e^{\frac{1-\gamma}{\gamma} \theta ^T \theta \left(Z_T - Z_*\right)}\\
+&=& \wedge _* w_* e^{-\frac{1}{2} \left(\frac{\gamma -1}{\gamma}\right)^2 \theta ^T \theta \left(s-*\right)} e^{-\frac{\gamma - 1}{\gamma} \theta ^T \left(Z_s-Z_*\right)}\\
+d\left(\wedge _s w_s\right) &=& -\wedge _s w_s \left(\frac{\gamma -1}{\gamma}\right) \theta ^T dZ_s \rightarrow \mbox{ p-martingale}\\
+\mbox{Separately,}\\
+d\left(\wedge _s w_s\right) &=& -\wedge _s w_s \left(\frac{\partial \wedge _s}{\wedge _s} + \frac{\partial w_s}{w_s} + \frac{\partial \wedge _s}{\wedge _s} \frac{\partial w_s}{s_s}\right)\\
+\end{eqnarray*}
+We know the different terms vanish. To check use,
+\begin{eqnarray*}
+dw &=& \sum_{i} n_{s_i} ds_i + n_B dB\\
+\mbox{Define : } \frac{n_{s_i} s_i}{w} &=& X_i \\
+\frac{n_B B}{w} &=& 1-\sum X_i\\
+\frac{dw}{w} &=& \sum_{i} X_i \frac{\partial s_i}{s_i} + \left( 1- \sum_{i} X_i\right) \gamma \partial * \\
+&=& \sum_{i} X_i \left( \mu _i \partial * + \sum_{i} \sigma _{ij} dZ_j \right) + \left( 1- \sum_{i} X_i\right) \gamma \partial *\\
+\Rightarrow d\left(\wedge _s w_s\right) &=& \wedge _s w_s \left\{ \left[ -\gamma ds - \left(\mu ^T - \gamma 1^T\right)\sigma^{-1} dZ \right] \right. \\
+&&+\left. \left[\gamma ds + X^T \left(\mu -\gamma 1\right)d* + X^T \sigma dZ\right] + \left[\left(\mu ^T - \gamma 1^T\right) X d*\right]\right\}\\
+&=& -\wedge _s w_s \left[ \left(\mu ^T - \gamma 1^\gamma \right) \sigma ^{-1} dZ - X^T \sigma dZ\right] \\
+&=& -\wedge _s w_s \left( \frac{\gamma -1}{\gamma} \right) \theta ^T dZ \\
+\Rightarrow X^T \sigma &=& -\left( \frac{\gamma -1}{\gamma} \right) \theta ^T + \theta ^T\\
+&=& \frac{1}{\gamma} \theta ^T\\
+\Rightarrow X^T &=& \frac{1}{\gamma} \theta ^T \sigma ^{-1}
+\end{eqnarray*}
+\end{document}
