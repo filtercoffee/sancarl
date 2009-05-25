@@ -1,0 +1,89 @@
+\documentclass[]{article}
+\usepackage{gensymb}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+
+\begin{document}
+\section*{Bansal Yaron}
+\begin{eqnarray*}
+R_{*,*+1} = P_{*+1} + D_{*+1} &=& \left( \frac{P_{*+1} + D_{*+1}}{D_{*+1}}\right) \left(\frac{D_{*+1}}{D_*}\right) \left(\frac{D_*}{P_*}\right)\\
+Define,&& Z_* = L_r \left( \frac{P_*}{D_*} \right), r \equiv L_r R, g = L \left( \frac{D_{*+1}}{D_*} \right) \\
+r &=& L_r \left[ e^{Z_{*+1}} +1 \right] + g - Z_*\\
+&=& L_r \left[ \frac{e^{Z_{*+1}} +1}{e^{Z_{*}} +1} \right] + L_r \left[ e^{\bar{Z}} + 1 \right] + g - Z_*\\
+&=& L_r \left[ \frac{e^{\bar{Z}}e^{Z_{*+1} - \bar{Z}} +1}{e^{\bar{Z}} +1} \right] + L_r \left[ e^{\bar{Z}} + 1 \right] + g - Z_*\\
+&\approx & L_r \left[ \frac{e^{\bar{Z}\left(1+\left(Z_{*+1} - \bar{Z}\right) \right)} +1}{e^{\bar{Z}} +1} \right] + L_r \left[ e^{\bar{Z}} + 1 \right] + g - Z_*\\
+&\approx & L_r \left[ 1 + \left( \frac{e^{\bar{Z}}}{e^{\bar{Z}+1}} \right) \left( Z_{*+1} - \bar{Z} \right) \right] + L_r \left[ e^{\bar{Z}} + 1 \right] + g - Z_*\\
+&\approx & \left( \frac{e^{\bar{Z}}}{e^{\bar{Z}+1}} \right) \left( Z_{*+1} - \bar{Z} \right) + L_r \left[ e^{\bar{Z}} + 1 \right] + g - Z_*\\
+&=& K_0 + K_1 Z_{*+1} - Z_* + g, \mbox{where,}\\
+&& K_0 = L \left[ e^{\bar{Z}} + 1 \right] - \bar{Z} \left( \frac{e^{\bar{Z}}}{e^{\bar{Z}+1}} \right)\\
+&& K_1 = \left( \frac{e^{\bar{Z}}}{e^{\bar{Z}+1}} \right)\\
+\mbox{For } e^{\bar{Z}} &\approx & (25) (12) \left[ \mbox{ the 12 is for monthly } \right]\\
+&=& 300\\
+\Rightarrow K_1 &\approx & \frac{300}{301} = 0.9966\\
+\end{eqnarray*}
+
+Campbell/ Shdler approximation of an identity:\\
+Since g exogenous, a solution for Z leads to a complete characterization of the return of r
+\begin{eqnarray*}
+r_{*, *+1} &\cong & K_0 + K_1 Z_{*+1} - Z_* + g_{*+1}\\
+&& \epsilon / Z \mbox{ Pacing Kernel } \\
+M_{*,*+1} &=& \theta L_r \delta - \frac{\theta}{\psi} g_{*+1} + \left(\theta -1\right)r_{a, *+1}\\
+&& \mbox{Note : when } \theta = 1 \mbox{ which imples } \frac{1}{\psi} = r\\
+&& \Rightarrow m = L_r \delta - r g_{*+1} = CRRA\\
+&& \mbox{ exogenously specify Lucas consumption dynamics, }\\
+g_{*+1} &=& \mu + X_* + \sigma n_{*+1}\\
+g_{*+1} ^ d &=& \mu _d + Q X_* + Q_d \sigma n_{*+1}\\
+X_{*+1} &=& \rho X_* + Q_e \sigma e_{*+1}\\
+1 &=& E \left[ e^{m+r} \right]\\
+&=& E \left[ e^{ \left( \left[ \theta L_r \delta - \frac{\theta}{\psi} g_{*+1} + \left( \theta -1 \right) \right] + r_{a, *+1} \right)} \right]\\
+&=& E \left[ e^{ \left[ \theta L_r \delta - \frac{\theta}{\psi} g_{*+1} + \theta \left[ K_0 + K_1 Z_{*+1} - Z_* + g_{*+1}\right] \right]} \right]\\
+&=& E \left[ e^{ \left[ \theta L_r \delta + \theta \left( 1 - \frac{1}{\psi}\right) g_{*+1} + \theta K_0 + \theta K_1 Z_{*+1} -\theta Z_* \right] } \right]\\
+1&=& e^{\theta L_r \delta + \theta K_0 - \theta Z_*} E_* e^{\theta \left(1-\frac{1}{\psi}\right)\left( \mu + X_* + \sigma n_{*+1} \right) + \theta K_1 Z_{*+1}}\\
+\mbox{Guess, } Z_* &=& Z_0 + A_1 A_*, Z_{*+1} = A_0 + A_1 X_{*+1}\\
+1&=& e^{\theta L_r \delta + \theta K_0 - \theta \left(A_0 + A_1 X_*\right) + \theta \left(1-\frac{1}{\psi}\right)\left(\mu + X_*\right) + \theta K_1 A_0} E e^{\theta \left(1-\frac{1}{\psi}\right)\sigma n_{*+1} + \theta K_1 A_1 \left(\rho X_* + Q_e \sigma e_{*+1}\right)}\\
+0&=& \theta L_r \delta + \theta K_0 - \theta \left(A_0 + A_1 X_*\right) + \theta \left(a-\frac{1}{\psi}\right)\left(\mu + X_*\right) + \theta K_1 A_0 +\theta K_1 A_1 \rho X_* + \frac{1}{2} \theta ^2 \left(1-\frac{1}{\psi}\right)^2 \sigma ^2 \\
+&&+ \frac{1}{2} \theta ^2 K_1^2 A_1^2 Q_e^2 \sigma ^2\\
+X ^ \prime : 0 &=& -\theta A_1 + \theta \left( 1 - \frac{1}{\psi}\right) + \theta K_1 A_1 \rho \\
+X ^ 0 : 0 &=& \theta L_r \delta + \theta K_0 - \theta A_0 + \theta \left(1-\frac{1}{\psi}\right) \mu + \theta K_1 A_0 + \frac{\sigma ^2}{2} \theta ^2 \left( 1-\frac{1}{psi} \right) ^2 + \frac{\sigma ^2}{2} \theta ^2 K_1^2 A_1^2\\
+X^\prime : 0 &=& A_1\left(K_1 \rho -1 \right) + \left(1-\frac{1}{psi}\right)\\
+\Rightarrow A_1 &=& \frac{1-\frac{1}{\psi}}{1-K_1 \rho}\\
+M_{*,*+1} &=& \theta L_r \delta - \frac{\theta}{\psi} g_{*+1} + \left(\theta -1\right) \left( K_0 + K_1 Z_{*+1} - Z_* + g_{*+1}\right)\\
+&=& \theta L_r \delta + \left(\theta -1 \right) \left(L_0 - Z_*\right) + \left(\theta -1\right) K_1 \left(A_0 + A_1 X_{*+1}\right) + \left(\theta -1 - \frac{\theta}{\psi}\right)\left(\mu + X_* +\sigma n_{*+1}\right)\\
+&=& \theta L_r \delta + \left(\theta -1 \right) \left(L_0 - Z_*\right) + \left(\theta -1\right) K_1 A_0 + \left(\theta -1 - \frac{\theta}{\psi}\right) \left(\mu + X_*\right) \\
+&& + \left(\theta -1\right)K_1 A_1 \left(\rho X_* + Q_e \sigma e_{*+1}\right) + \left(\theta - 1- \frac{\theta}{\psi}\right) \sigma n_{*+1}\\
+&=& \theta L_r \delta + \left(\theta -1\right) \left(K_0-\left(A_0 + A_1 X_*\right)\right) + \left(\theta -1\right) K_1 A_0 + \left(\theta -1\right)K_1 A_1 \rho X_*\\
+&& \left(\theta -1\right) K_1 A_1 Q_e \sigma e_{*+1} + \left(\theta -1 - \frac{\theta}{\psi}\right)\sigma n_{*+1}\\
+&=& E_* \left(m_{*+1}\right) - \left(1-\theta \right) \left(K_1 \frac{1-\frac{1}{\psi}}{1-K_1\rho} Q_e\right) \sigma e_{*+1}+\left(\theta -1 - \frac{\theta}{\psi}\right) \sigma n_{*+1}\\
+&=& E_* \left(m_{*+1}\right) - \lambda _{m,e} \sigma e_{*+1} + \lambda _{m,n} \sigma n_{*+1}\\
+&& \mbox{where, } \lambda _{m,e} \equiv \left(1-\theta \right)\left(K_1 \left(\frac{1-\frac{1}{\psi}}{1-K_1\rho}\right)Q_e\right)\\
+&& \lambda _{m,n} \equiv -\frac{\theta}{\psi} + \theta -1\\
+e^{-r_F} \equiv \frac{1}{R_F} &=& E_* M_{*,*+1} = E_* e^{M_{*,*+1}}= e^{E\left(m\right)+\frac{1}{2} Var \left(m\right)}\\
+r_F &=& -E\left(m\right) - \frac{1}{2}Var\left(m\right)\\
+&=& -\left(\theta L_r \delta + \left(\theta -1\right)\left(K_0 - A_0 + K_1 A_0\right)+\left(\theta-1- \frac{\theta}{\psi}\right)\mu\right) \\
+&& - X_* \left(-\left(\theta -1\right)A_1 + \left(\theta -1 -\frac{\theta}{\psi}\right)+ \left(\theta -1\right)K_* - \frac{1}{2}Var\left(m\right) \right)
+\end{eqnarray*}
+\begin{eqnarray*}
+\mbox{Term Linear in X } &=& \left(\theta -1\right) A_1 \left(1-K_1\rho\right)-\left(\theta -1 -\frac{\theta}{\psi}\right)\\
+&=& \left(\theta -1\right)\left(1-\frac{1}{\psi}\right) - \left(\theta - 1- \frac{\theta}{\psi}\right)\\
+&=&-\left(\frac{1}{\psi}\right) \left(\theta -1 -\theta \right)\\
+&=& \frac{1}{\psi}\\
+e^0 = 1 &=& E \left(e^{m+r_i}\right) e^{E\left(m\right)+E\left(r_i\right)+\frac{1}{2}Var\left(m\right)+\frac{1}{2}Var\left(i\right)+cov\left(m,r_i\right)}\\
+0&=& \left(-r_F - \frac{1}{2} Var\left(m\right)\right)+E\left(r_i\right) + \frac{1}{2}Var\left(m\right)+\frac{1}{2}Var\left(i\right)+cov\left(m,r_i\right)\\
+\Rightarrow E \left(r_i\right) - r_F &=& -cov(m,r_i) - \frac{1}{2}Var\left(r_i\right)
+\end{eqnarray*}
+For Market portfolio, where,
+\begin{eqnarray*}
+r_m &=& K_{0,m} + K_{1,m} Z_m(*+1) - Z_m(*) + g_{d,*+1}\\
+&=& const + K_{1,m} A_{1,m} Q_e \sigma e_{*+1} + Q_d \sigma u_{*+1}\\
+-cov\left(m,r\right) &=& -\left(K_{1,m} A_{1,m} Q_e \sigma \left(-\lambda _{m,e} \sigma \right)\right)\\
+&=& K_{1,m} \frac{\theta 0 \frac{1}{\psi}}{1-K_{1,m}\rho} Q_e \lambda _{m,e} \sigma ^2\\
+&=& \beta _{m,e} \lambda _{m,e} \sigma ^2\\
+&& \mbox{where, } \beta _{m,e} \equiv K_{1,m} \left(\frac{Q - \frac{1}{\psi}}{1- K_{1,m}\rho}\right) Q_e
+\end{eqnarray*}
+\end{document}

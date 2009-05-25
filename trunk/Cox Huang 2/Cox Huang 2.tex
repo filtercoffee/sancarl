@@ -1,0 +1,73 @@
+\documentclass[]{article}
+\usepackage{gensymb}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+
+\begin{document}
+\section*{Cox Huang 2}
+\begin{eqnarray*}
+\frac{ds}{s} &=& \mu dt + \sigma dZ\\
+\frac{dB}{B} &=& r dt\\
+&& \mbox{all zero divided securities satisfy.}\\
+0 &=& E \left( d(\wedge X) \right)\\
+&=& E \left( \frac{\partial \wedge}{\wedge} + \frac{\partial X}{X} + \frac{\partial \wedge}{\wedge} \frac{\partial X}{X} \right)\\
+&& \mbox{Notationally Specify, } \frac{\partial \wedge}{\wedge} = - \alpha dt - \beta dZ\\
+\mbox{Bond : } 0 &=& -\alpha + r \Rightarrow \alpha = r\\
+\mbox{Stock : } 0 &=& -r + \mu - \beta \sigma \Rightarrow \beta = \left( \frac{\mu -r}{\sigma}\right)\\
+\frac{\partial \wedge}{\wedge} &=& -r dt - \left( \frac{\mu -r}{\sigma}\right) dZ\\
+\wedge _t W_t &=& E_t \left( \wedge _t W(t)\right)\\
+Max E\left( \frac{1}{1-r} W_t ^{1-r}\right) &s.t.& \wedge _t W_t = E_t \left( \wedge _t W_t\right)\\
+L&=& \int dw D(w) \frac{W(w_t)^{1-r}}{1-r} + + \beta \left[ \wedge _t w_t - \int \partial w D(w) \wedge (w) W(w) \right]\\
+\frac{\partial Z}{\partial W(w_T)} = 0 &=& D(w) W(w)^{-r} - \beta D(w) \wedge (w)\\
+\Rightarrow W(w)^{-r} &=& \beta \wedge(w)\\
+\Rightarrow W_T &=& \beta ^{-\frac{1}{r}} \wedge _t ^{-\frac{1}{r}}\\
+\wedge _t w_t &=& E \left[ \wedge \beta ^{-\frac{1}{r}} \wedge ^{-\frac{1}{r}}\right]\\
+&=& \beta ^{-\frac{1}{r}} E\left[ \wedge^{-\frac{r -1}{r}} \right]\\
+\wedge(t) &=& \wedge(t) e^{\left( -r - \frac{\theta ^2}{r}\right)\left( T-t \right)-\theta \left( Z_t \cdot Z_t \right)}\\
+\wedge _t w_t &=& \beta ^{-\frac{1}{r}} \wedge _t^{\frac{r-1}{r}} e^{-\left( r + \frac{\theta ^2}{r} \right)\left( T-t \right)\left( \frac{r-1}{r} \right)} e^{\frac{1}{2} \left( \frac{r-1}{r}\right)^2 \theta ^2 \left( 1-r\right)}\\
+\beta ^{-\frac{1}{r}} &=& \wedge _t w_t \wedge_t ^{-1 + \frac{1}{r}} e^{\left( r + \frac{\theta ^2}{r} \right) \left( T-t \right)\left( \frac{r-1}{r} \right)} e^{-\frac{\theta ^2}{2} \left(\frac{r-1}{r}\right)^2 \left(T-t\right)}\\
+&=& w_t \wedge _t^{\frac{1}{r}} e^{\left(r+\frac{\theta ^2}{2}\right)\left( T-t \right)\left( \frac{r-1}{r} \right) - \frac{\theta ^2}{2} \left( \frac{r-1}{r} \right)^2 \left( T-t \right)}\\
+W(w) &=& \wedge (w)^{-\frac{1}{r}} w_t \wedge _t^{\frac{1}{r}} e^{\left(r+\frac{\theta ^2}{2}\right)\left( T-t \right)\left( \frac{r-1}{r} \right) - \frac{\theta ^2}{2} \left( \frac{r-1}{r} \right)^2 \left( T-t \right)}\\
+&=& w_t e^{\left( \frac{1}{r} \right) \left( r+\frac{\theta ^2}{2} \right) \left( T-t\right) + \left( \frac{\theta}{r} \right) \left( Z_T Z_t\right)} e^{\left(r+\frac{\theta ^2}{2}\right)\left( T-t \right)\left( \frac{r-1}{r} \right) - \frac{\theta ^2}{2} \left( \frac{r-1}{r} \right)^2 \left( T-t \right)}\\
+&=& w_t e^{\left( \frac{\theta}{r} \right) \left( Z_T Z_t\right)} e^{ \left( r+\frac{\theta ^2}{2} \right) \left( T-t\right)- \left(\frac{\theta ^2}{2}\right)\left( \frac{r-1}{r} \right)^2\left( T-t \right)}\\
+&=& w_t e^{\left( \frac{\theta}{r} \right) \left( Z_T Z_t\right)} e^{ \left( T-t\right)} e^{\left(\frac{\theta ^2}{2r^2}\right) \left( T-t \right) \left( r^2 - \left(r^2 - 2r + 1\right)\right)}\\
+W(w_T) &=& W_t e^{\frac{\theta}{r} \left( Z_T Z_t \right)} e^{r \left( T-t\right)} e^{\frac{\theta ^2}{2r^2} \left( T-t \right)\left( 2r-1 \right)}\\
+\wedge (w_s) W(w_s) &=& E_s \left( \wedge (w_T) W(w_t) \right)\\
+\wedge (w_T) &=& \wedge (w_s) e^{-\left( r+\frac{\theta ^2}{2}\right)\left( T-s \right)-\theta \left( Z_T Z_s\right)}\\
+\wedge (w_s) W(w_s) &=& w_t \wedge(w_s) e^{-\left( r+\frac{\theta ^2}{2}\right)\left( T-s \right)} e^{r\left( T-t  \right)} e^{\frac{\theta ^2}{2r^2}\left( T-t \right)\left( 2r-1 \right)} E_s \left[ e^{-\theta \left( Z_T Z_s\right)} e^{\frac{\theta}{r} Z_T Z_t} e^{\frac{\theta}{r} Z_s Z_t}\right]\\
+W(w_s) &=& w_t e^{r\left( s-t \right)} e^{-\frac{\theta ^2}{2} \left( t-s \right)} e^{\frac{\theta ^2}{2r^2}\left( T-t \right)\left( 2r-1 \right)} e^{\frac{1}{2} \left( \frac{\theta}{r} \left( 1-r \right)\right)^2 \left( T-s \right)} e^{\frac{\theta}{r} \left( Z_s - Z_t\right)}\\
+&=& W_t e^{r\left( s-t \right)} e^{\frac{\theta}{r} \left( Z_s - Z_t \right)} e^{\frac{\theta ^2}{2r^2} \left( T-s \right) \left( 2r-1-r^2+\left( 1-r\right)^2\right)} e^{ \frac{\theta ^2}{2r^2} \left( s-t \right)}\\
+&=& w_t e^{r\left( s-t\right)} e^{\frac{\theta}{r}\left( Z_s Z_t\right)} e^{\frac{\theta ^2}{2r^2} \left( s-t \right)\left( 2r-1\right)}\\
+\Rightarrow dW_s &=& W\left( rds + \frac{\theta ^2}{2r^2} \left( 2r-1 \right)ds + \frac{\theta}{r}dZ + \frac{1}{2} \left( \frac{\theta}{r}\right)^2 ds\right)\\
+&=& W\left( \left[ r+\frac{\theta ^2}{2r^2} 2r\right]ds + \frac{\theta}{r}dZ \right)\\
+&=& W \left( \left[ r+ \frac{\theta ^2}{r} \right] ds + \frac{\theta}{r} dZ\right)\\
+&& \mbox{Compare with, }\\
+W &=& n_B B + n_S S \Rightarrow w \equiv \frac{n_S S}{w}, 1-w = \frac{n_B B}{w}\\
+dW &=& n_B dB + n_S dS\\
+\frac{dw}{w} &=& \frac{n_B B}{w} \frac{\partial B}{B} + \frac{n_S S}{w} \frac{\partial S}{S}\\
+&=& \left( 1-w \right) r dt + w \left( \mu dt + \sigma dZ\right)\\
+&=& \left( r + w\left( \mu -r\right)\right)dt + w \sigma dZ\\
+\mbox{vs} && \\
+&=& \left( r+\frac{\theta ^2}{r} \right)dt + \frac{\theta}{r}dZ\\
+w \sigma &=& \frac{\theta}{r} \Rightarrow w = \frac{\mu -r}{r\sigma ^2}\\
+\mbox{Check, } w \left( \mu -r \right) &=& \frac{\theta ^2}{r}\\
+\frac{1}{r} \left( \frac{\mu -r}{\sigma} \right)^2 &=& \frac{\left( \mu - \frac{r}{\sigma}\right)^2}{r}\\
+\wedge (w_t) W(w_t) &=& \left( \wedge (0) e^{\left(r+\frac{\theta ^2}{2}\right) t-\theta Z_t} \right)\left( w_0 e^{rt} e^{\frac{\theta ^2}{2r^2} \left( 2r-1\right) t} e^{\frac{\theta}{r} Z_t}\right)\\
+&=& \wedge _0 w_0 e^{\left( \frac{\theta}{r}\right) \left( 1-r \right)Z_t} e^{\frac{1}{2} \left( \frac{\theta}{r}\right)^2 t \left( 2r-1-r^2 \right)}\\
+&=& \wedge _0 w_0 e^{\frac{\theta \left( 1-r \right)}{r} Z_t} e^{-\frac{1}{2} t \left( \frac{\theta \left( 1-r\right)}{r} \right)^2}\\
+&\equiv & \mbox{P-Martingale}\\
+d(\wedge w) &=& \wedge w \frac{\theta \left( 1-r \right)}{r} dZ\\
+\mbox{vs} && \\
+d(\wedge w) &=& \wedge w \left( \frac{\partial \wedge}{\wedge} + \frac{\partial w}{w} + \frac{\partial \wedge}{\wedge} \frac{\partial w}{w}\right)\\
+&=& \wedge w \left( -\theta dZ + X_s \sigma dZ \right)\\
+\Rightarrow X_s \sigma &=& \theta + \frac{\theta \left( 1-r \right)}{r}\\
+\mbox{Note: m log case, } r &=& 1, X_s \sigma = \theta\\
+\Rightarrow X_s &=& \frac{\mu -r}{\sigma ^2}
+\end{eqnarray*}
+\end{document}
