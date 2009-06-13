@@ -203,21 +203,128 @@ n^*_0 &=& \lambda_H \theta_H(w_0) (1-a_H) \frac{1}{Y^*(w_0)} \left[\frac{\lambda
 && \mbox{But setting $w_H = S(0)$, we get,}\\
 1&=& \frac{\lambda_H \theta_H(w_0)}{\lambda_H \theta_H(w_0)a_H + \lambda_F \theta_F(0)a_F}, \theta_H(w_0) = 1, \theta_F(w_0) = 1\\
 \Rightarrow \lambda_H a_H + \lambda_F a_F &=& \lambda_H\\
-\frac{\lambda_F}{\lambda_H} &=& \frac{1}{a_F} (1-a_H)
+\frac{\lambda_F}{\lambda_H} &=& \frac{1}{a_F} (1-a_H)\\
+W_H[t, Y(w_t), Y^*(w_t), q(w_t)] &=& \int_t^\infty dS \int \partial w_S \left[ C_H(w_S) \rho (w_S) + C_H^*(w_S) \rho ^*(w_S) \right] AD_{w(t)} (w_S)\\
+\mbox{1st term} &=& \int_t^\infty dS \int \partial w_S C_H(w_S)\rho (w_S) \frac{\hat{n_0}(w_S)}{\hat{n_0}(w_t)}\\
+&=& \int_t^\infty dS C_H(w_S)\rho (w_S) \frac{D_0(w_S)e^{-PS}\frac{1}{Y(w_S)}}{D_0(w_t)e^{-Pt}\frac{1}{Y(w_t)}} \frac{[\lambda_H \theta_H(w_S) a_H + \lambda_F \theta_F(w_S)a_F]/\rho(w_S)}{[\lambda_H \theta_H(w_t) a_H + \lambda_F \theta_F(w_t)a_F]/\rho(w_t)}\\
+&=& \rho(w_t) Y(w_t) \int_t^\infty dS \int \partial w_S D(w_S/w_t) e^{-P(S-t)} C_H(w_S) \frac{1}{Y(w_S)}\\ &&\frac{\lambda_H \theta_H(w_S) a_H + \lambda_F \theta_F(w_S)a_F}{\lambda_H \theta_H(w_t) a_H + \lambda_F \theta_F(w_t)a_F}\\
+\end{eqnarray*}
+\begin{eqnarray*}
+&=& \rho(w_t) Y(w_t) \int_t^\infty dS \int \partial w_S D(w_S/w_t) e^{-P(S-t)} \frac{\lambda_H \theta_H(w_S) a_H}{\lambda_H \theta_H(w_t) a_H + \lambda_F \theta_F (w_t) a_F}\\
+&& \mbox{use fact that } E_t(\theta_H(w_t)) = \theta_H(w_S)\\
+&=& \rho(w_t) Y(w_t) \int_t^\infty dS e^{-P(S-t)} \frac{\lambda_H \theta_H(w_S) a_H}{\lambda_H \theta_H(w_t) a_H + \lambda_F \theta_F (w_t) a_F}\\
+&=& \rho (w_t) Y(w_t) \frac{1}{\rho} \frac{\lambda_H \theta_H(w_S) a_H}{\lambda_H \theta_H(w_t) a_H + \lambda_F \theta_F (w_t) a_F}\\
+\mbox{2nd term} &=& \int_t^\infty dS \int \partial w_S C_H^*(w_S)\rho^* (w_S) \frac{\hat{n_0^*}(\rho^* w_S)}{\hat{n_0^*}(\rho^* w_t)}\\
+&=& P^*(w_t)\int_t^\infty dS \int \partial w_S C_H^*(w_S)\rho^* (w_S) \frac{D_0(w_S)e^{-PS}}{D_0(w_t)e^{-Pt}} \frac{[\lambda_H \theta_H(w_S) (1-a_H)]C_H^*(w_t)}{[\lambda_H \theta_H(w_t) (1-a_H)] C_H^*(w_S)}\\
+&=& \rho^*(w_t) C_H^*(w_t) \int_t^\infty dS \int \partial w_S D(w_S/w_t) e^{-P(S-t)} \frac{\theta_H(w_S)}{\theta_H(w_t)}\\
+&=& \rho^*(w_t) Y^*(w_t) \frac{\lambda_H \theta_H(w_t)(1-a_H)}{\lambda_H \theta_H(w_t) (1-a_H) + \lambda_F \theta_F (w_t)(1-a_F)}\frac{1}{\rho}\\
+&& \mbox{use} P^*(w_t) Y^*(w_t) = P(w_t)Y(w_t) \frac{\lambda_H \theta_H(w_t)(1-a_H)+\lambda_F \theta_F(w_t)(1-a_F)}{\lambda_H\theta_H(w_t)a_H + \lambda_F \theta_F(w_t)a_F}\\
+&=& \frac{1}{\rho}P(w_t) Y(w_t) \frac{\lambda_H \theta_H(w_S) (1-a_H)}{\lambda_H \theta_H(w_t) a_H + \lambda_F \theta_F (w_t) a_F}\\
+W_H(t) &=& \frac{1}{\rho} P(w_t)Y(w_t) \frac{\lambda_H \theta_H (w_t)}{\lambda_H \theta_H (w_t) a_H + \lambda_F \theta_F(w_t)a_F}, \mbox{ use, } \frac{\lambda_F}{\lambda_H} = \frac{1-a_H}{a_F}\\
+&=& \frac{1}{\rho} P(w_t)Y(w_t) \frac{\theta_H (w_t)}{\theta (w_t) a_H + (1-a_F)} \mbox{ use, } \theta(w_t) \equiv \frac{\theta_H(w_t)}{\theta_F(w_t)}\\
+&& \mbox{Note that, of the 4 state variables $Y, Y^*, q, \theta$ only three are independent} \\
+q &=& \left[\frac{\theta(w_t)a_H + \frac{1-a_H}{a_F}a_F}{\theta(w_t)(1-a_H) + \frac{1-a_H}{a_F} (1-a_F)}\right] \left(\frac{Y^*(w_t)}{Y(w_t)}\right)\\
+&=& \frac{a_H}{1-a_H} \left[\frac{\theta (w_t) + \frac{1-a_H}{a_H}}{\theta (w_t) + \frac{1-a_F}{a_F}}\right] \left(\frac{Y^*(w_t)}{Y(w_t)}\right)\\
+&& \mbox{I want to find the dynamics of $\frac{dS}{S}$ where,}\\
+S &=& \frac{1}{\rho} \left(\frac{q(t)}{\alpha q(t) + (1-\alpha)}\right) Y(t)\\
+&& \mbox{So, we need the dynamics of $q(t)$}\\
+\log q &=& L\left[\frac{a_H}{1-a_H}\right] + L\left[\theta(t) + \frac{1-a_H}{a_H}\right] - L \left[\theta(t) + \frac{1-a_F}{a_F}\right] + L Y^* - L Y\\
+d(Lq) &=& \frac{d\theta}{\theta + \frac{1-a_H}{a_H}} - \frac{d\theta}{\theta + \frac{1-a_F}{a_F}} + d(LY^*) - 
+d(LY)\\
+&=& \frac{\frac{1-a_F}{a_F}-\frac{1-a_H}{a_H}}{\left[\theta + \frac{1-a_H}{a_H}\right]\left[\theta + \frac{1-a_F}{a_F}\right]} d\theta + \left[\mu_Y^* - \frac{\sigma_Y^{*2}}{2}\right] dt + \sigma_Y^* \partial w^* - \left[\mu_Y - \frac{\sigma_Y ^2}{2}\right]dt - \sigma_Y \partial w\\
+LS &=& L[q(t)] - L[\alpha q(t) + (1-\alpha)] + LY - L\rho\\
+d[LS] &=& d[Lq] - \left(\frac{\alpha q}{\alpha q + (1-\alpha)}\right) \frac{dq}{q} + d(LY)\\
+&& \mbox{Just looking at stochastic components,}\\
+&=& \frac{\alpha q + (1-\alpha) - \alpha q}{\alpha q + (1-\alpha)} d(Lq) + d(LY)\\
+&=& \frac{1-\alpha}{\alpha q + (1-\alpha)} [A d\theta + \sigma_Y^* \partial w^* - \sigma_Y \partial w] + \sigma_Y \partial w\\
+&=& \left(\frac{1-\alpha}{\alpha q + (1-\alpha)}\right) A d\theta + \sigma_Y \partial w \frac{\alpha q}{\alpha q + (1-\alpha)} + \sigma_Y^* \partial w^* \frac{1-\alpha}{\alpha q + (1-\alpha)}\\
+\end{eqnarray*}
+Now, look at Bond; which is riskless in LOCAL good : $dB^H = r^H B^H dt$. $B^H$ is in units of home good :  in units of numera... we have,
+\begin{eqnarray*}
+B(w_t) &=& P(w_t) B^H(t) = \frac{q(w_t)}{\alpha q (w_t) + (1-\alpha)} B^H(t)\\
+LB(w_t) &=& L q(w_t) - L[\alpha q (w_t) + (1-\alpha)] + LB^H\\
+d(LB) &=& (\cdot) dt + d(Lq) - \frac{\alpha q}{\alpha q + (1-\alpha)} \frac{dq}{q}\\
+&=& \frac{1-\alpha}{\alpha q + (1-\alpha)} [Ad\theta + \sigma_Y^* \partial w^* - \sigma_Y\partial w]\\
+\mbox{Case B:} &&\\
+d\theta &=& ()dt + [K_H - K_F]\theta dw^\theta\\
+\frac{dS}{S} &=& ()dt + \frac{1-\alpha}{\alpha q + (1-\alpha)} A (K_H - K_F)\theta dw^\theta \\
+&&+\frac{\alpha q}{\alpha q + (1-\alpha)} \sigma_Y \partial w + \frac{1-\alpha}{\alpha q + (1-\alpha)} \sigma_Y^* dw^*\\
+\frac{dS^*}{S^*} &=& ()dt + \frac{-\alpha q}{\alpha q + (1-\alpha)} A (K_H - K_F)\theta dw^\theta \\
+&&+\frac{\alpha q}{\alpha q + (1-\alpha)} \sigma_Y \partial w + \frac{1-\alpha}{\alpha q + (1-\alpha)} \sigma_Y^* dw^*\\
+&& \mbox{From three eqns above,}\\
+\frac{\partial B}{B} &=& ()dt + [A(K_H-K_F) \theta \partial w^\theta + \sigma_Y^* \partial w^* - \sigma_Y \partial w] \frac{1-\alpha}{\alpha q + (1-\alpha)}\\
+\mbox{Case C:} &&\\
+d\theta &=& ()dt + [K_H - K_F]\theta dw^\theta\\
+\frac{dS}{S} &=& ()dt + \frac{1}{\alpha q + (1-\alpha)} \left[ (1-\alpha) A (K_H\theta \partial w - K_F \theta \partial w^*)+\alpha q \sigma_Y \partial w + (1-\alpha) \sigma_Y^* \partial w^* \right]\\
+\frac{dS^*}{S^*} &=& ()dt + \frac{1}{\alpha q + (1-\alpha)} \left[ -\alpha q A (K_H\theta \partial w - K_F \theta \partial w^*)+\alpha q \sigma_Y \partial w + (1-\alpha) \sigma_Y^* \partial w^*\right]\\
 \end{eqnarray*}
 
+\textbf{Pricing Kernel Dynamics}
+\begin{eqnarray*}
+L(w_t) &=& e^{-Pt} \left\{\left(\frac{\alpha}{Y(w_t)}\right)\left[\lambda_H \theta_H(w_t)a_H+ \lambda_F \theta_F(w_t)a_F\right] \right. \\
+&& \left. + \left(\frac{1-\alpha}{Y^*(w_t)}\right)\left[\lambda_H \theta_H(1-a_H) + \lambda_F \theta_F (1-a_F)\right]\right\}\\
+&& \mbox{It is convenient to define}\\
+\Psi_1 &\equiv & \frac{\theta_H(w_t)}{Y(w_t)}, \Psi_\theta = \frac{1}{Y}, \Psi_Y = \frac{-\theta}{Y^2}, \Psi_{\theta \theta} = 0, \Psi_{\theta Y} = \frac{-1}{Y}, \Psi_{YY} = \frac{2\theta}{Y^2}\\
+d\Psi_1 &=& \frac{d\theta_H}{Y} - \frac{\theta_H}{Y} \frac{\partial Y}{Y} + \frac{\theta}{Y} \frac{\partial \theta}{\theta} \frac{\partial Y}{Y}\\
+\frac{d\Psi_1}{\Psi_1} &=& \frac{d\theta_H}{\theta_H} - \frac{\partial Y}{Y} + \left(\frac{\partial Y}{Y}\right)^2 - \frac{\partial \theta}{\theta} \frac{\partial Y}{Y}\\
+&=& -K_H^T \partial w - [\mu_Y dt + \sigma_Y \partial w] + \left(\frac{\sigma_Y^2}{2}\right)dt - K_H^w \sigma _Y dt\\
+&& \mbox{where $K_H^w$ is the component of the vector $K_H$ that loads on dw}\\
+\mbox{1st term } &=& d[\alpha \lambda_H a_H \Psi_1]\\
+&=& \alpha \lambda_H a_H \Psi_1 \left[\left(\frac{\sigma_Y^2}{2} - K_H^w \sigma_Y - \mu_Y \right)dt - \sigma_Y \partial w -K_F^T \partial w \right]\\
+\mbox{2nd term : } \Psi_2 &=& \frac{\theta_F}{Y} \mbox{ All else is the sum}\\
+&=& d[\alpha \lambda_F a_F \Psi_2]\\
+&=& \alpha \lambda_F a_F \Psi_2 \left[\left(\frac{\sigma_Y^2}{2} - K_F^w \sigma_Y - \mu_Y \right)dt - \sigma_Y \partial w - K_F^T \partial w\right]\\
+\mbox{3rd term : } \Psi_3 &\equiv & \frac{\theta_H}{Y^*} \Psi_\theta = \frac{1}{Y} \Psi_Y \\
+\frac{d\Psi_3}{\Psi_3} &=& -K_H^T \partial w - (\mu_Y^* + \sigma_Y^* \partial w^*) + \frac{\sigma_Y^2}{2}dt - K_H^* \sigma_Y^* dt\\
+&=& \left(\frac{\sigma_Y^2}{2} - \mu_Y^* - K_H^* \sigma_Y^* \right) dt - \sigma_Y^* \partial w^* - K_H^T \partial w\\
+\mbox{4th term : }\frac{d\Psi_4}{\Psi_4} &=& \left(\frac{\sigma_Y^2}{2} - \mu_Y^* - K_F^* \sigma_Y^* \right) dt - \sigma_Y^* \partial w^* - K_H^T \partial w\\
+d\zeta &=& -\rho \zeta dt + e^{-Pt} [\alpha \lambda_H a_H] \left[\frac{\theta_H}{Y}\right] \left[\left(\frac{\sigma_Y^2}{2}-K_H^w \sigma_Y -\mu_Y\right) dt - \sigma_Y \partial w - K_H^T \partial w\right]\\
+&& + e^{-Pt} [\alpha \lambda_F a_F] \left[\frac{\theta_F}{Y}\right] \left[\left(\frac{\sigma_Y^2}{2}-K_F^w \sigma_Y -\mu_Y\right) dt - \sigma_Y \partial w - K_F^T \partial w\right]\\
+&& + e^{-Pt} [(1-\alpha) \lambda_H (1-a_H)] \left[\frac{\theta_H}{Y^*}\right] \left[\left(\frac{\sigma_Y^{*2}}{2}-K_H^* \sigma_Y^* -\mu_Y^* \right) dt - \sigma_Y^* \partial w^* - K_H^T \partial w\right]\\
+&& + e^{-Pt} [(1-\alpha) \lambda_F (1-a_F)] \left[\frac{\theta_F}{Y^*}\right] \left[\left(\frac{\sigma_Y^{*2}}{2}-K_F^* \sigma_Y^* -\mu_Y^* \right) dt - \sigma_Y^* \partial w^* - K_F^T \partial w\right]\\
+-r\zeta &=& \frac{1}{dt} E[d\zeta]\\
+&=& -\rho \zeta + e^{-Pt} \mbox{(4 terms within a few signs and 1/2, I get what they get on page 1175)}
+\end{eqnarray*}
+
+Stochastic Terms:
+\begin{eqnarray*}
+d\zeta_{stoch} &=& -m^T \zeta d\vec{w}\\
+-m^T\zeta e^{Pt} &=& -(\sigma_Y,0,0) \left[\alpha \lambda_H a_H \frac{\theta_H}{Y} + \alpha \lambda_F a_F \frac{\theta_F}{Y^*}\right]\\
+&& + -(0,\sigma_Y^*,0) \left[(1-\alpha) \lambda_H (1-a_H) \frac{\theta_H}{Y} + (1-\alpha) \lambda_F (1-a_F) \frac{\theta_F}{Y^*}\right]\\
+&& - \left[\alpha \lambda_H a_H \frac{\theta_H}{Y} K_H^T + \alpha \lambda_F a_F \frac{\theta_F}{Y}K_F^T\right]\\
+&& - \left[(1-\alpha) \lambda_H (1-a_H) \frac{\theta_H}{Y^*} K_H^T + (1-\alpha) \lambda_F (1-a_F) \frac{\theta_F}{Y^*}K_F^T\right]\\
+&& \mbox{again, with a few signs, agrees with page 1175.}
+\end{eqnarray*}
+
+\textbf{Portfolio weights} (bottom of page 1175)\\
+From FOC's of social planner (eqn 1, 2, 3, 4 on my notes) and using $n(w_t) = \hat{n_0}(w_t)P(w_t) = \zeta_0 (w_t) D_0(w_t) P(w_t)$ I get,
+\begin{eqnarray*}
+\mbox{1' : } \zeta (w_t) P(w_t) &=& e^{-Pt} \lambda_H \theta_H(w_t)a_H \frac{1}{C_H(w_t)}\\
+\mbox{2' : } \zeta (w_t) P(w_t) &=& e^{-Pt} \lambda_F \theta_H(w_t)a_F \frac{1}{C_F(w_t)}, \frac{\zeta(t) P(t)}{\lambda_i} = e^{-Pt} \frac{\theta_i a_i}{C_i}\\
+\mbox{3' : } \zeta (w_t) P^*(w_t) &=& e^{-Pt} \lambda_H \theta_H(w_t)(1-a_H) \frac{1}{C_H^*(w_t)}\\
+\mbox{4' : } \zeta (w_t) P^*(w_t) &=& e^{-Pt} \lambda_F \theta_F(w_t)(1-a_F) \frac{1}{C_F^*(w_t)}, \frac{\zeta(t) P^*(t)}{\lambda_i} = e^{-Pt} \frac{\theta_i (1-a_i)}{C^*_i(t)}\\
+&& \mbox{To identify security holdings, first define p- martingale M:}\\
+M_i(t) &=& \zeta (t) w_i(t) + \int_0^t dS(\cdot)\\
+&& \mbox{and notationally define } dM_i \equiv \Psi_i^T dw\\
+\mbox{vs: } dM_{stoch} &=& \zeta dw_{stoch} + w d\zeta_{stoch}\\
+&& \mbox{use } \frac{d\zeta}{\zeta} = -rdt - m^T dw, \frac{\partial w_{stoch}}{w_i} \simeq X_i\sigma^T \partial w\\
+\Psi_i^T \partial w &=& \zeta w \left[X_i \sigma^T - m^T\partial w\right]\\
+\sigma^T X &=& I^Tm + I^T \frac{\Psi_i}{\zeta w}, \mbox{where,}
+\end{eqnarray*}
+I = $ \left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \end{array} \right)$ 
+or I =$ \left( \begin{array}{cc}
+1 & 0\\
+0 & 1\\
+0 & 0\end{array} \right)$ depending upon number ... independent securities.\\ 
+
+top of page 11, my notes:
+\begin{eqnarray*}
+w_H &=& \frac{1}{\rho} P(t) Y(t) \frac{\lambda_H \theta_H}{\lambda_H \theta_H a_H + \lambda_F \theta_F a_F}\\
+\mbox{Eq A3 : } \zeta &=& e^{-Pt} \frac{1}{PY} [\lambda_H \theta_H a_H + \lambda_F \theta_F a_F]\\
+w\zeta &=& \frac{1}{\rho} e^{-Pt} \lambda_H \theta_H(t)
+\end{eqnarray*}
+Note I have a $e^{-Pt}$ term; Eq A11 does not.
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
