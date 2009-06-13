@@ -1,0 +1,223 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+
+\begin{document}
+\section*{Pavlova Rigabon}
+They eventually use state dependent log utility. So do we, expl... chosen to closely mimic by economy.\\
+
+Main contribution, ``Develop a tractable 2-country, 2-good asset pricing model in which terms of trade land, hence, exchange rate, play an important role in determining the dynamics of countries stock and bond markets, thereby introducing elements of international trade into an otherwise standard infra... pricing ... ''\\
+
+Most models consider only single good $\Rightarrow $ tears of trade = d, exchange rate = 1 unless include shipping costs\\
+
+Help..., Cole/..., ... : Terms of trade perfectly offset output stocks
+\begin{list}{$\Rightarrow $}{}
+\item value of dividends same across all stocks (for any numerative)
+\item stock markets are perfectly correlated
+\item no benefits to investing internationally
+\item To ..., P/R introduce ``Demand Stocks''
+\item Each country specializes in ``Own Goods''
+\item stock = ... to own good
+\item Representative agent in each country consumes both goods, but prefernce for own good.
+\item Uncertainity channels 1) output stocks, 2) deamnd stocks
+\end{list}
+
+Special cases
+\begin{list}{-}{}
+\item Consumer sentiment
+\item Catching up with tones
+\item Heterogeneous beliefs / consumer confidence
+\end{list}
+
+Q? What if there was not a jump in output but a jump in expected growth?\\
+Now terms of trade will not move much. In fact, if there is a home bias, then due to more wealthy would expect higher demand for domestic good and then terms of trade would improve. Basically, wealth effect would generate a positive demand stock.\\
+
+Maybe not, as agents ... expect factor p... of good to drop, and thus PV may not rise today more than other stock.\\
+
+Generates perfect correlation of market returns in previous literature. All stock markets move in same direction in response to a supply stock in contraty, positive return in domestic marketting but causes deteroriation in terms of trade sicne higher supply implies a lower price, this generates increase in foreign stock.\\
+
+In contrast, demand stocks causes a ``divergence'', creating an important in terms of trade \\
+- Paper claims it helps both stock and bond markets\\
+- Ok, claim to future units of good more valuable. (Recall, this is a real bond)\\
+
+Demand stocks can \\
+1) Increase variance of terms of tade without increasing, variance of output.\\
+2) Despite perfect risk sharing, they cause divergence in countries' consumption indexes.\\
+
+Due to preference of home good, find $\exists $ additional hedging portfolio due to demand stocks that biases holdings towards domestic assets.\\
+
+Existing literature focuesed on 1 Channel : Common worldwide discount facts.\\
+This paper, 2nd channel = fluctuating terms of trade.\\
+
+Emprically, find demand stocks twice as important as supply stocks for asset prices and exchange rates.\\
+
+Also, heterogeneous beliefs rather than se.. or catching up with Jones' supported.\\
+
+Exchange economy, 3D B/M's, 2 countries Home/Foreign (H)(F), producing own good.
+\begin{eqnarray*}
+\frac{\partial Y}{Y} &=& \mu_Y dt + \sigma_Y \partial w \\
+\frac{\partial Y^*}{Y^*} &=& \mu_Y^* dt + \sigma_Y^* \partial w \\
+\partial w \partial w^* &=& 0\\
+&& \mbox{Price of home good } \equiv P\\
+&& \mbox{Price of foreign good } \equiv P^*
+\end{eqnarray*}
+
+World num... basket : $\alpha $ units of home good, $(1-\alpha)$ units of foreign good\\
+$\Rightarrow $ Everything is priced wrt numeraire good\\
+
+4 Securities : Home Bond, with price = B, Home Stock Price = S, Foreign Bond Price $B^*$, Foreign Stock Price = $S^*$\\
+
+B = Money market account instantaneously riskless in LOCAL GOOD, etc. So, if invest, local good at price P(0), get back $e^{r \Delta t}$ local goods at price $P(\Delta t)$. Set return = $\left[P(\Delta t) e^{r\Delta t} - P(0)\right]$\\
+
+Terms of trade $q \equiv \frac{P}{P^*} =$ relative price of home good vs foreign good.\\
+Preposition : Agent for each country endorsed at time 0, with total supply of stock of country $w_H(0) = S(0), w_F(0)=S^*(0)$ each agent choose $[C,C^*]$ and $[X^S, X^{S^*}, X^B, X^{B^*}]$, X= factor of wealth.
+\begin{eqnarray*}
+dw + PC dt + P^*C^*dt &=& wX^S \left[\frac{dS + PYdt}{S}\right] + wX^{S^*} \left[\frac{dS^* + P^*Y^*dt}{S^*}\right] + wX^B \frac{dB}{B} + wX^{B^S} \frac{dB^*}{B^*}\\
+&& \mbox{Home Utility : }\\
+&& \max_{\zeta\zeta} E \left[\int_0^T dt e^{-Pt} \theta_H(t)\right] \left[a_H \zeta C_H(*) + (1-a_H) \zeta C_H^*(*)\right]\\
+&& \mbox{Foreign Utility : }\\
+&& \max_{\zeta\zeta} E \left[\int_0^T dt e^{-Pt} \theta_H(t)\right] \left[a_F \zeta C_F(*) + (1-a_F) \zeta C_F^*(*)\right]
+\end{eqnarray*}
+$a_H, (a_F) $ are weights on home (foreign) agent. Imposing $a_H \> a_F $ (I prefer $a_H>0.5, a_F$) captures ``Home bias''\\
+
+Heterogenity in tasks required; otherwise demand stocks would have no effect.\\
+
+Demand stocks $\theta_H(t), \theta_F(t)$ positive driven by $\vec{w}$ with $\theta_H(0) = \theta_F(0) = 1$ and are martingales : $E_t[\theta_i(S)] = \theta_i(t)$\\
+
+Note : Model does not neccessarily imply static dependent preferences $\Rightarrow $ can supply be heterogenous beliefs\\
+ 
+\textbf{Section 1.2}\\
+Financial markets are potentially dynamically complete (3 risk sources, 4 securities). If they are not, one can still obtain equaiton by solving social planners problem, because pareto optimality preserved even under market incompleteness.\\
+
+Social planner input weights $\left\{\lambda_H, \lambda_F\right\}$
+\begin{eqnarray*}
+\int_0^t dt \int dw_t D_0(w_t) e^{-Pt} \left[\lambda_H \theta_H (w_t) (a_H \zeta C_H(w_t) + (1-a_H) \zeta C_H^*(w_t) + \lambda_F \theta_F (w_t) (a_F\zeta C_F(w_t) + (1-a_F)\zeta C^*_F(w_t))\right]\\
++ \int_0^t dt \int dw_t n_0(w_t) \left[Y(w_t) - C_H(w_t) - C_F(w_t)\right] + \int_0^t dt \int dw_t n_0^*(w_t) \left[Y^*(w_t) - C_H^*(w_t) - C_F^*(w_t)\right]\\
+\end{eqnarray*}
+\begin{eqnarray}
+\frac{\partial \zeta}{\partial C_H(w_t)} : 0 &=& D_0(w_t) e^{-Pt} \lambda_H \theta_H(w_t) a_H \left(\frac{1}{C_H(w_t)}\right) - n_0(w_t)\\
+\frac{\partial \zeta}{\partial C_F(w_t)} : 0 &=& D_0(w_t) e^{-Pt} \lambda_F \theta_F(w_t) a_F \left(\frac{1}{C_F(w_t)}\right) - n_0(w_t)\\
+\frac{\partial \zeta}{\partial C_H^*(w_t)} : 0 &=& D_0(w_t) e^{-Pt} \lambda_H \theta_H(w_t) (1-a_H) \left(\frac{1}{C_H^*(w_t)}\right) - n_0^*(w_t)\\
+\frac{\partial \zeta}{\partial C_F^*(w_t)} : 0 &=& D_0(w_t) e^{-Pt} \lambda_F \theta_F(w_t) (1-a_F) \left(\frac{1}{C_F^*(w_t)}\right) - n_0^*(w_t)
+\end{eqnarray}
+
+I define $n_0(w_t)$ to emphasize that if we do this calcualtion at date S $(0<S<t)$ and $w_S \in w_t$, we will then have $D_{w(S)} (w_t)$ and $n_{w(S)(w_t)}$. We know\\
+$D_{w(S)} (w_t) = \frac{D_0(w_t)}{D_0(w_S)}, w_S \in w_t, 0$, otherwise\\
+$n_{w(S)} (w_t) = \frac{n_0(w_t)}{n_0(w_S)}, w_S \in w_t, 0$, otherwise\\
+However, $\left[\lambda_H \theta_H (w_t) a_H \left(\frac{1}{C_H(w_t)}\right)\right]$ is independent of date 0.\\
+
+1 + 2 :
+\begin{eqnarray}
+\lambda_H \theta_H(w_t) a_H \left(\frac{1}{C_H(w_t)}\right) &=& \lambda_F \theta_F(w_t) a_F \left(\frac{1}{C_F(w_t)}\right)\notag\\
+\Rightarrow C_H(w_t) &=& C_F(w_t) \left(\frac{\lambda_H \theta_H(w_t)a_H}{\lambda_F \theta_F(w_t)a_F}\right)\notag\\
+&& \mbox{Combine with $C_H(w_t) + C_F(w_t) = Y(w_t)$}\notag\\
+\Rightarrow C_F(w_t) &=& Y(w_t) \left(\frac{\lambda_F \theta_F (w_t) a_F}{\lambda_H \theta_H (w_t) a_H + \lambda_F \theta_F (w_t) a_F}\right)\\
+\Rightarrow C_H(w_t) &=& Y(w_t) \left(\frac{\lambda_F \theta_F (w_t) a_H}{\lambda_H \theta_H (w_t) a_H + \lambda_F \theta_F (w_t) a_F}\right)
+\end{eqnarray}
+
+3 + 4 :
+\begin{eqnarray}
+\lambda_H \theta_H(w_t) (1-a_H) \left(\frac{1}{C_H^*(w_t)}\right) &=& \lambda_F \theta_F(w_t) (1-a_F) \left(\frac{1}{C_F^*(w_t)}\right)\notag\\
+\Rightarrow C_H^*(w_t) &=& C_F^*(w_t) \left(\frac{\lambda_H \theta_H(w_t)(1-a_H)}{\lambda_F \theta_F(w_t)(1-a_F)}\right)\notag\\
+&& \mbox{Combine with $C_H^*(w_t) + C_F^*(w_t) = Y^*(w_t)$}\notag\\
+\Rightarrow C_F^*(w_t) &=& Y^*(w_t) \left(\frac{\lambda_F \theta_F (w_t) (1-a_F)}{\lambda_H \theta_H (w_t) (1-a_H) + \lambda_F \theta_F (w_t) (1-a_F)}\right)\\
+\Rightarrow C_H^*(w_t) &=& Y^*(w_t) \left(\frac{\lambda_F \theta_F (w_t) (1-a_H)}{\lambda_H \theta_H (w_t) (1-a_H) + \lambda_F \theta_F (w_t) (1-a_F)}\right)
+\end{eqnarray}
+Despite perfet risk sharing, correlation between consumption of a particular good and its aggregate output is not perfect because of demand stocks. Separately, home-bias has an effect in that even if $\theta_H(w_t) = 1, \theta_F(w_t) = 1 $, we have,
+\begin{eqnarray*}
+\frac{C_H(w_t)}{C_F(w_t)} &=& \frac{\lambda_H a_H}{\lambda_F a_F}\\
+\frac{C_H^*(w_t)}{C_F^*(w_t)} &=& \frac{\lambda_H (1-a_H)}{\lambda_F (1-a_F)}\\
+\frac{C_H/C_F}{C_H^*/C_F^*} &=& \frac{a_H/a_F}{(1-a_H)/(1-a_F)}\\
+\end{eqnarray*}
+So, unless $a_H = a_F \Rightarrow$ not perfect sharing\\
+
+To identify state prices, note that $n(w_t)(n^*(w_t))$ is proportional to price of one unit of home (foreign) good to be delivered at date to iff, state $w_t$ occurs. That is lagrangean multiplier measures marginal utility and ratio of marginal utlities equals ratio of prices.\\
+
+Define terms of trade $q(w_t) \equiv \frac{P(w_t)}{P^*(w_t)} = \frac{n_0(w_t)}{\hat{n_0} (w_t)}$\\
+Note:\\
+  $n_0(w_t)$ = date 0 price\\ 
+  $P(w_t)$ = date t spot price\\
+  ratio of prices = ratio of marginals\\
+Convenient to represent $R, n^*$ as a product of 2 components : $n_0(w_t) = \hat{n_0} (w_t). P(w_t)$
+\begin{list}{-}{}
+\item State price $\hat{n_0} (w_t)$ = dated price of A/D security that pays one unit of numeralle iff $w_t(0)$
+\item Spot price $P(w_t)$
+\end{list}
+Need $P(w_t)$ shares of (1 numerator)( $\tilde{w}= w_t$ ). to be able to capable (1 - home good) ($\tilde{w}= w_t$)\\
+
+\begin{eqnarray*}
+\Rightarrow q(w_t) = \frac{n_0(w_t)}{n_0^* (w_t)} &=& \frac{a_H}{(1-a_H)} \frac{C_H^*(w_t)}{C_H(w_t)}\\
+&=& \frac{a_H}{(1-a_H)} \frac{Y^*(w_t)}{Y(w_t)} \frac{\lambda_H \theta_H(w_t) (1-a_H)}{\lambda_H \theta_H (w_t) a_H} \frac{\lambda_H \theta_H a_H + \lambda_F \theta_F a_F}{\lambda_H \theta_H (1-a_H) + \lambda_F \theta_F (1-a_F)}\\
+&=& \frac{Y^*(w_t)}{Y(w_t)} \frac{\lambda_H \theta_H a_H + \lambda_F \theta_F a_F}{\lambda_H \theta_H (1-a_H) + \lambda_F \theta_F (1-a_F)}
+\end{eqnarray*}
+Also define, $q_0 = \frac{Y^*(w_t)}{Y(w_t)} \frac{\theta + \frac{a_F}{a_H} \lambda}{\theta + \frac{1-a_F}{1-a_H} \lambda} \frac{a_H}{1-a_H}$ where, $\theta \equiv \frac{\theta_H (w_t)}{\theta_F (w_t)}, \lambda \equiv \frac{\lambda_F}{\lambda_H}$ with $a_F<a_H$, can show $\frac{\partial q}{\partial \theta} > 0 \Rightarrow$ terms of trade increase with demand stocks which is intuitive.\\
+
+Also terms of trade decreaese with local output as home good becomes relatively less scarce $\Rightarrow$ standard Ricardian result. That is $\frac{dq(w_t)}{dY(w_t)}<0$\\
+
+It is worth noting that, by definition of numeraire, $\alpha P(w_t) + (1-\alpha) P^*(w_t) \equiv 1, \forall w_t$, since we have determined $q(w_t) \equiv \frac{P(w_t)}{P^*(w_t)}$, we can determine $P(w_t)$ via, 
+\begin{eqnarray*}
+1 &=& \alpha P + (1-\alpha) \frac{P}{q}\\
+q &=& \alpha Pq + (1-\alpha) P\\
+P(1-\alpha + \alpha q) = q
+P(w_t) &=& \frac{q(w_t)}{1-\alpha + \alpha q(w_t)}\\
+P^*(w_t) &=& \frac{P(w_t)}{q(w_t)} = \frac{1}{1-\alpha + \alpha q (w_t)}\\
+&& \mbox{Note that if $q=1$, (i.e., $p=p^*$), then $P=1$}\\
+\mbox{Price Stock} &=& \mbox{Claim to $Y(w_t)$ units of good, whose price = $P(w_t)$}\\
+S(0) &=& \int dt \int \partial w_t Y(w_t).P(w_t).A/D_0(w_t)\\
+&=& \int dt \int \partial w_t Y(w_t) P(w_t) \frac{\hat{n_0}(w_t)}{\hat{n_0}(w_0)}\\
+&=& P(0) \int dt \int \partial w_t Y(w_t) \frac{n_0(w_t)}{n_0 (w_0)}, \mbox{ using } n_0(w_t) = \hat{n_0}(w_t).P(w_t)\\
+\mbox{From 1 and 6 : } &&\\
+n_0(w_t) &=& D_0(w_t) e^{-Pt} \frac{1}{Y(w_t)} (\lambda_H \theta_H(w_t) a_H + \lambda_F \theta (w_t) a_F)\\
+n_0(w_0) &=& \frac{1}{Y(w_0)} (\lambda_H \theta_H(w_0) a_H + \lambda_F \theta (w_0) a_F)\\
+\mbox{Use Matingale property :}&&\\
+E_0(\theta_H(w_t)) &=& \int \partial (w_t)D_0(w_t) \theta_H(w_t) = \theta_H(w_0)\\
+S(0) &=& P(0) \int dt \int \partial w_t Y(w_t) D_0 (w_t) e^{-Pt} \frac{Y(0)}{Y(w_t)} \frac{\lambda_H \theta_H (w_t)a_H + \lambda_F \theta_F(w_t) a_F}{\lambda_H \theta_H (w_0) a_H + \lambda_F \theta_F (w_0) a_F}\\
+&=& P(0) Y(0) \int_0^T dt e^{-Pt}\\
+&=& P(0) Y(0) \frac{1}{P} (1-e^{-PT}), \mbox{ use } P(0) = \frac{q(0)}{1-\alpha + \alpha q(0)} \\
+&=& \frac{1}{P} (1-e^{-Pt}) Y(0) \frac{q(0)}{1-\alpha + \alpha q(0)}
+\end{eqnarray*}
+The weights in the planners problem $(\lambda_H, \lambda_F)$ cannotj be determined uniquely. Only then ratio can be $(\frac{\lambda_F}{\lambda_H})$
+
+\begin{eqnarray*}
+W_H(0) &=& \int dt \int \partial w_t [C_H(w_t)P(w_t) + C_H^* (w_t) P^*(w_t)] A/D_0(w_t)\\
+\mbox{1st term } &=& P(0) \int dt \int \partial w_t C_H(w_t) \frac{n_0(w_t)}{n_0(w_0)}\\
+&=& P(0) \int dt \int \partial w_t D_0(w_t) e^{-Pt} \frac{Y(0)}{Y(w_t)} \left[\frac{\lambda_H \theta_H(w_t)a_H + \lambda_F \theta_F(w_t)a_F}{\lambda_H \theta_H(w_0)a_H + \lambda_F \theta_F (w_0) a_F}\right]\\
+&& \cdot Y(w_t) \left[\frac{\lambda_H \theta_H(w_t)\theta_H}{\lambda_H \theta_H(w_t)a_H + \lambda_F \theta_F (w_t) a_F }\right]\\
+&=& P(0) Y(0) \left(\frac{\lambda_H \theta_H(w_t)a_H}{\lambda_H \theta_H(w_0)a_H + \lambda_F \theta_F (w_0) a_F}\right) \frac{1}{P} (1-e^{-Pt})\\
+\mbox{2nd term : } &=& P^*(0) \int dt \int \partial w_t C_H^*(w_t) \frac{n_0^*(w_t)}{n_0^*(w_0)}\\
+&=& P^*(0) Y^*(0) \int dt \int \partial w_t D_0(w_t) e^{-Pt} \lambda_H \theta_H(w_t)(1-a_H)\\
+&& \frac{1}{\lambda_H \theta_H(w_0)(1-a_H) + \lambda_F \theta_F (w_0) (1-a_F)}\\ 
+\mbox{Where I have used,}&&\\
+n^*_0 &=& \lambda_H \theta_H(w_0) (1-a_H) \frac{1}{Y^*(w_0)} \left[\frac{\lambda_H \theta_H(w_0)(1-a_H) + \lambda_F \theta_F (w_0) (1-a_F)}{\lambda_H \theta_H(w_0) (1-a_H)}\right]\\
+&=& \frac{1}{Y^*(w_0)} [\lambda_H \theta_H(w_0)(1-a_H) + \lambda_H \theta_H (w_0) (1-a_H) + \lambda_F \theta_F(w_0)(1-a_F)]\\
+&=& P^*(0) Y^*(0) \left(\frac{\lambda_H \theta_H(w_0)(1-a_H)}{\lambda_H \theta_H(w_0)(1-a_H) + \lambda_H \theta_H (w_0) (1-a_H) + \lambda_F \theta_F(w_0)(1-a_F)}\right)\\
+&& \frac{1}{P} (1-e^{-Pt})\\
+\mbox{Note from } && q(0) = \frac{P(0)}{P^*(0)} = \frac{\lambda_H \theta_H(0)a_H + \lambda_F \theta_F(0) a_F}{\lambda_H \theta_H(0)(1-a_H) + \lambda_F \theta_F(0) (1-a_F)} \frac{Y^*(0)}{Y(0)}\\
+\Rightarrow \mbox{2nd term } &=& P(0) Y(0) \frac{\lambda_H \theta_H(w_0) (1-a_H)}{\lambda_H \theta_H(0)a_H + \lambda_F \theta_F(0) a_F} \frac{1}{P} (1-e^{-Pt})\\
+\mbox{1st term + 2nd term } &=& P(0) Y(0) \frac{\lambda_H \theta_H(w_0)}{\lambda_H \theta_H(0) a_H + \lambda_F \theta_F(0) a_F} \frac{1}{P} (1-e^{-Pt})\\
+&& \mbox{But setting $w_H = S(0)$, we get,}\\
+1&=& \frac{\lambda_H \theta_H(w_0)}{\lambda_H \theta_H(w_0)a_H + \lambda_F \theta_F(0)a_F}, \theta_H(w_0) = 1, \theta_F(w_0) = 1\\
+\Rightarrow \lambda_H a_H + \lambda_F a_F &=& \lambda_H\\
+\frac{\lambda_F}{\lambda_H} &=& \frac{1}{a_F} (1-a_H)
+\end{eqnarray*}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

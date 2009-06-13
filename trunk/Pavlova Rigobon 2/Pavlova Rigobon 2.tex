@@ -1,0 +1,285 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+
+\begin{document}
+\section*{Pavlova Rigabon 2}
+Derive GE without a representative agent:
+\begin{eqnarray*}
+\mbox{1) } \frac{dY}{Y} &=& \mu _Y dt + \sigma _Y \partial w\\
+\mbox{2) } \frac{dY^*}{Y^*} &=& \mu _Y^* dt + \sigma _Y^* \partial w\\
+P(w_*) &\equiv & \mbox{ price of home good in state } - w_* \mbox{ in term os numerative }\\
+P^*(w_*) &\equiv & \mbox{ price of foreign good in state } - w_* \mbox{ in term os numerative }\\
+q(w_*) &\equiv & \frac{P(w_*)}{P^*(w_*)}
+\end{eqnarray*}
+Assume complete set of ... securities with dated prices $ Q_0(w_*)$\\
+Home: 
+\begin{eqnarray*}
+L &=& \int_0^T dt e^{-\rho *} \int \partial w_* D_0(w_*) \theta _H (w_*) \left\{ a_H LC_H(w_*) + (1-a_H) L C_H^*(w_*)\right\}\\
+&& + \beta _H \left\{ w_H(0) - \int dt \int \partial w_* \theta _0(w_*) \left[C_H(w_*) \rho(w_*) + C_H^*(w_*)\rho ^*(w_*)\right]\right\}\\
+\frac{\partial}{\partial C_H(w_*)} = 0 &=& e^{-p*} D_0(w_*) \theta _H(w_*) a_H \left(\frac{1}{C_H(w_*)}\right) - \beta _H \theta _0(w_*) \rho (w_*) \forall w_*\\
+\frac{\partial}{\partial C_H^*(w_*)} = 0 &=& e^{-p*} D_0(w_*) \theta _H(w_*) (1-a_H) \left(\frac{1}{C_H^*(w_*)}\right) - \beta _H \theta _0(w_*) \rho ^* (w_*) \forall w_*\\
+\frac{\partial}{\partial \beta _H} = 0 &=& w_H(0) - \int dt \int \partial w_* \theta _0(w_*) \left[C_H(w_*) \rho (w_*) + C_H^* (w_*) \rho ^*(w_*)\right]\\
+&\Rightarrow & C_H(w_*) \rho (w_*) = \left(\frac{1}{\beta _H}\right) \left(\frac{1}{\theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _H(w_*) a_H\\
+& \Rightarrow & C_H^*(w_*) \rho ^*(w_*) = \left(\frac{1}{\beta _H}\right) \left(\frac{1}{\theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _H(w_*) (1-a_H)
+\end{eqnarray*}
+Foreign: 
+\begin{eqnarray*}
+L &=& \int_0^T dt e^{-\rho *} \int \partial w_* D_0(w_*) \theta _H (w_*) \left\{ a_F LC_F(w_*) + (1-a_F) L C_F^*(w_*)\right\}\\
+&& + \beta _F \left\{ w_F(0) - \int dt \int \partial w_* \theta _0(w_*) \left[C_F(w_*) \rho(w_*) + C_F^*(w_*)\rho ^*(w_*)\right]\right\}\\
+\frac{\partial}{\partial C_F(w_*)} = 0 &=& e^{-p*} D_0(w_*) \theta _F(w_*) a_F \left(\frac{1}{C_F(w_*)}\right) - \beta _F \theta _0(w_*) \rho (w_*) \forall w_*\\
+\frac{\partial}{\partial C_F^*(w_*)} = 0 &=& e^{-p*} D_0(w_*) \theta _F(w_*) (1-a_F) \left(\frac{1}{C_F^*(w_*)}\right) - \beta _F \theta _0(w_*) \rho ^* (w_*) \forall w_*\\
+\frac{\partial}{\partial \beta _F} = 0 &=& w_F(0) - \int dt \int \partial w_* \theta _0(w_*) \left[C_F(w_*) \rho (w_*) + C_F^* (w_*) \rho ^*(w_*)\right]\\
+&\Rightarrow & C_F(w_*) \rho (w_*) = \left(\frac{1}{\beta _F}\right) \left(\frac{1}{\theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _F(w_*) a_F\\
+& \Rightarrow & C_F^*(w_*) \rho ^*(w_*) = \left(\frac{1}{\beta _F}\right) \left(\frac{1}{\theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _F(w_*) (1-a_F)\\
+\end{eqnarray*}
+\begin{eqnarray*}
+W_F(0) &=& \frac{1}{\beta _F} \int dt \int \partial w_* e^{-\rho *} D_0 (w_*) \theta _F(w_*) \left[a_F + 1-a_F\right]\\
+&=& \frac{1}{\beta _F} \int dt \int \partial w_* e^{-\rho *} D_0 (w_*) \theta _F(w_*)\\
+&=& \frac{1}{\rho \beta _F} \mbox{ using } E\left[ \theta _F (w_*)\right] = \theta _F(0) = 1\\
+\\&& \mbox{vs}\\ \\
+W_H(0) &=& \frac{1}{\beta _H} \int dt \int \partial w_* e^{-\rho *} D_0 (w_*) \theta _H(w_*)\\
+&=& \frac{1}{\rho \beta _H}
+\end{eqnarray*}
+In partial equilibrium with $\left\{ \theta (w_*), D_0(w_*), \left[ \theta _0(w_*), w_H(0), w_F(0), \rho (w_*), \rho ^*(w_*) \right]\right\}$ exogenous, we would be done, and these last two equations would define $\left\{\beta_H, \beta_F\right\}$\\
+
+From partial equation, I have $ 4x(*x\omega _*) + 2$ equations
+\begin{eqnarray}
+C_H(w_*) \rho (w_*) &=& \left(\frac{1}{\beta _H \theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _H(w_*) a_H \forall (*, w_*)\\
+C_H^*(w_*) \rho ^*(w_*) &=& \left(\frac{1}{\beta _H \theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _H(w_*) (1-a_H) \forall (*, w_*)\\
+C_F(w_*) \rho (w_*) &=& \left(\frac{1}{\beta _F \theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _F(w_*) a_F \forall (*, w_*)\\
+C_F^*(w_*) \rho ^*(w_*) &=& \left(\frac{1}{\beta _F \theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _F(w_*) (1-a_F) \forall (*, w_*)\\
+w_H(0) &=& \left(\frac{1}{\beta _H}\right)\int dt \int \partial w_* e^{-\rho *} D_0(w_*) \theta _H(w_*)\\
+w_F(0) &=& \left(\frac{1}{\beta _H}\right)\int dt \int \partial w_* e^{-\rho *} D_0(w_*) \theta _H(w_*)
+\end{eqnarray}
+
+Here in partial equation, we take $\left\{ \theta (w_*), D_0(w_*), \left[ \theta _0(w_*), w_H(0), w_F(0), \rho (w_*), \rho ^*(w_*) \right]\right\}$ exogenous\\
+
+In general equation, these $2 \neq 3 x(*x\omega _*)$ are determined via\\
+\begin{eqnarray}
+s(0) = w_H(0) &=& \int dt \int \partial w_* \theta _0(w_*) Y(w_*) \rho(w_*) \mbox{       leq}\\
+s^*(0) = w_F(0) &=& \int dt \int \partial w_* \theta _0(w_*) Y^*(w_*) \rho ^*(w_*) \mbox{       leq}\\
+Y(w_*) &=& C_H(w_*) + C_F(w_*)  \mbox{     } (*x\omega _*) \mbox{ eq}\\
+Y^*(w_*) &=& C_H^*(w_*) + C_F^*(w_*)  \mbox{     } (*x\omega _*) \mbox{ eq}\\
+1 &=& \alpha \rho (w_*) + (1-\alpha) \rho ^H (w_*) \mbox{     } (*x\omega _*) \mbox{ eq}
+\end{eqnarray}
+\begin{equation*}
+\mbox{(11*) } \frac{\theta _0(0)}{D_0(0)} = 1 \Rightarrow \mbox{ Need this because without, can only determine ratio} \left(\frac{\beta_H}{\beta_F}\right)\tag{11*}
+\end{equation*}
+
+$\Rightarrow$ This forces price of consumption unit today equal to 1.\\
+
+To solve, I will first determine $q(w_*) \equiv \frac{\rho (w_*)}{\rho ^H(w_*)}$ and then use equation 11 to solve for $\rho (w_*), \rho ^*(w_*)$. I will then solve for $\theta _0(w_*)$ and finally solve for $w_H(0), w_F(0)$.\\
+
+Solve for $q(w_*)$ : \\
+\begin{eqnarray}
+(1,3,9) : \rho(w_*) Y(w_*) &=& \rho (w_*) C_H(w_*) + \rho (w_*) C_F (w_*)\nonumber\\
+&=& \left(\frac{1}{\beta _H \theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _H (w_*) a_H + \nonumber \\
+&& \left(\frac{1}{\beta _F \theta _0(w_*)}\right) e^{-\rho *} D_0(w_*) \theta _F (w_*) a_F 
+\end{eqnarray}
+\begin{eqnarray}
+(2,4,10) : \theta _0(w_*) \rho ^*(w_*) Y^*(w_*) &=& \theta _0 (w_*) \rho ^*(w_*) C_H^* (w_*) + \theta _0 (w_*) \rho ^* (w_*) C_F^*(w_*)\nonumber\\
+&=& e^{-\rho *} D_0(w_*) \left\{\left(\frac{1}{\beta_H}\right)\theta _H (w_*) (1-\theta_H)+ \right. \nonumber \\
+&& \left. \left(\frac{1}{\beta_F}\right)\theta_F(w_*)(1-\theta_F)\right\}
+\end{eqnarray}
+\begin{equation*}
+\frac{12}{13}:q(w_*) \frac{Y(w_*)}{Y^*(w_*)} = \frac{\left(\frac{1}{\beta_H}\right)\theta_H(w_*)a_H + \left(\frac{1}{\beta_F}\right)\theta_F(w_*)a_F}{\left(\frac{1}{\beta_H}\right)\theta_H(w_*)(1-a_H) + \left(\frac{1}{\beta_F}\right)\theta_F(w_*)(1-a_F)}\tag{13b}
+\end{equation*}
+
+This agrees with equation in P/R if $\frac{1}{\beta_H} \sim \lambda_H, \frac{1}{\beta_F} \sim \lambda_F$ which is the typical asset that lagrange multiplier of agent reciprocal of lagrange multiplier of agents weight in social planner problem.\\
+
+Eq 13b gives $q(w_*)$ as a fact of $\{\beta_H, \beta_F\}$, and exogenous variables - 
+\begin{equation}
+(11) \Rightarrow \frac{1}{\rho (w_*)} = \alpha + (1-\alpha) \frac{1}{q(w_*)}\notag\\
+\end{equation}
+\begin{equation}
+\Rightarrow  \rho (w_*) = \frac{q(w_*)}{(1-\alpha) + \alpha q(w_*)}\tag{13c}\\
+\end{equation}
+\begin{equation}
+(11) \Rightarrow \frac{1}{\rho ^* (w_*)} = \alpha q (w_*) + (1-\alpha)\notag \\
+\end{equation}
+\begin{equation}
+\Rightarrow  \rho (w_*) = \frac{1}{(1-\alpha) + \alpha q(w_*)}\tag{13d}\\
+\end{equation}
+
+Since $q(w_*)$ written in exogenous terms, so are $\{\rho (w_*), \rho ^*(w_*)\}$\\
+
+To solve for $\theta _0(w_*)$, use 12, 13 and 11
+\begin{eqnarray}
+12: \alpha \rho \theta_0(w_*) &=& \alpha e^{-\rho *} D_0(w_*) \left(\frac{1}{Y(w_*)}\right)\left\{\left(\frac{1}{\beta_H}\right)\theta_H(w_*)a_H + \left(\frac{1}{\beta_F}\right)\theta_F(w_*)a_F \right\}\\
+13: (1-\alpha) \rho^* \theta_0(w_*) &=& (1-\alpha) e^{-\rho *} D_0(w_*) \left(\frac{1}{Y^*(w_*)}\right)\left\{\left(\frac{1}{\beta_H}\right)\theta_H(w_*)a_H  \right. \notag\\
+&&\left.+\left(\frac{1}{\beta_F}\right)\theta_F(w_*)a_F \right\}\\
+&&\mbox{Combine 14, 15, and use in 11: }\notag
+\end{eqnarray}
+\begin{equation*}
+\theta_0(w_*) = e^{-\rho *} D_0(w_*)\left\{ \left(\frac{\alpha}{Y(w_*)}\right) \left[\frac{1}{\beta_H} \theta_H(w_*)a_H+\left(\frac{1}{\beta_F}\right)\theta_F(w_*)a_F\right] + \left(\frac{1-\alpha}{Y^*(w_*)}\right)\right.\notag\\
+\end{equation*}
+\begin{equation*}
+\left. \left[\frac{1}{\beta_H} \theta_H(w_*)(1-a_H)+\left(\frac{1}{\beta_F}\right)\theta_F(w_*)(1-a_F)\right] \right\}\tag{15*}
+\end{equation*}
+
+This is consistent with $q(w_*) \equiv \frac{\theta_0(w_*)}{D_0(w_*)}$ if $\frac{1}{\beta_H}=\lambda _H, \frac{1}{\beta_F}=\lambda _F$\\
+
+Now, solve for $\{w_H(0), w_F(0)\}$. For $w_H(0)$, use (7), (12)
+\begin{eqnarray}
+w_H(0) &=& \int dt \int \partial w_* e^{-\rho *}(w_*) \left\{\frac{1}{\beta_H} \theta_H(w_*)a_H + \frac{1}{\beta_F} \theta_F(w_*)a_F\right\}\notag\\
+&&\mbox{use fact that $\theta_H, \theta_F$ are marginals: $\int \partial w_* D_0(w_*) = \theta_H(0)=1, \forall *$}\notag\\
+&=& \left(\frac{1}{\rho}\right)\left(\frac{a_H}{\beta_H}+\frac{a_F}{\beta_F}\right)\\
+&& \mbox{Similarly, for $w_F(0)$, use (8) and (13)}\notag\\
+w_F(0) &=& \int dt \int \partial w_* e^{-\rho *} D_0 (w_*) \left\{\frac{1}{\beta_H} \theta_H(w_*)(1-a_H) + \frac{1}{\beta_F} \theta_F(w_*)(1-a_F)\right\}\notag\\
+&=& \left(\frac{1}{\rho}\right)\left(\frac{1-a_H}{\beta_H}+\frac{1-a_F}{\beta_F}\right)\\
+&& \mbox{But from partial eq, we have $w_H(0)=\frac{1}{\rho \beta_H}, w_F(0)=\frac{1}{\rho \beta_F}$}\notag\\
+&& \mbox{Combining,}\notag\\
+1&=& a_H +a_F\frac{\beta_H}{\beta_F}, 1=(1-a_H)\frac{\beta_F}{\beta_H} + (1-a_F)\notag\\
+\frac{\beta_H}{\beta_F} &=& \frac{1-a_H}{a_F}\\
+&&\mbox{Plugging back we get,}\notag\\
+\frac{w_H(0)}{w_F(0)} = \frac{\beta_F}{\beta_H} = \frac{a_F}{1-a_H}\\
+&&\mbox{Also from 14, 18 we have:}\notag\\
+q(0) &=& \frac{Y^*(0)}{Y(0)} \left[\frac{\frac{a_H}{\beta_H}+\frac{a_F}{\beta_F}}{\frac{1-a_H}{\beta_H}+\frac{1-a_F}{\beta_F}}\right]\notag\\
+&=& \frac{Y^*(0)}{Y(0)} \left[\frac{\frac{a_Fa_H}{1-a_H}+a_F}{a_F+(1-a_F)}\right]\notag\\
+&=& \frac{Y^*(0)}{Y(0)} \frac{a_F}{a-a_H}\\
+&& \mbox{use equation 11* and 15*: $\theta_H(0)=1,\theta_F(0)=1$}\notag\\
+1&=& \frac{\theta_0(0)}{D_0(0)} = \frac{\alpha}{Y(0)} \left[\frac{a_H}{\beta_H} + \frac{a_F}{\beta_F}\right] + \frac{1-\alpha}{Y^*(0)} \left[\frac{1-a_H}{\beta_H}+\frac{1-a_F}{\beta_F}\right]\notag\\
+&&\mbox{Use equation 19 : $\frac{\beta_F}{\beta_H} = \frac{a_F}{a-a_H}$ }\notag\\
+\beta_F &=& \frac{\alpha}{Y(0)}\left[a_H\frac{a_F}{1-a_H}+a_F\right]+\frac{1-\alpha}{Y^*(0)}\left[(1-a_H)\frac{a_F}{1-a_H}+(1-a_F)\right]\notag\\
+&=& \frac{1}{Y(0)}\frac{\alpha}{1-a_H}\left[a_Ha_F+a_F(1-a_H)\right]+(1-\alpha)\frac{1}{Y^*(0)}\notag\\
+&=& \frac{\alpha}{Y(0)} \frac{a_F}{1-a_H} + \frac{1-\alpha}{Y^*(0)}\notag\\
+&=& \alpha \left(\frac{a_F}{a-a_H}\right) \left( \frac{q(0)}{Y^*(0)}\right) \frac{\frac{1}{\beta_H} (1-a_H) + \frac{1}{\beta_F}(1-a_F)}{\frac{1}{\beta_H}a_H+\frac{1}{\beta_F}a_F} + \frac{1-\alpha}{Y^*(0)}\notag\\
+&=& \frac{1}{Y^*(0)} \left\{\alpha \left(\frac{a_F}{1-a_H}\right)q(0)\left[\frac{\left(\frac{a_F}{1-a_H}\right)\left(1-a_H\right)+\left(1-a_F\right)}{\left(\frac{a_F}{1-a_H}\right)a_H+a_F}\right]+(1-\alpha)\right\}\notag\\
+&=& \frac{1}{Y^*(0)} \left\{\alpha \left(\frac{a_F}{1-a_H}\right)q(0)\left[\frac{1-a_H}{a_Fa_H+a_F(1-a_H)}\right]+(1-\alpha)\right\}\notag\\
+&=& \frac{1}{Y^*(0)} \left\{\alpha q(0) + (1-\alpha) \right\}\notag\\
+\beta_F &=& \frac{1}{Y^*(0)} \frac{1}{\rho ^*(0)}
+\end{eqnarray}
+\begin{eqnarray}
+&&\mbox{Back to 13b}\notag\\
+q(0)\left(  \frac{Y(0)}{Y^*(0)}\right) &=& \frac{\frac{a_H}{\beta_H}+\frac{a_F}{\beta_F}}{\frac{1-a_F}{\beta_H}+\frac{1-a_F}{\beta_F}}\notag\\
+&=& \frac{a_H\frac{a_F}{1-a_H}+a_F}{(1-a_H)\frac{a_F}{1-a_H}+(1-a_F)}\notag\\
+&=& \frac{a_F}{1-a_H}\notag\\
+&=& \frac{\beta_F}{\beta_H}\notag\\
+\mbox{Thus, } \beta_H &=& \beta_F \left(\frac{Y^*(0)}{Y(0)}\right) \left(\frac{\rho^*(0)}{\rho (0)}\right)\notag\\
+&=& \frac{1}{\rho(0)Y(0)} \\
+&& \mbox{From 5, 6:}\notag\\
+s(0) &=& w_H(0) = \frac{1}{\rho \beta_H} = \frac{\rho(0)Y(0)}{\rho}\\
+s^*(0) &=& w_F(0) = \frac{1}{\rho \beta_F} = \frac{\rho^*(0)Y(0)}{\rho}\\
+\mbox{1x3:} \frac{C_H(w_*)}{C_F(w_*)} &=& \frac{\beta_F}{\beta_H} \frac{\theta_H(w_*)}{\theta_F(w_*)}\frac{a_H}{a_F}\notag\\
+Y(w_*) &=& C_H(w_*)\left[1+\frac{\beta_H a_F \theta_F}{\beta_F \theta_H a_H}\right]\notag\\
+\Rightarrow C_H(w_*) &=& Y(w_*) \frac{\beta_F a_H \theta_H}{\beta_F a_H \theta_H + \beta_H a_F \theta_F}\notag\\
+&=& Y(w_*) \frac{\frac{1}{\beta_H}a_H\theta_H}{\frac{1}{\beta_H}a_H\theta_H + \frac{1}{\beta_F}a_F \theta_F}\\
+\Rightarrow C_F(w_*) &=& Y(w_*) - C_H(w_*)\notag\\
+&=& Y(w_*) \left(\frac{\frac{1}{\beta_F}a_F\theta_F}{\frac{1}{\beta_H}a_H\theta_H+\frac{1}{\beta_F}a_F\theta_F}\right)\\
+\Rightarrow C_H^*(w_*) &=& Y^*(w_*) \frac{\beta_F a_H \theta_H}{\beta_F a_H \theta_H + \beta_H a_F \theta_F}\notag\\
+&=& Y(w_*) \frac{\frac{1}{\beta_H}a_H\theta_H}{\frac{1}{\beta_H}a_H\theta_H + \frac{1}{\beta_F}a_F \theta_F}\notag \\
+\Rightarrow C_F^*(w_*) &=& Y^*(w_*) - C_H^*(w_*)\notag\\
+&=& Y^*(w_*) \left(\frac{\frac{1}{\beta_F}a_F\theta_F}{\frac{1}{\beta_H}a_H\theta_H+\frac{1}{\beta_F}a_F\theta_F}\right)\notag\\
+&& \mbox{From here I go back to P/R's notation,}\notag\\
+(2): q &=& \frac{\lambda_H \theta a_H+\lambda_F a_F}{\lambda_H \theta (1-a_H) + \lambda_F (1-a_F)} \frac{Y^*}{Y}, \theta \equiv \frac{\theta_H}{\theta_F}\notag\\
+Lq &=& L\left[\lambda_H a_H \theta + \lambda_F a_F\right] - L\left[\lambda_H (1-a_H) \theta + \lambda_F (1-a_F)\right] + LY^*- LY\notag\\
+dLq &=& \left(\frac{\lambda_H a_H}{\lambda_H a_H \theta + \lambda_F a_F}\right)d\theta - \frac{\lambda_H(1-a_H)}{\lambda_H(1-a_H)\theta + \lambda_F (1-a_F)}d\theta + \frac{dY^*}{Y^*} - \frac{dY}{Y} + \theta(d*)\notag\\
+&\equiv & Ad\theta + \frac{dY^*}{Y^*}-\frac{dY}{Y} +\theta (d*)\notag\\
+&& \mbox{where, } A\equiv \left(\frac{\lambda_H a_H}{\lambda_H a_H \theta + \lambda_F a_F}\right) - \left(\frac{\lambda_H (1-a_H)}{\lambda_H (1-a_H) \theta + \lambda_F (1-a_F)}\right)\notag\\
+\frac{dq}{q} &=& ()d* + \left[ Ad\theta - \sigma_Y dw + \sigma_Y^* \partial w^* \right]
+\end{eqnarray}
+\begin{eqnarray}
+S(*) &=& \left(\frac{1}{\rho}\right) \left(\frac{q(*)}{\alpha q(*) + (1-\alpha)}\right)Y \notag\\
+LS &=& Lq- L\left[\alphaq(*) + (1-\alpha)\right] + LY \notag\\
+dLS &=& \frac{dq}{q} - \frac{\alpha dq}{\alpha q(*) + (1-\alpha)} + \frac{dY}{Y}+()dt\notag\\
+&=&\left[1-\frac{\alpha q}{\alpha q + (1-\alpha)}\right] \frac{dq}{q} + \frac{dY}{Y}\notag\\
+&=&\left[\frac{1-\alpha}{\alpha q + (1-\alpha)}\right] \frac{dq}{q} + \frac{dY}{Y}\notag\\
+&=& \left[\frac{1-\alpha}{\alpha q + (1-\alpha)}\right] \left[A d\theta -\sigma_Y \partial w +\sigma^*_Y \partial w^*\right] - \sigma_Y \partial w\\
+S^* &=& \frac{1}{\rho} \left(\frac{1}{\alpha q + (1-\alpha)}\right) Y^*\notag\\
+dLS^* &=& (\cdot) d* - \left(\frac{\alpha q}{\alpha q + (1-\alpha)}\right) \frac{dq}{q} + \frac{dY^*}{Y^*}\notag\\
+&=& - \left[\frac{\alpha q}{\alpha q + (1-\alpha)}\right] \left[A d\theta -\sigma_Y \partial w +\sigma^*_Y \partial w^*\right] - \sigma^*_Y \partial w^*
+\end{eqnarray}
+Home bond pays out $(1-C_Hd*)$ units of home goods, in terms of numeraire:
+\begin{eqnarray}
+\mbox{1 unit of home good} &=& \rho (*) \mbox{ at date *}\notag\\
+\mbox{$a-C_Hd*$ units of home good} &=& (1+C_Hd*)\rho (*_\Delta *) \mbox{ at date *...}\notag\\
+\Rightarrow \DeltaPrice &=& (1+C_Hd*)(\rho+d\rho)-\rho\notag\\
+&=& \rho +d\rho + C_H\rho d*\notag\\
+\Rightarrow \frac{\Delta Price}{\rho} &=& \frac{d\rho}{\rho} + C_Hd*\notag\\
+\Rightarrow \frac{\partial B}{B} &=& C_Hd* + \frac{\partial \rho}{\rho}\notag\\
+\rho &=& \frac{q}{(1-\alpha)j + \alpha q}\notag\\
+dL\rho &=& () d* + \frac{dq}{q} - \left(\frac{\alpha q}{(1-\alpha)+\alpha q}\right)\frac{dq}{q}\notag\\
+&=& ()d* + \left[\frac{1-\alpha}{(1-\alpha)+\alpha q}\right] \left[Ad\theta - \sigma_Y \partial w + \simga^*_Y \partial w^*\right]
+\end{eqnarray} 
+Foreign Bond:
+\begin{eqnarray}
+\Delta \rho &=& (1+C_Fd*)(\rho^* + d\rho^*) - \rho^*\notag\\
+\frac{\partial B^*}{B^*} &=& \frac{\partial \rho^*}{\rho^*} + C_Fd*\notag\\
+dL\rho^* &=& -\left[\frac{\alpha \rho}{(1-\alpha)+\alpha q}\right] \frac{dq}{q} + ()d*\notag\\
+\frac{\partial B^*}{B^*} &=& -\left[\frac{\alpha \rho}{(1-\alpha)+\alpha q}\right] \left[Ad\theta - \sigma _Y \partial w + \sigma_Y^* \partial w^*\right]\\
+&&\mbox{all agree with property 1, equation 17.}\notag\\
+&&\mbox{I do not want to do all consumption dynamics. I will do just one:}\notag\\
+LC_H &=& L\theta - L\left[\lambda_H a_H \theta + \lambda_F a_F\right] + LY + ...\notag\\
+\frac{dC_H}{C_H} &=& ()d* + \frac{d\theta}{\theta} - \left(\frac{\lambda_H a_H\theta}{\lambda_H a_H\theta+\lambda_F a_F}\right)\frac{d\theta}{\theta} + \frac{dY}{Y}\notag\\
+&=& \left(\frac{\lambda_F a_F}{\lambda_F a_F+\lambda_H a_\theta \theta}\right) \frac{d\theta}{\theta} + \frac{dY}{Y}\\
+&&\mbox{agrees with signsin equaiton 19.}\notag
+\end{eqnarray}
+13a: if $Y_H=0, Y_F=0$ then I see only 2 B/M's $\frac{\partial Y}{Y}=\mu d* + \sigma \partial w, \frac{\partial Y^*}{Y^*} = \mu_*d*+\sigma^* \partial w^*$ So the fact that $S+S^*$ are perfectly correlated, to me, still seems like complete markets.
+\begin{eqnarray*}
+13b: \frac{d\theta_H}{\theta_H} &=& Y_H \partial w_\theta\\
+\frac{d\theta_F}{\theta_F} &=& Y_F \partial w_\theta\\
+\theta &=& \frac{\theta_H}{\theta_H}, \theta_1 = \frac{1}{\theta_F}, \theta_2 = \frac{1}{\theta_F^2},\theta_{11} = 0, \theta_{12} = -\frac{1}{\theta_F^2}, \theta_{22} = \frac{2\theta_H}{\theta_F^3}\\
+\frac{d\theta}{\theta} &=& Y_H \partial w_\theta - Y_F \partial w_\theta + Y_F^2 \partial * - Y_H Y_F \partial *
+\end{eqnarray*}
+\begin{equation}
+= (Y_F^2 - Y_H Y_F)d* + (Y_H-Y_F) \partial w_\theta
+\end{equation}
+Proposition 2:
+First, introduce ``world bond'' : If you want a portfolio that pays $\alpha $ units of home good and $(1-\alpha )$ units of foreign good at date $(*+d*)$, its date $(*+d*)$ value is,
+\begin{eqnarray*}
+V(*+d*) &=& \alpha \rho(*+d*) +(1-\alpha) \rho ^* (*+d*) \equiv 1\\
+&&\mbox{at date *, this will cost:}\\
+V(*) &=& \left(\frac{\alpha}{1+C_Hd*}\right) \rho(*) + \left(\frac{1-\alpha}{1+C_Fd*}\right)\rho^*(*)\\
+&=& (\alpha \rho(*) + (1-\alpha) \rho^* (*) ) - (\alpha \rho(*) C_H +(1-\alpha)\rho^*(*)C_F)d*\\
+&=& 1- C_w d*
+\end{eqnarray*}
+\begin{equation}
+\Rightarrow C_w \equiv \alpha c_F(*) \rho(*) + (1-\alpha) C_F(*) \rho^*(*)
+\end{equation}
+Interpretations:\\
+B: 4 assets : 3 risky $[S,S^*, B]$ and one riskless $B^w$\\
+C: 3 assets : 2 risky $[S,S^*]$ and one riskless $B^w$\\
+D:\\
+Going back to P/R notation via equation A4:\\
+\begin{eqnarray*}
+\zeta(w_*) &\alpha & e^{-\rho*} \left\{\left(\frac{\alpha}{Y(w_*)}\right) \left(\lambda_H\theta_H(w_*)a_H + \lambda_F \theta_F (w_*) a_F\right) \right.\\
+&&+ \left.\left(\frac{1-\alpha}{Y^*(w_*)}\right)\left(\lambda_H\theta_H(w_*)a_H + \lambda_F \theta_F (w_*) a_F\right)\right\}\\
+d\zeta &=& -\rho qd* + e^{-\rho *} \left(\frac{\alpha}{Y(w_*)}\right) \left[\lambda_H a_H Y_H^T \theta_H \partial w + \lambda_F a_F Y_F^T \theta_F \partial w\right]\\
+&& - e^{-\rho *} \left(\frac{\alpha}{Y}\right) \left[\lambda_H a_H \theta_H + \lambda_F a_F \theta_F \right] \left[\mu_Y d* + \sigma_Y \partial w\right]\\
+&& - e^{-\rho *} \left(\frac{\alpha}{Y}\right) \left[\lambda_H a_H \theta_H \sigma_Y Y_{H,1} + \lambda_F a_F \theta_F \sigma_Y Y_{F,1} \right]dt\\
+&& + e^{-\rho *} \left(\frac{1-\alpha}{Y}\right) \left[\lambda_H (1-a_H) \theta_H \sigma_Y Y_H \partial w + \lambda_F (1-a_F) \theta_F \sigma_Y Y_F \partial w \right]\\
+&& - e^{-\rho *} \left(\frac{1-\alpha}{Y}\right) \left[\lambda_H (1-a_H) \theta_H + \lambda_F (1-a_F) \theta_F \right] \left[\mu_Y^* d* + \sigma_Y^* + \sigma_Y^* \partial w^*\right]\\
+&& - e^{-\rho *} \left(\frac{1-\alpha}{Y}\right) \left[\lambda_H (1-a_H) \theta_H \sigma_Y^* Y_{H,2} + \lambda_F (1-a_F) \theta_F \sigma_Y^* K_{F,2} \right]dt\\
+&& + e^{-\rho *} \left(\frac{\alpha}{Y}\right) \left[\lambda_H \theta_H a_H + \lambda_F \theta_F a_F \right]\sigma_Y^* dt + e^{-\rho *} \left(\frac{1-\alpha}{Y^*}\right) \left[\lambda_H \theta_H (1-a_H) + \lambda_F \theta_F (1-a_F) \right](\sigma_Y^*)^2 dt\\ 
+-\gamma &=& -\rho -\frac{e^{-\rho *}}{\zeta} \left(\frac{\alpha}{Y}\right) \left[\lambda_H a_H \theta_H + \lambda_F a_F \theta_F \right] \mu_Y\\
+&& - \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{\alpha}{Y}\right) \left[\lambda_H a_H \theta_H \sigma_Y Y_{H,1}+ \lambda_F a_F \theta_F \sigma_Y K_{F,1}\right]\\
+&& - \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{1-\alpha}{Y^*}\right) \left[\lambda_H (1-a_H) \theta_H + \lambda_F (1-a_F) \theta_F \right] \mu_Y^*\\
+&& - \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{1-\alpha}{Y^*}\right) \left[\lambda_H (1-a_H) \theta_H \sigma_Y^* Y_{H,2}+ \lambda_F (1-a_F) \theta_F \sigma_Y^*Y_{F,2}\right]\\
+&& + \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{\alpha}{Y}\right) \left[\lambda_H \theta_H a_H + \lambda_F \theta_F a_F \right]\sigma_Y^2 + \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{1-\alpha}{Y^*}\right) \left[\lambda_H \theta_H (1-a_H) + \lambda_F \theta_F (1-a_F) \right]\\
+&& \mbox{where wer are using } \frac{d\zeta}{\zeta} \equiv -\gamma d* - m^T \partial \vec{w}\\
+-\vec{m} &=& \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{\alpha}{Y}\right) \left(\lambda_H a_H Y_H^T \theta_H + \lambda_F a_F Y_F^T\theta_F\right)\\
+&& - \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{\alpha}{Y}\right) \left(\lambda_H a_H \theta_H + \lambda_F a_F \theta_F\right) \left(\sigma_Y ,0,0\right)\\
+&& + \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{1-\alpha}{Y^*}\right) \left(\lambda_H (1-a_H) Y_H^T \theta_H + \lambda_F (1-a_F) Y_F^T\theta_F\right)\\
+&& - \left(\frac{e^{-\rho *}}{\zeta}\right)\left(\frac{1-\alpha}{Y^*}\right) \left(\lambda_H (1-a_H) \theta_H + \lambda_F (1-a_F) \theta_F\right) \left(0,\sigma_Y^* ,0\right)\\
+\end{eqnarray*}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
