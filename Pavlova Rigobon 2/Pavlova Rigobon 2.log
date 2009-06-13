@@ -1,0 +1,228 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.4.23)  7 JUN 2009 15:52
+entering extended mode
+ %&-line parsing enabled.
+**"Pavlova Rigobon 2.tex"
+(./Pavlova Rigobon 2.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
+tin, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, romanian, rus
+sian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish, ukenglis
+h, ukrainian, uppersorbian, welsh, loaded.
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(c:/Program Files/texlive/2008/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(./Pavlova Rigobon 2.aux)
+\openout1 = `"Pavlova Rigobon 2.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ [1
+
+{c:/Program Files/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+
+Overfull \hbox (7.4678pt too wide) in alignment at lines 129--157
+ [][][] []
+ []
+
+[3]
+Overfull \vbox (25.12709pt too high) has occurred while \output is active []
+
+
+[4]
+Overfull \vbox (22.37628pt too high) has occurred while \output is active []
+
+
+[5]
+! Undefined control sequence.
+l.189 LS &=& Lq- L\left[\alphaq
+                               (*) + (1-\alpha)\right] + LY \notag\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.202 \Rightarrow \DeltaPrice
+                              &=& (1+C_Hd*)(\rho+d\rho)-\rho\notag\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.208 ...t[Ad\theta - \sigma_Y \partial w + \simga
+                                                  ^*_Y \partial w^*\right]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 244--250
+
+ []
+
+
+Overfull \hbox (40.63649pt too wide) in alignment at lines 250--270
+ [][][] []
+ []
+
+[7] [8] (./Pavlova Rigobon 2.aux) ) 
+Here is how much of TeX's memory you used:
+ 808 strings out of 493886
+ 9206 string characters out of 1148984
+ 83717 words of memory out of 3000000
+ 4147 multiletter control sequences out of 10000+50000
+ 4699 words of font info for 18 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 27i,10n,20p,316b,125s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/Program Files/texlive/2008/texmf-dist/fo
+nts/type1/bluesky/cm/cmbx12.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts
+/type1/bluesky/cm/cmex10.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/ty
+pe1/bluesky/cm/cmmi10.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1
+/bluesky/cm/cmmi5.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/blu
+esky/cm/cmmi7.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky
+/cm/cmr10.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/
+cmr5.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.
+pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb
+><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy5.pfb><c:
+/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb>
+Output written on "Pavlova Rigobon 2.pdf" (8 pages, 88199 bytes).
+PDF statistics:
+ 73 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
