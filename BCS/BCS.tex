@@ -1,0 +1,189 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+
+\begin{document}
+\section*{BCS}
+\begin{equation*}
+\mbox{Risk Sharing Index }= 1-\frac{\sigma^2[m_f-m_d]}{\sigma^2m_f + \sigma^2m_d} = 1-\frac{\sigma^2e}{\sigma^2m_f + \sigma^2m_d}
+\end{equation*}
+
+Numerator = how differnt marginal utility growth is across two countries.\\
+$\Rightarrow $ how much risk is not shared\\
+
+Real exchange rate changes only occur due to market imperfections. If risk sharing is perfect, then real exchange rates won't change, as marginal utility moves in lock-step over agents/countries.\\
+
+We regard this as a puzzle. Common intuition and calucation based on consumption data and observed protfolios suggest much ... risk sharing.\\
+
+Yet our conlcusion is based to escape. Our calculation uses price data and no quantity data or economic modeling. a large degree of international risk sharing is an nesca... logical conclusion of eq(1), a high eq ..., and based economic proposition that price ratios measure marginal ratios of substitution.\\
+
+If puzzle resolved ... equity ... ..., then p... resolved in favor of asset market view that international risk sharing is good.\\
+
+The only way it can be resolved in favor of poor international risk sharing is if the vast majority of consumers are far from their first order conditions, further off then can be explained by observed financial market imperfections, so that measurements of M/S from price ratios are wrong by orders of magnitude.\\
+
+Three major impediments to rish sharing
+\begin{list}{ }{}
+\item (1) Transport Costs
+\item (2) Incomplete Markets (esp cant sell labor formed)
+\item (3) Ignorance (This is my addition - not in paper)
+\end{list}
+
+Oter Discussions:
+\begin{list}{ }{}
+\item (1) Poor consumption calculation
+\item (2) Home bias puzzle
+\item (3) Frictions that separate marginal utility from prices
+\end{list}
+
+H has positive stock\\
+due to risk sharing in assets, ``ividend'' goes from three to four\\
+but 1 unit home good = (1-r) units of foreign good\\
+$\Rightarrow $ Home currency depreciates from 1 to $(1-r) \frac{\mbox{foreign good}}{\mbox{per unit home good}}$\\
+
+Pg8 : I think units of e are $u[c] = \frac{\mbox{Domestic}}{\mbox{Foreign}}$, not $\frac{\mbox{Foreign}}{\mbox{Domestic}}$\\
+
+\begin{eqnarray}
+\mbox{Value of foreign bond for domestic investor} &=& B^f e\nonumber\\
+Return &=& \frac{d(eB_f)}{eB_f} \nonumber\\
+&=& \frac{de}{e} + \frac{dB_f}{B_f} \nonumber\\
+&=& \theta^e dt + dz^e+r^f dt\nonumber\\
+\frac{d(eB_f)}{eB_f} - r_ddt &=& [\theta^e + r^f -r_d]dt + dz^e\\
+\mbox{Value of foreign stock for domestic investor} &=& S^f e\nonumber\\
+Return &=& \frac{d(eS_f)}{eS_f} \nonumber\\
+&=& \frac{de}{e} + \frac{dS_f}{S_f} + \frac{de}{e} \frac{dS^f}{S^f} \nonumber\\
+&=& \theta^e dt + dz^e+ \theta^f dt + dz^f + \varepsilon^{ef} dt
+\end{eqnarray}
+
+Now if we go \$1 long foreign stock and \$1 stock foreign bond, protfolio value and change in portfolio value acre : 
+\begin{eqnarray*}
+w&=& \frac{1}{eS^f} eS^f - \frac{1}{eB^f} eB^f\\
+dw &=& \frac{d(eS^f)}{eS^f} - \frac{d(eB^f)}{eB^f}\\
+&=& [(\theta^e + \theta^f + \varepsilon^{ef})dt + dz^e + dz^f] - [(\theta^e + r^f)dt + dz^e]\\
+&=& [\theta^f - r^f + \varepsilon^{ef}]dt + dz^f
+\end{eqnarray*}
+
+I think BCS keep going back and forth on whether e is in units of \$/L or L/\$. Here, I choose \$/L.\\
+$B^d$ and $S^d$ are in \$
+\begin{eqnarray*}
+\frac{dB_D}{B_D} &=& r^d dt\\
+\frac{dS_D}{S_D} &=& \theta^d dt
+\end{eqnarray*}
+
+$B^f$ and $S^f$ are in L:
+\begin{eqnarray*}
+\frac{dB_f}{B_f} &=& r^f dt\\
+\frac{dS_f}{S_f} &=& \theta^f dt + dZ^f
+\end{eqnarray*}
+
+e is in \$/L : $\frac{de}{e} = \theta^e dt + dz^e$\\
+where $\varepsilon = dz dz^\prime = $ eq 11\\
+
+1) Place \$1 in $S^D$, -\$1 in $B^D$
+\begin{eqnarray*}
+w &=& \frac{1}{S_D} S^D - \frac{1}{B_D} B^D = 0\\
+dw &=& \frac{dS^D}{S^D} - \frac{dB^D}{B^D}\\
+&=& [\theta^D - r^D]dt + dz^D
+\end{eqnarray*}
+
+2) Place \$1 in $B^F \Rightarrow \frac{1}{B_F e_D}$  shares at price $(B_F e_D)\frac{1}{share}$ share \$1 in $B^D$
+\begin{eqnarray*}
+w &=& \frac{d(B_Fe_D)}{B_Fe_D} - \frac{\partial B_D}{B_D} = 0\\
+&=& \frac{\partial B_F}{B_F} + \frac{\partial e}{e} -\frac{\partial B_D}{B_D}\\
+&=& [r_f - r_d + \theta^e]dt + dz^e
+\end{eqnarray*}
+
+3) Place \$1 in $S^F : \frac{1}{S^F e_D}$ shares at price $(S_F e_D) \frac{L}{share} \frac{dollar}{L} = \frac{dollar}{share}$\\
+shot \$1 in $B^F : \frac{1}{B_F e}$ share at price $B_Fe$
+\begin{eqnarray*}
+0=w &=& \frac{1}{S_Fe} S_Fe - \frac{1}{B_Fe} B_Fe\\
+dw &=& \frac{\partial S_Fe}{S_Fe} - \frac{B_Fe}{B_Fe}\\
+&=& \frac{\partial S_F}{S_F} + \frac{de}{e} + \frac{\partial S_F}{S_F} \frac{de}{e} - \frac{\partial B_F}{B} - \frac{de}{e}\\
+&=& (\theta_F dt + dZ^f) + \varepsilon ^{ef} dt - r_f dt\\
+&=& [\theta_F + \varepsilon ^{ef} - r_f]dt + dz_f\\
+&& \mbox{Thus can express drift vector as in eq 12.}
+\end{eqnarray*}
+
+Foreign:\\
+4) L1 in $S^F$, -L1 in $B^F$
+\begin{eqnarray*}
+0 = w &=& \frac{1}{S_F} S_F - \frac{1}{B_F} B_F\\
+dw &=& \frac{\partial S_F}{S_F}- \frac{\partial B_F}{B_F}\\
+&=& (\theta_f - r_f)dt + dz^f
+\end{eqnarray*}
+
+5) L1 = \$(e) in $B^D$ such that -L1 in $B_F$
+\begin{eqnarray*}
+0 = w &=& \frac{e}{B_D}\frac{B^d}{e} - \frac{1}{B^f} B_f\\
+dw &=& \frac{d(\frac{B_d}{e})}{\frac{B_d}{e}} - \frac{\partial B_f}{B_f}\\
+&=& \frac{\partial B_D}{B_D} - \frac{de}{e} + \left(\frac{\partial e}{e}\right)^2 - \frac{\partial B_f}{B_f}\\
+&=& r^D dt - [\theta^e dt + dz^e] + \varepsilon^{ee}dt - r^f dt\\
+&=& [r^D - \theta^e + \varepsilon^{ee} -r^f] dt - dz^e\\
+&& \mbox{OK since they went $+dz^e$ here, need to go long $B_f$, short $\frac{B_d}{e}$}\\
+0=w &=& [\theta^e + r^f - r^D - \varepsilon^{ee}]dt + dz^e\\
+&& \mbox{ie) long $L_01$ = \$(e) in $S^D$, short $L_01$=\$(e) in $B^D$ }\\
+0=w&=& \frac{e}{S_D} \frac{S_D}{e} - \frac{e}{B_D} \frac{B_D}{e}\\
+dw &=& \frac{d(\frac{S_D}{e})}{(\frac{S_D}{e})} - \frac{d(\frac{B_D}{e})}{(\frac{B_D}{e})}\\
+&=& \left[\frac{\partial S_D}{S_D} -\frac{de}{e} + \left(\frac{de}{e}\right)^L - \frac{\partial S}{S} \frac{\partial e}{e}\right] - \left[\frac{\partial B_D}{B_D} - \frac{\partial e}{e} + \left(\frac{\partial e}{e}\right)^L \right]\\
+&=& (\theta^D dt + dz^D) - \varepsilon^{ee} dt -r^d dt\\
+&=& (\theta^D dt -r^D - \varepsilon^{de}dt + dz^D
+\end{eqnarray*}
+
+Note that if you stack these three domestic, and three foreign excess returns. The risk sources are $[+dz_d, +dz_e, +dz_f]$. That is ... BCS means after eq 13 to say that ``commerce method =  for both masters''\\
+
+By identifying market prices of risk for each risk factor, can re-write\\
+\begin{equation*}
+\frac{\partial \wedge_D}{\wedge_D} = -r_D dt - \mu_D \varepsilon ^{-1} dz
+\end{equation*}
+recall dz has units of $\sigma $ B/M, so $\mu^\prime \varepsilon^{-1} dz$ has units $\frac{\mu -r}{\sigma}$\\
+
+Now, pricing kernel defined via 
+\begin{list}{ }{}
+\item 1) $E\left[\frac{d\wedge}{\wedge}\right] = -r \partial dt$
+\item 2) $(\mu-r)^{\prime\prime} dt = -E\left(\frac{d\wedge}{\wedge}, \left(\frac{\partial S}{S}-\frac{\partial B^\prime}{B^\prime}\right)\right)$ 
+\end{list}
+
+Look at their equations 4-7 combined with dB - dz: \\
+\begin{eqnarray*}
+\frac{d\wedge}{\wedge} dB &=& (-\mu^\prime \varepsilon ^{-1} dz)dz^T\\
+&=& -\mu^\prime \varepsilon ^{-1} \varepsilon\\
+&=&-\mu^\prime 
+\end{eqnarray*}
+
+Now look at numerator of their index:\\
+First note that $\mu^f = \mu^d - \varepsilon ^e$, wehre $\varepsilon ^e = \varepsilon . $ $ \left( \begin{array}{c}
+0\\
+1\\
+0\end{array} \right)$ = $ \left( \begin{array}{c}
+\varepsilon^{de}\\
+\varepsilon^{ee}\\
+\varepsilon^{fe}\end{array} \right)$\\
+
+\begin{eqnarray*}
+(dx \wedge_d - dz \wedge_f)|_{stoch} &=& \mu_f ^\prime \varepsilon ^{-1} dz - \mu_D^\prime \varepsilon ^{-1} dz\\
+&=& -\varepsilon^e \varepsilon^{-1} dz\\
+&=& -(\mbox{0 1 0})\varepsilon \varepsilon^{-1} dz\\
+&=& -(\mbox{0 1 0})dz\\
+&=& dz_e
+\end{eqnarray*}
+
+Thus the numerator is $(dz_e)^2 = \varepsilon_{ee}$\\
+
+The denominator is $(\mu_D^\prime \varepsilon^\prime dz)(dz^\prime \varepsilon^{-1}\mu_D) = \mu_D^\prime \varepsilon ^{-1} \mu_D$ and similar for foreign.\\
+
+Note that,
+\begin{eqnarray*}
+\frac{\partial \wedge_f}{\wedge_f} + r_f dt &=& -\mu_f^\prime \varepsilon^{-1} dz\\
+\frac{\partial \wedge_D}{\wedge_D} + r_D dt &=& -\mu_D^\prime \varepsilon^{-1} dz\\
+&=& -(\mu_f^\prime + \varepsilon_e^\prime) \varepsilon^{-1} dz\\
+&=& \frac{\partial \wedge_f}{\wedge_f} + r_fdt - \varepsilon_e^\prime \varepsilon^{-1} dz\\
+&=& \left(\frac{\partial \wedge_f}{\wedge_f}+r_fdt\right)-\left(\mbox{0 1 0}\right)\varepsilon \varepsilon^{-1} dz\\
+&=& \left(\frac{\partial \wedge_f}{\wedge_f} + r_f dt\right) - dz_e
+\end{eqnarray*}
+
+``Domestic foreign discount factors load equally on the domestic and foreign stock return stocks and their loading on the ... rate stock differs by exactly one''
+\end{document}
