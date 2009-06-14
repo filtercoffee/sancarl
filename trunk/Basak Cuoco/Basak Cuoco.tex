@@ -1,0 +1,92 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+
+\begin{document}
+\section*{Basak Cuoco}
+Exchange economy, with exogenous dividned process
+\begin{equation*}
+d\delta = \mu_\delta dt + \sigma_\delta dw
+\end{equation*}
+
+Bond and Stock process :
+\begin{eqnarray*}
+\frac{dB}{B} &=& rdt\\
+\frac{ds+\delta dt}{s} &=& \mu dt + \sigma \partial w
+\end{eqnarray*}
+$(r, \mu, \sigma) $ to be determined endogenously in equilibrium.\\
+
+Define:
+\begin{list}{-}{}
+\item $\alpha \equiv$ amount in Bond
+\item $\theta \equiv$ amount in Stock
+\item $W \equiv \alpha + \theta = $ Wealth
+\begin{eqnarray*}
+dW + cdt &=& (\alpha r + \theta \mu)dt + \theta \sigma d\vec{w}\\
+U_i(\{c\})&=& E\left[\int_0^T e^{-\rho t} U_i(c_t)dt\right]
+\end{eqnarray*}
+\end{list}
+
+Throughout assume $U_2(c_2) = Lc_2$\\
+
+\textbf{Endowments:}\\
+Agent 1 : Long 1 share stock, short $\beta $ shares of bond\\
+Agent 2 : Long $\beta $ shares of bond\\
+
+\textbf{Equilibrium:}\\
+1) $w_i = \alpha_i + \theta_i = E_t[\int_0^T ds \frac{\zeta^i s}{\zeta^i t} c(s)]$
+2) Market clearing
+\begin{list}{ }{}
+\item (i) $c_1+ c_2 = \delta $
+\item (ii) $\alpha_1 + \alpha_2 = 0$
+\item (iii) $\theta_1 = s$
+\end{list}
+
+\textbf{Unrestricted Case:} - Dynamically complete markets\\
+Introduce representative agent $U[c,\lambda] = E[\int_0^T e^{-\rho t} u[c_t, \lambda] dt]$ where $\lambda $ is a constant and where $u[c,\lambda] = \max_{c_1+c_2=c} u_1(c_1) + \lambda u_2 (c_2)$\\
+
+In equal, $(c= \delta)$, so SDF follows 
+\begin{eqnarray*}
+\zeta(t) &=& e^{-\rho t} \frac{U_c \delta_{t,\lambda}}{U_c \delta_{0,\lambda}}\\
+\frac{\partial \zeta}{\zeta} &=& -rdt - K\partial w\\
+K &=& \frac{\mu - r }{\sigma}\\
+-r = \frac{1}{dt} E\left[\frac{d\zeta}{\zeta}\right] &=& \frac{1}{dt}E\left[-\rho dt + \frac{u_{cc}}{u_c} d\delta + \frac{1}{2} \frac{u_{ccc}}{u_c} d\delta^2\right]
+\end{eqnarray*}
+\begin{equation}
+r = \rho + A\mu_\delta - \frac{1}{2} A \rho \sigma_\delta^2 \tag{12}
+\end{equation}
+\begin{eqnarray*}
+\zeta_t S_t &=& E_t\left[\int_t^T \zeta(u) \delta(u) du\right]\\
+&\Rightarrow & \zeta_t S_t + \int_t^T \zeta(u) \delta(u) du = \mbox{ P martingale}\\
+&\Rightarrow & 0 = E\left[\frac{d\zeta}{\zeta} + \frac{\partial s}{s} + \frac{d\zeta}{\zeta}  \frac{\partial s}{s} + \frac{\delta}{s}dt\right]\\
+&\Rightarrow & E\left[\frac{ds+\delta dt}{s}\right] - rdt = -E\left[\frac{\partial \zeta}{\zeta} \frac{\partial s}{s}\right]
+\end{eqnarray*}
+\begin{equation}
+\mu - r = K \sigma \tag{13}
+\end{equation}
+where, K is defined via, $-K = \frac{d\zeta}{\zeta}|_{stoch} = \frac{U_{cc}}{U_c} \sigma_\delta$\\
+\begin{equation}
+K = A\sigma_\delta \tag{14}
+\end{equation}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
