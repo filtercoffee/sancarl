@@ -73,6 +73,153 @@ where, K is defined via, $-K = \frac{d\zeta}{\zeta}|_{stoch} = \frac{U_{cc}}{U_c
 \begin{equation}
 K = A\sigma_\delta \tag{14}
 \end{equation}
+
+\textbf{1}\\
+Worth noting that 
+\begin{eqnarray*}
+u[c(w_t),\lambda] &=& \max_{c_1} u_1[c_1] + \lambda u_2 (c_2=(c-c_1))\\
+FOC : 0 &=& u_1^\prime[c_1^\prime(w_t)]- \lambda u_2^\prime [c_2^\prime(w_t) = c^\prime(w_t) - c_1^\prime(w_t)]\\
+\lambda&=& \frac{u_1^\prime [c_1^\prime(w_t)]}{u_2^\prime [c_2^\prime(w_t)]}\\
+&&\mbox{$\lambda$ is a constant in complete markets case.}
+\end{eqnarray*}
+Now, for a given $\lambda $ market eventually needs to be determined, we have 2 eqns.\\
+
+\textbf{2}
+\begin{eqnarray*}
+\delta &=& c = c_1^\prime (c,\lambda) + c_2^\prime (c,\lambda)\\
+u_1^\prime(c_1^\prime(w_t)) &=& \lambda u_2^\prime (c_2^\prime (w_t))\\
+&& \mbox{These jointly determine $c_i^\prime(c,\lambda)$}, i = 1,2,...\\
+\mbox{Ex: if } u_1(x) &=& u_2(x) = \log x\\
+\frac{1}{c_1} &=& \frac{\lambda}{c_2}\\
+c_2 &=& \lambda c_1\\
+c &=& c_1 + \lambda c_1\\
+c_1 &=& \frac{c}{1+\lambda}\\
+c_2 &=& \frac{\lambda c}{1+ \lambda}\\
+&& \mbox{Envelope Condition:}\\
+\mbox{1 } \Rightarrow u_c[c(w_t), \lambda] &=& u_1^\prime[c_1^\prime(c,\lambda)]\cdot \frac{dc_1}{dc} + \lambda u_2^\prime [c_2^\prime] \frac{dc_2}{dc}\\
+\mbox{2 } \Rightarrow &=& \lambda u_2^\prime \frac{d[c_1+c_2]}{dc}\\
+\end{eqnarray*}
+\begin{equation}
+u_c = \lambda u_2^\prime = u_1^\prime \tag{16.5}
+\end{equation}
+
+Define 
+\begin{equation*}
+f_i(x) \equiv \left(\left[u_i^\prime\right]^{-1}\right)(x)\\
+\end{equation*}
+\begin{equation}
+c_1^\prime(w_t) = f_1\left[u_c(\delta(w_t),\lambda)\right]\tag{15}\\
+\end{equation}
+\begin{equation}
+c_2^\prime(w_t) = f_2\left[\frac{u_c(\delta(w_t),\lambda)}{\lambda}\right]\tag{16}\\
+\end{equation}
+
+Thus everything is determined if $\lambda $ is identified. To identify $\lambda $, use
+\begin{eqnarray*}
+u_c(w_t) &=& \lambda u_2^\prime(c_2^\prime) = \lambda \frac{1}{c_2^\prime (w_t)}\\
+\zeta &&\mbox{Thus everything is determined if $\lambda $ is identified}\\
+\zeta (w_t) &=& e^{-\rho t} \frac{c_2^\prime(0)}{c_2^\prime (w_t)} \mbox{, Note }\zeta(0) =1\\
+\zeta (0) w_2(0) &=& w_2(0) = \beta = E\left[\int_0^T e^{-\rho t} \frac{c_2^\prime(0)}{c_2^\prime(w_t)} c_2^\prime(w_t)dt\right]\\
+&=& c_2^\prime(0) \frac{1}{\rho} (1-e^{-\rho t})
+\end{eqnarray*}
+\begin{equation}
+\beta = \frac{\lambda}{u_c [\delta(0),\lambda]} \frac{1}{\rho} (1-e^{-\rho t}) \tag{17}
+\end{equation}
+This is one equation for the one unknown $\lambda $. Worth noting that the richest agent-2 can be is that she consumes all output $\Rightarrow c_2$. In that case,
+\begin{eqnarray*}
+\frac{u_c(\delta , \lambda)}{\lambda} = u_2^\prime [c_2=\delta] = \frac{\partial}{\partial c_2} [c_2] |_{c_2=\delta} = \frac{1}{8}
+\end{eqnarray*}
+
+Plugging this into 17 we get $\beta = \frac{\delta}{\rho} (1-e^{-\rho t})$, which is estimation in eq 16.
+\begin{equation}
+u_1^\prime [c_1^\prime(\delta, \lambda)] = u_c[\delta, \lambda] \tag{A}
+\end{equation}
+\begin{eqnarray*}
+\mbox{I to LHS } du_i^\prime &=& u_1^{\prime \prime} dc_1 + \frac{1}{2} u_1^{\prime \prime \prime} dc_1^2\\
+\mbox{I to RHS } && u_{cc} d\delta + \frac{1}{2}r_{ccc} d\delta ^2
+\end{eqnarray*}
+\begin{equation}
+dc_1 = \frac{1}{u_1^{\prime\prime}} \left[u_{cc}\left(\mu_\delta dt + \sigma_\delta \partial w\right) + \frac{1}{2}u_{ccc} \sigma_\delta^2 dt - \frac{1}{2} u_1^{\prime\prime\prime} dc_1^2\right] \tag{B}
+\end{equation}
+\begin{eqnarray*}
+\mbox{A + RHS1: } &=& \frac{u_{cc}}{u_c} \frac{u_1^\prime}{u_1^{\prime\prime}} \left(\mu_\delta dt + \sigma_\delta \partial w\right) = \frac{A}{A_1} \left(\mu_\delta dt + \sigma_\delta \partial w\right)\\
+\mbox{A + RHS2: } &=& \frac{1}{2}\frac{u_{ccc}}{u_c} \frac{u_1^\prime}{u_1^{\prime\prime}} \sigma_\delta^2 dt = -\frac{1}{2} A\rho \frac{1}{A_1} \sigma_\delta^2 dt\\
+\mbox{RHS3: }&& -\frac{1}{2} \frac{u_1^{\prime\prime\prime}}{u_1^{\prime\prime}}dc_1^2\\
+&& \mbox{But from B, we have, } dc_1^2 = \left(\frac{u_{cc}}{u_1^{\prime\prime}}\right)^2 \sigma_\delta^2\\
+&=& \frac{1}{2}\rho_1 \left(\frac{u_{cc}/u_c}{u_1^{\prime\prime}/u_1^{\prime}}\right)^2\sigma_\delta^2\\
+&=& \frac{1}{2} \rho_1 \left(\frac{A}{A_1}\right)^2 \sigma_\delta^2\\
+\sigma_{c^\prime}&=& \frac{u_{cc}}{u_1^{\prime\prime}} \sigma_\delta = \frac{A}{A_1} \sigma_\delta\\
+\mu_{c^\prime} &=& \frac{A}{A_1} \mu_\delta - \frac{1}{2} \frac{A}{A_1} \rho \sigma_\delta^2 + \frac{1}{2}\left(\frac{A}{A_1}\right)^2 \rho_1 \sigma_\delta^2
+\end{eqnarray*}
+\begin{eqnarray*}
+w_2(t) &=& E_t\left[\int_t^T e^{-\rho t} \frac{u_c[\delta_s, \lambda]}{u_c[\delta_t,\lambda]} c_2^\prime(s)ds\right]\\
+&=& \frac{1}{u_c(\delta_t,\lambda)} E_t\left[\int_t^T e^{-\rho t} \frac{\lambda}{c_2^\prime(s)} c_2^\prime(s)ds\right]\\
+&=& \frac{\lambda}{u_c(\delta_t,\lambda)} \frac{1}{\rho} \left(1-e^{-\rho(T-t)}\right) \mbox{ , using 17, } \frac{\lambda}{\rho} = \frac{\beta u_c(\delta_0,\lambda)}{1-e^{-\rho t}}\\
+&=& \beta \frac{u_c(\delta_0,\lambda)}{u_c(\delta_t, \lambda)} \frac{1-e^{-\rho(T-t)}}{1-e^{-\rho t}}\\
+&=& \beta \left[\frac{e^{-\rho t} - e^{-\rho T}}{1-e^{-\rho t}}\right]\frac{1}{\zeta(t)}\\
+dw_2|_{stoch} &=& w_2 \left(\frac{-ds}{s}\right)|_{stoch}\\
+&=& w_2K, \mbox{    vs }dw_2|_{stoch}=\theta_2 \sigma \mbox{ from wealth dynamics}\\
+\theta_2 &=& \frac{K}{\sigma}w_2 = \frac{\mu -r}{\sigma^2}w_2\\
+\alpha_2 &=& w_2 - \theta_2 = w_2\left[1-\frac{\mu -r}{\sigma^2}\right]\\
+\theta_1 &=& s-\theta_2\\
+\alpha_1 &=& -\alpha_2
+\end{eqnarray*}
+
+\textbf{Restricted Case : }\\
+When agent-2 restricted from participating in markets, equlibrium not pareto efficient, so solution is not same as social planner/representative agent with a constant weight $\lambda $. However, can still introduce representation agent with stochastic weight $\lambda(w_t) \Rightarrow$ This reduces search for an equilibrium to the specification of the weighting process $\alpha \lambda $ [and $\lambda(0)$].\\
+
+Representative agent:
+\begin{eqnarray*}
+U[c,\lambda] &=& E_0\left[\int_0^T e^{-\rho t} u[c, \lambda] dt\right]\\
+&&\mbox{where, } u[c,\lambda] = \max_{c_1} \left\{u_1[c_1] + \lambda(w_t) u_2[c_2 = c-c_1]\right\}\\
+&& \mbox{FOC : } u_1^\prime[c_1^\prime] = \lambda(w_t) u_2^\prime[c_2^{\prime\prime}]\\
+&&\mbox{A1 optimum, must be indifferent to small, affordable, consumption changes}\\
+\end{eqnarray*}
+\begin{eqnarray*}
+u[c_0^\prime, \lambda_0] + D_0(w_t) e^{-\rho t} u[c(w_t), \lambda(w_t)] &=& u[c_0^\prime - \Delta c_0] + 
+D_0(w_t)e^{-\rho t} u(c^\prime + \Delta c(w_t), \lambda(w_t))\\
+\end{eqnarray*}
+\begin{eqnarray*}
+0&=&-\Delta c_0 u^\prime[c_0^\prime, \lambda_0] + \Delta c(w_t)u^\prime[c^\prime (w_t), \lambda(w_t)]D_0(w_t)e^{-\rho t}\\
+&&\mbox{where, $[\Delta c(w_t), -\Delta c(0)]$ have zero cost via A/D prices:}\\
+&&0=-\Delta c(0) + \Delta c(w_t) . AD_0 (w_t)\\
+AD_0(w_t) u^\prime[c_0^\prime, \lambda_0] &=& D_0(w_t)e^{-\rho t} u^\prime [c^\prime(w_t), \lambda(w_t)]\\
+\zeta_0(w_t) &\equiv & \frac{AD_0(w_t)}{D_0(w_t)} = e^{-\rho t} \frac{u^\prime [c^\prime(w_t), \lambda (w_t)]}{u^\prime [c^\prime(0), \lambda(0)]} = e^{-\rho t} \frac{u^\prime [\delta(w_t), \lambda (w_t)]}{u^\prime [\delta(0), \lambda(0)]}\\
+&&\mbox{Also, from bottom of page 6,}\\
+u_c(c,\lambda) &=& u_1^\prime [c_1^\prime]\frac{\partial c_1^\prime}{\partial c} + \lambda u_2^\prime(c_1^\prime) \frac{\partial c_1^\prime}{\partial c}, \mbox{  use, } \mu_1^\prime = \lambda u_2^\prime\\
+&=& u_1^\prime (c_1^\prime) \frac{d(c_1^\prime + c_2^\prime)}{dc} = u_1^\prime (c_1^\prime), \mbox{  since, } c_1^\prime + c_2^\prime = c = \delta\\
+u_c(c,\lambda) &=& u_1^\prime(c_1^\prime) = \lambda \mu_2^\prime(c_2^\prime)\\
+\end{eqnarray*}
+\textbf{Implications}\\
+i
+\begin{equation}
+c_1^\prime [\delta(w_t), \lambda (w_t)] = \left[u_1^\prime\right]^{-1} (u_c(\delta(w_t), \lambda(w_t))) \equiv f_1[u_c(\delta(w_t), \lambda(w_t))]\tag{18}
+\end{equation}
+ii :
+\begin{equation}
+c_2^\prime [\delta(w_t), \lambda (w_t)] = \left[u_2^\prime\right]^{-1} \frac{(u_c(\delta(w_t), \lambda(w_t)))}{\lambda} \equiv f_2\left[\frac{u_c(\delta(w_t), \lambda(w_t))}{\lambda}\right]\tag{19}
+\end{equation}
+iii : 
+\begin{equation}
+\lambda(w_t) = \frac{u_1^\prime []c_1^\prime(w_t) }{u_2^\prime[c_2^\prime(w_t)]}\tag{20}
+\end{equation}
+
+Important!!! When they wrote $u[c] = u_1[c_1] + \lambda u_2[c]_2]$, they already assumed agent-1 was unrestricted.\\
+
+More generally, need to write $u[c] \equiv \max_{c_1+c_2=c} \lambda_1(w_t) u_1[c_1] + \lambda_2(w_t)u_2[c_2]$ and will need to identify $(\lambda_1(w_t), \lambda_2(w_t))$ separately.\\
+
+Have shown above that, 
+\begin{eqnarray*}
+u_1^\prime[c_1^\prime(\delta(w_t), \lambda(w_t))] &=& u_c[\delta(w_t), \lambda(w_t)] = e^{-\rho t} \zeta(w_t) u_c[\delta_0, \lambda]\\
+\Rightarrow e^{-\rho t} u_1^\prime[c_1^\prime] &\propto & \zeta(w_t)
+\end{eqnarray*}
+
+B/C interpret,``Since agent-1 facing a dynamically complete market, optimality of $c_1^\prime$, equvivalent to $e^{-\rho t} u_1^\prime(c_1^\prime)$ being proportional to $\zeta(t)$''\\
+
+Also shown above that,
+\begin{eqnarray*}
+&&
+\end{eqnarray*}
 \end{document}
 
 
