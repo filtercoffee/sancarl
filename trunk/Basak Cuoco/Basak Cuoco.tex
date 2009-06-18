@@ -218,10 +218,80 @@ B/C interpret,``Since agent-1 facing a dynamically complete market, optimality o
 
 Also shown above that,
 \begin{eqnarray*}
-&&
+\lambda u_2^\prime[c_1^\prime]&=& u_c = e^{-\rho t} \zeta u_c[\delta_0, \lambda_0]\\
+e^{-\rho t} u_2^\prime[c_2^\prime(w_t)] &\propto & \frac{\zeta (w_t)}{\lambda (w_t)}\\
+&\propto & B(w_t)^{-1}
+\end{eqnarray*}
+B/C interpret, ``Since agent-2 facing a dynamically incomplete market, marginal utility is not proportional to $\zeta(w_t) $. Since agent-2 has log preferences cand can only invest in bond, then,
+\begin{equation*}
+e^{-\rho t} u_2^\prime[c_2^\prime(w_t)] \propto B(w_t)^{-1}
+\end{equation*}
+My interpretation : Without access to stocks, $\frac{\partial \zeta_2}{\zeta_2} = -rdt$. By definition, $\frac{\partial B}{B} = \delta dt \Rightarrow \zeta_2 \propto \frac{1}{B}$ $\Rightarrow \frac{\partial \zeta_2}{\zeta_2} = \frac{-\partial B}{B} = -rdt$. Here $\zeta_2 \neq \zeta$ in paper, but pricing kernel for restricted agent. More generally we have for 2nd agent,
+\begin{eqnarray*}
+sw_2 + c_2dt &=& rw_2dt\\
+\zeta_2(t) w_2(t) &=& E_t[\int_t^T ds \zeta_2(s) c_2(s)]\\
+\rightarrow	0 &=& E_t\left[\frac{\partial \zeta_2}{\zeta_2}+\frac{\partial w_2}{w_2} + \frac{\partial \zeta_2}{\zeta_2} \frac{\partial w_2}{w_2} + \frac{c_2}{w_2} dt\right]\\
+\end{eqnarray*}
+Notationally specify,
+\begin{equation}
+\frac{\partial \zeta_2}{\zeta_2} = -\alpha dt - \beta dw \tag{9A}
+\end{equation}
+
+Use 9A
+\begin{eqnarray*}
+0&=& -\alpha + \frac{1}{w_2} [rw_2-c_2] + 0(\mbox{ since $\partial w_2$ deterministic }) + \frac{c_2}{w_2}\\
+&=& -\alpha + r \\
+\alpha &=& r\\
+&& \mbox{But $\beta$ not determined.}
+\end{eqnarray*}
+Markes sense in that any $\beta $ will price bond correctly with $\alpha $ set to r.\\
+
+My guess is that 2nd agent will not correctly price the stock, since if they did I assume they would price everything correctly.\\
+
+Apply I/O's lemma to 
+\begin{eqnarray*}
+\lambda(t) &=& \frac{u_1^\prime(c_1^\prime)}{u_2^\prime(c_2^\prime)} = \frac{\Psi_1 \zeta(w_t)}{\Psi_2B(w_t)^{-1}} = \frac{\Psi_1}{\Psi_2} \zeta B\\
+\frac{d\lambda}{\lambda} &=& \frac{d\zeta}{\zeta} + \frac{\partial B}{B}\\
+&=& (-r dt - K\partial w) + rdt = -K\partial w = \frac{\partial \zeta}{\zeta}|_{stoch}\\
+d\lambda &=& -\lambda K \partial w, \mbox{ Q? what is K?}\\
+\mbox{We have, } e^{-\rho t} u_1^\prime &=& e^{-\rho t} u_c = \Psi_1 \zeta\\
+\frac{d(e^{-\rho t}u_1^\prime)}{e^{-\rho t}u_1^\prime}|_{stoch} &=& \frac{d(e^{-\rho t}u_c)}{e^{-\rho t}u_c}|_{stoch} = \frac{d\zeta}{\zeta}|_{stoch}\\
+\frac{u_1^{\prime\prime}}{u_1^\prime}dc_1|_{stoch}&=& \frac{u_{cc}}{u_c}dc|_{stoch} = -Kd\vec{w}
+\end{eqnarray*}
+
+In corollary 2, BC show that $dc_1|_{stoch} = dc|_{stoch} = \sigma_s \partial w$\\
+Another way to see this is that $\delta = c_1+c_2 = d\delta|_{stoch} = dc_1|_{stoch} + dc_2|_{stoch}$
+\begin{equation}
+u_2^{\prime\prime} dc_2|_{stoch} = -\frac{\partial B}{B}|_{stoch} = 0 \Rightarrow \sigma_\delta = dc_1|_{stoch} \tag{22}
+\end{equation}
+\begin{eqnarray*}
+-K&=& \frac{u_1^{\prime\prime}}{u_1^\prime} \sigma_\delta = \frac{u_{cc}}{u_c}\sigma_\delta \mbox{, and since } u_1^\prime = u_c\\
+&=& \frac{u_1^{\prime\prime}}{u_c} \sigma_\delta
+\end{eqnarray*}
+\begin{equation}
+d\lambda = \lambda \frac{u_1^{\prime\prime}}{u_c} \sigma_\delta d\vec{w} \tag{23}
+\end{equation}
+
+\textbf{Theorem 1}
+Taking,
+\begin{equation*}
+e^{-\rho t} u_2^\prime(c_2^\prime) = \Psi_2 B(t)^{-1}
+\end{equation*}
+as given, initial width of agent 2 is 
+\begin{eqnarray*}
+\beta &=& w_2(0) = E_0\left[\int_0^T ds e^{-\rho s} \frac{u_2^\prime c_2(s)}{u_2^\prime c_2(0)}c_2(s)\right]\\
+&=& \frac{1}{u_2^\prime(c_2(0))} \frac{1}{\rho} (1-e^{-\rho t}), \mbox{  use, } \lambda(0) u_2^\prime(c_2^\prime(0)) = u_c(\delta(0), \lambda(0))
+\end{eqnarray*}
+\begin{equation}
+\beta = \frac{\lambda(0)}{u_2^\prime(c_2(0))} \frac{1}{\rho} (1-e^{-\rho t}) \tag{24}
+\end{equation}
+Everything is correctly priced by marginal utility of representative agent wealth of economy $w_1+w_2 = (s-w_2)+w_2 = s$
+\begin{eqnarray*}
+w_2(w_t)&=& E_t\left[\int_t^T ds e^{-\rho (s-t)}\frac{u_2^\prime[c(0)]}{u_2^\prime[c(w_t)]} c_2(w_s)\right]\\
+&=& \frac{1}{u_2^\prime c(w_t)} \frac{1}{\rho} (1-e^{-\rho (T-t)}) \mbox{ use, } \lambda(w_t)u_1^\prime(c_2^\prime(w_t)) = u_c(\delta(w_t), \lambda)\\
+&=&\frac{1-e^{-\rho(T-t)}}{\rho} \frac{\lambda (w_t)}{u_c(\delta(w_t),\lambda(w_t)n)}
 \end{eqnarray*}
 \end{document}
-
 
 
 
