@@ -289,21 +289,108 @@ Everything is correctly priced by marginal utility of representative agent wealt
 \begin{eqnarray*}
 w_2(w_t)&=& E_t\left[\int_t^T ds e^{-\rho (s-t)}\frac{u_2^\prime[c(0)]}{u_2^\prime[c(w_t)]} c_2(w_s)\right]\\
 &=& \frac{1}{u_2^\prime c(w_t)} \frac{1}{\rho} (1-e^{-\rho (T-t)}) \mbox{ use, } \lambda(w_t)u_1^\prime(c_2^\prime(w_t)) = u_c(\delta(w_t), \lambda)\\
-&=&\frac{1-e^{-\rho(T-t)}}{\rho} \frac{\lambda (w_t)}{u_c(\delta(w_t),\lambda(w_t)n)}
+&=& \frac{1}{\rho} (e^{-\rho t} - e^{-\rho t}) \frac{1}{\Psi_2} B(w_t)
+\end{eqnarray*}
+\begin{equation}
+w_2(w_t)=\frac{1-e^{-\rho(T-t)}}{\rho} \frac{\lambda (w_t)}{u_c(\delta(w_t),\lambda(w_t))} \tag{26B}
+\end{equation}
+\begin{eqnarray*}
+w_2(w_t) &=& c_2(w_t) \frac{1-e^{-\rho (T-t)}}{\rho}\\
+w_2(0) &=& \beta = \frac{1}{\rho} (1-e^{-\rho t}) \frac{1}{\Psi_2}\\
+w_2(w_t) &=& \alpha_2(w_t) = \beta \frac{e^{-\rho t} - e^{-\rho t}}{1-e^{-\rho t}} B(w_t)\\
+&&\mbox{Lemma 2, Pg 331:}\\
+u(c(w_t),\lambda(w_t)) &=& \max_{c_1} \left\{u_1[c_1(w_t)] + \lambda(w_t)u_2 [c_2(w_t)=c(w_t)-c_1(w_t)]\right\}\\
+FOC: &=& 0=u_1^\prime [c_1^\prime(w_t)] - \lambda(w_t) u_2^\prime [c_2^\prime(w_t) = c^\prime(w_t).c_1^\prime(w_t)]\\
+\lambda (w_t) &=& \frac{u_1^\prime(c_1^\prime(w_t))}{u_2^\prime(c_2^\prime(w_t))}\\
+&& \mbox{Envelope Condition : }\\
+u_c &=& u_1^\prime \frac{\partial c_1}{\partial c} + \lambda u_2^\prime \frac{\partial c_2}{\partial c}\\
+&=& u_1^\prime \frac{\partial (c_1+c_2)}{\partial c}\\
+&=& u_1^\prime = \lambda u_2^\prime\\
+u_1^\prime(c_1^\prime) &=& u_c(c) \Rightarrow c_1^\prime \equiv f_1(u_c(c))\\
+u_2^\prime(c_2^\prime) &=& \frac{1}{\lambda} u_c(c) \Rightarrow c_2^\prime \equiv f_2 \frac{(u_c(c))}{\lambda}
+\end{eqnarray*}
+\begin{equation}
+c = c_1^\prime + c_2^\prime = f_1(u_c(c)) + f_2\frac{u_c(c)}{\lambda} \tag{31}
+\end{equation}
+\begin{eqnarray*}
+1 &=& f_1^\prime [u_c(c,\lambda)] u_{cc} + f_2^\prime \frac{u_c(c,\lambda)}{\lambda} \frac{u_{cc}}{\lambda}\\
+&& \mbox{Note that, by definition of the f-functions,}\\
+u_i[f_i(x)] &=& x\\
+u_i^{\prime\prime} [f_i(x)] . f_i^\prime(x) &=& 1\\
+f_i^\prime(x) &=& \frac{1}{u_i^{\prime\prime}[f_i(x)]}\\
+&&\mbox{Plug into 12-A,}\\
+1&=& \frac{u_{cc}}{u_1^{\prime\prime}[f_1(u_c(c,\lambda))]} + \frac{1}{\lambda} \frac{u_{cc}}{u_2^{\prime\prime} [f_2\frac{u_c}{\lambda}]}
+\end{eqnarray*}
+\begin{equation}
+\frac{1}{u_{cc}(c,\lambda)} = \frac{1}{u_1^{\prime\prime}[f1(u_c(c,\lambda))]} + \frac{1}{\lambda} \frac{1}{u_2^{\prime\prime} [f_2\frac{u_c(c,\lambda)}{\lambda}]} \tag{32}
+\end{equation}
+\begin{eqnarray*}
+\frac{\partial}{\partial \delta}[eq31] : 0 &=& f_1^\prime [u_c(c,\lambda)] u_{c\lambda} (c,\lambda) + f_2^\prime \frac{u_c(c,\lambda)}{\lambda} \left[\frac{1}{\lambda} u_{c\lambda}(c,\lambda) - \frac{u_c(c,\lambda)}{\lambda^2}\right]\\
+&=& \frac{u_{c\lambda}(c,\lambda}{u_1^{\prime\prime}[f_1(u_c(c,\lambda))]} + \frac{1}{\lambda} \frac{1}{u_2^{\prime\prime}[f_2\frac{u_c(c,\lambda)}{\lambda}]} \frac{\lambda u_{c\lambda} - u_c(c,\lambda)}{\lambda}\\
+&& \mbox{use 32,}\\
+&=& \frac{u_{c\lambda}(c,\lambda}{u_1^{\prime\prime}[f_1(u_c(c,\lambda))]} + \left[\frac{1}{u_{cc}(c,\lambda)} - \frac{1}{u_1^\prime [f_1(u_c(c,\lambda))]}\right] \frac{\lambda u_{c\lambda} - u_c(c,\lambda)}{\lambda}\\
+&=& \frac{u_c(c,\lambda)}{\lambda u_1^{\prime\prime}[f1(u_c(c,\lambda))]}+\frac{\lambda u_{c\lambda} - u_c(c,\lambda)}{\lambda u_{cc}(c,\lambda)}
+\end{eqnarray*}
+\begin{equation}
+u_1^{\prime\prime} [f_1(u_c(c,\lambda))] = \frac{u_c(c,\lambda) u_{cc}(c,\lambda)}{u_c(c,\lambda)-\lambda u_{c\lambda}(c,\lambda)} \tag{33}
+\end{equation}
+
+
+Proof of theorem 1 : 2 steps:
+\begin{list}{ }{}
+\item (i) show $\left\{c_i\right\}$ financed by $\left\{\alpha, \theta\right\}$
+\item (ii) show $\left\{c_i\right\}$ optimal
+\end{list}
+
+They seem to be assuming eq 25 in step 1 ...\\
+
+Clearly from 25, $d[e^{-rho t} u_c] = -r e^{-\rho t} u_c dt + () dw$ \\
+The stochastic term is $e^{-\rho t}[u_{cc}dc|_{stoch} + u_{c\lambda} d\lambda |_{stoch}]$ using eq 23\\
+$= e^{-\rho t} [u_{cc} \sigma_\delta \partial w + u_{c\lambda} \frac{u_1^{\prime\prime}}{u_c}\lambda \sigma_\delta \partial w]$, using eq 33.
+\begin{eqnarray*}
+\Rightarrow d(e^{-\rho t}u_c) &=& e^{-\rho t}u_c r dt + e^{-\rho t} \left[u_{cc} + \frac{u_{c\lambda}}{u_c} \lambda \left(\frac{u_c u_{cc}}{u_c - \lambda u_{c\lambda}}\right)\right] \sigma_\delta \partial w\\
+&=& e^{-\rho t}u_c r dt  + \left(\frac{e^{-\rho t}}{u_c-\lambda u_{c\lambda}}\right)[u_{cc}u_c - \lambda u_{cc} u_{c\lambda} + \lambda u_{cc} u_{c\lambda}]\sigma_\delta \partial w
+\end{eqnarray*}
+use 33 again,
+\begin{equation}
+d(e^{-\rho t}u_c) = e^{-\rho t}u_c r dt + e^{-\rho t} u_1^{\prime\prime} \sigma_\delta \partial w \tag{34}
+\end{equation}
+\begin{eqnarray*}
+d\left(\frac{e^{-\rho t} u_c}{\lambda}\right) &=& \frac{1}{\lambda} d(e^{-\rho t u_c}) - \frac{e^{-\rho t}u_c}{\lambda} \frac{d\lambda}{\lambda} - \frac{e^{-\rho t}}{\lambda} du_c \frac{d\lambda}{\lambda} + \frac{1}{2} 2 e^{-\rho t} u_c \frac{1}{\lambda} \frac{\partial \lambda}{\lambda^2}\\
+&=& \frac{1}{\lambda} \left\{-e^{-\rho t} u_crdt + e^{-\rho t} u_1^{\prime\prime} \sigma_\delta \partial w\right\} - \frac{e^{-\rho t}u_c}{\lambda} \frac{u_1^{\prime\prime}}{u_c} \sigma_\delta \partial w - \frac{e^{-\rho t}}{\lambda} u_1^{\prime\prime} \sigma_\delta \frac{u_1}{u_c} + \frac{e^{-\rho t}}{\lambda} u_c \left(\frac{u_1^{\prime\prime}}{u_c}\right)^2 \sigma_\delta^2 dt
+\end{eqnarray*}
+\begin{equation}
+d\left(\frac{e^{-\rho t} u_c}{\lambda}\right) = -\left(\frac{e^{-\rho t} u_c}{\lambda}\right) r dt \tag{35}
+\end{equation}
+
+Compare with $\frac{dB}{B}=rdt \Rightarrow d(\frac{1}{B})=-\frac{1}{B^2} r Bdt = -(\frac{1}{B})rdt$\\
+$\Rightarrow \frac{d(1/B)}{1/B} = -rdt = \frac{d\left(\frac{e^{-\rho t} u_c}{\lambda}\right)}{\left(\frac{e^{-\rho t} u_c}{\lambda}\right)}$\\
+$\Rightarrow B(t) - \Psi \frac{e^{\rho t} \lambda(t)}{u_c(t)}$ for some $\Psi \Rightarrow B(0) = 1 = \Psi \frac{\lambda(0)}{u_c(0)}$\\
+\begin{equation}
+B(t) = e^{\rho t} \frac{\lambda(t)}{\lambda(0)} \frac{u_c(0)}{u_c(t)} \tag{36}
+\end{equation}
+\begin{eqnarray*}
+c_2^\prime(w_t) &=& f_2\left[\frac{u_c(\delta_t,\lambda_t)}{\lambda_t}\right] = \frac{\lambda(t)}{u_c(\delta_t,\lambda_t)} \mbox{  due to log utility}\\
+&=& e^{-\rho t} B(t) \frac{\lambda(0)}{u_c(0)} = e^{-\rho t} B(t) \frac{\beta \rho}{1-e^{-\rho t}}\\
+&& \mbox{ We also have,}\\
+w_2(w_t) &=& E_t\left[\int_t^T ds e^{-\rho(s-t)} \frac{u_2^\prime(c_s)}{u_2^\prime(c_t)} c(w_s)\right], u_2^\prime(x) = \frac{1}{x}\\
+&=& c(w_t) \frac{1}{\rho} (1-e^{-\rho(T-t)})\\
+&=& \beta \frac{\rho e^{-\rho t}}{1-e^{-\rho t}} B(t) \frac{1}{\rho} (1-e^{-\rho(T-t)})\\
+&=& \beta \frac{e^{-\rho t}-e^{-\rho T}}{1-e^{-\rho T}} B(t)\\
+dw_2 &=& d\left[\beta \frac{e^{-\rho t} - e^{-\rho T}}{1-e^{-\rho T}} B(t)\right]\\
+&=& \beta \left(\frac{e^{-\rho t} - e^{-\rho T}}{1-e^{-\rho T}}\right) r Bdt - \rho \frac{\beta B(t)}{1-e^{-\rho T}} e^{-\rho t} dt\\
+&\equiv & (\alpha_2 r-c_2)dt\\
+&=& \left[\alpha_2 r - \beta \frac{\rho e^{-\rho t}}{1-e^{-\rho T}} B(t)\right]\\
+\alpha_2 &=& \beta \left(\frac{e^{-\rho t} - e^{-\rho T}}{1-e^{-\rho T}}\right) B\\
+\end{eqnarray*}
+
+Step 2:
+\begin{eqnarray*}
+w_1(t) &=& s(t) - w_2(t) \\
+&=& E_t \left[\int_t^T dv e^{-\rho (v-t)} \frac{u_c(v)}{u_c(t)} f_1(f_c(v))\right]\\
+u_c(t) e^{-\rho t} s(t) - u_c(t) e^{-\rho t} \left[w_2(t) = \frac{1-e^{-\rho (T-t)}}{\rho} \frac{\lambda(t)}{u_c(t)}\right] &=& E_t\left[\int_t^T dv e^{-\rho v} u_c(v) f_1(u_c(v))\right]\\
+E_t\left[\int_t^T dv e^{-\rho v} u_c(v) f_1(u_c(v))\right] &=& u_c(t) e^{-\rho t} s(t) - \frac{e^{-\rho t} - e^{-\rho T}}{\rho} \lambda(t) \\
+&& + \int_0^T dv e^{-\rho v} u_c(v) f_c(u_c(v))\\
+&=& \mbox{ p-martingale}
 \end{eqnarray*}
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
