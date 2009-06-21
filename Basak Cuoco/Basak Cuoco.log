@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.4.23)  17 JUN 2009 19:45
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.4.23)  20 JUN 2009 17:31
 entering extended mode
  %&-line parsing enabled.
 **"Basak Cuoco.tex"
@@ -164,7 +164,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
-[6] [7] (./Basak Cuoco.aux) ) 
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Overfull \hbox (27.40376pt too wide) in alignment at lines 358--361
+ [][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
+
+ []
+
+[8] [9] (./Basak Cuoco.aux) ) 
 Here is how much of TeX's memory you used:
  810 strings out of 493886
  9173 string characters out of 1148984
@@ -172,7 +187,7 @@ Here is how much of TeX's memory you used:
  4148 multiletter control sequences out of 10000+50000
  5007 words of font info for 19 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 27i,8n,20p,430b,123s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,20p,430b,129s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/Program Files/texlive/2008/texmf-dist/fonts/ty
 pe1/bluesky/cm/cmbx10.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1
 /bluesky/cm/cmbx12.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bl
@@ -184,10 +199,11 @@ mmi7.pfb><c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10
 <c:/Program Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb><c:/P
 rogram Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb><c:/Prog
 ram Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy5.pfb><c:/Program 
-Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb>
-Output written on "Basak Cuoco.pdf" (7 pages, 87064 bytes).
+Files/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb><c:/Program File
+s/texlive/2008/texmf-dist/fonts/type1/public/cmex/fmex7.pfb>
+Output written on "Basak Cuoco.pdf" (9 pages, 102385 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
